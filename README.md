@@ -1,4 +1,4 @@
-# Grupo_2_Ecommerce-Librería
+# Grupo_2_BooksLibreria
 Ejemplo de desarrollo de un e-commerce para poner a prueba el desempeño al trabajar con Node.js y React.
 ## Temática del sitio:
 Ecommerce de venta de libros
