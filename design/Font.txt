@@ -1,0 +1,9 @@
+Nombre de la tipografia:
+Poppins
+
+Link de la familia en google font:
+https://fonts.google.com/specimen/Poppins?category=Serif,Sans+Serif&preview.text=Books&preview.text_type=custom
+
+
+Link con la tipografia en formato Thin, Regular, Bold:
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
