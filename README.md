@@ -1,6 +1,6 @@
 # Grupo_2_BooksLibreria 📚
 
-Proyecto integrador basado en el desarrollo de un e-commerce, utilizando lenguajes de programación como HTML5, CSS3, Javascript, React, Node.
+Proyecto integrador basado en el desarrollo de un e-commerce, utilizando lenguajes de programación como HTML, CSS, Javascript, Node.
 
 Este sitio esta enfocado en ofrecer libros en línea. Donde el usuario tendrá la máxima información para estar seguro de su compra. Contamos con recomendado del mes, libros nuevos, promociones; y sobre todo un mundo literario a la disposición de un clic para descubrir.
 
