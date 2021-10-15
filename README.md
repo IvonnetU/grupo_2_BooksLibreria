@@ -24,7 +24,7 @@ Personas entre 18 a 50 años, en América Latina, con acceso a internet y apasio
 
 ### Kate Castaño 👩‍💻
 
-Nació en Colombia, tiene 24 años, actualmente se encuentra cursando el 8° semestre de Ingeniería en Sistemas, le apasiona el mundo de la programación desde que se encontraba en el colegio, desde hace 2 años es coordinadora del area digital en una empresa de publicidad.
+Nació en Colombia, tiene 24 años, actualmente se encuentra cursando el 8° semestre de Ingeniería en Sistemas, le apasiona el mundo de la programación desde que se encontraba en el colegio, desde hace 2 años es coordinadora del área digital en una empresa de publicidad.
 
 ### Ivonne 👩‍🏫
 
