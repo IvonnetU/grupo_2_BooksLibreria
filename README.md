@@ -4,15 +4,15 @@ Proyecto integrador basado en el desarrollo de un e-commerce, utilizando lenguaj
 
 Este sitio esta enfocado en ofrecer libros en línea. Donde el usuario tendrá la máxima información para estar seguro de su compra. Contamos con recomendado del mes, libros nuevos, promociones; y sobre todo un mundo literario a la disposición de un clic para descubrir.
 
-## Temática del sitio:
+## 🧐 Temática del sitio :
 
 E-commerce de venta de libros
 
-## Público objetivo:
+## 🤓 Público objetivo:
 
 Personas entre 18 a 50 años, en América Latina, con acceso a internet y apasionados por la lectura, más específicamente en géneros como acción, ficción, romántico, novela gráfica y young adult, dispuestos a adquirir sus novelas y libros a través de internet.
 
-## Referencias:
+## 💻 Referencias:
 
 1. https://librerianacional.com/categoria/ebooks
 2. https://www.buscalibre.com.co/
@@ -20,6 +20,20 @@ Personas entre 18 a 50 años, en América Latina, con acceso a internet y apasio
 4. https://www.amazon.com/-/es/Libros/b?ie=UTF8&node=283155
 5. https://www.librerialerner.com.co/
 
-## Previsualización del proyecto 📽️ :
+## 👧 Descripción de integrantes:
+
+### Kate Castaño 👩‍💻
+
+Nació en Colombia, tiene 24 años, actualmente se encuentra cursando el 8° semestre de Ingeniería en Sistemas, le apasiona el mundo de la programación desde que se encontraba en el colegio, desde hace 2 años es coordinadora del area digital en una empresa de publicidad.
+
+### Ivonne 👩‍🏫
+
+### Ana Maria 👩‍🎓
+
+## 📜 Tablero de Trello:
+
+https://trello.com/b/vuDHztOz/cronograma-sprints
+
+## 📽️ Previsualización del proyecto:
 
 Esta es una vista previa de la funcionalidad de la aplicación simple

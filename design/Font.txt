@@ -7,3 +7,6 @@ https://fonts.google.com/specimen/Poppins?category=Serif,Sans+Serif&preview.text
 
 Link con la tipografia en formato Thin, Regular, Bold:
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+
+Import para el css
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap");
