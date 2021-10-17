@@ -18,21 +18,21 @@ app.get('/', (req, res) => {
 });
 
 // Declarando la ruta del archivo detalle del producto
-app.get('/', (req, res) => {
+app.get('/detalle-producto', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 });
 
 // Declarando la ruta del archivo carrito de compras
-app.get('/', (req, res) => {
+app.get('/carrito', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/productCart.html'));
 });
 
 // Declarando la ruta del archivo registro
-app.get('/', (req, res) => {
+app.get('/registro', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/register.html'));
 });
 
 // Declarando la ruta del archivo login
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
