@@ -8,7 +8,7 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 // Asignando el servidor
-app.listen(3000, () => {
+app.listen(3030, () => {
     console.log("Servidor ejecutandose en el puerto 3000");
 });
 
