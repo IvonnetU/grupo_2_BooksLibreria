@@ -8,3 +8,6 @@ Hexadecimales de la paleta de colores:
 6. Azul verdoso claro: #6D7E85
 7. Gris: #3A3A3A
 8. Vinotinto oscuro: #14070F
+9. Naranja: #E86621
+10. Gris claro: #dddddd
+11. Gris medio: #727272
