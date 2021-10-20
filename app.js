@@ -9,7 +9,7 @@ app.use(express.static(publicPath));
 
 // Asignando el servidor
 app.listen(3030, () => {
-    console.log("Servidor ejecutandose en el puerto 3000");
+    console.log("Servidor ejecutandose en el puerto 3030");
 });
 
 // Declarando la ruta del archivo inicio
