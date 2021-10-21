@@ -240,18 +240,20 @@ ol {
 .main-navbar {
   display: none;
 }
-.banners{
-  background-color: #e86621;
-  width: 100%;
+.banners {
   height: 150px;
-  margin-top: 61px;
+  margin-top: 80px;
+  background-image: url(../images/01Banner_BooksLibreria.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.title_one_line{
-  margin: 15px;
+.title_one_line {
+  margin: 35px 15px;
   padding: 5px;
   border-left: solid 3px #e86621;
-  color:#612B13;
+  color: #612b13;
   font-size: 17px;
 }
 /* Fin estilos Inicio */
@@ -360,12 +362,11 @@ ol {
 
   .list-menu li a:hover {
     color: #e86621;
-    
   }
   .main-header-bottom-bar {
     padding-bottom: 0;
   }
-  
+
   .main-header-bottom-bar .logo {
     width: 70px;
     position: static;
@@ -373,13 +374,13 @@ ol {
     padding: 5px;
   }
 
-  .banners{
-    height: 300px;
+  .banners {
+    height: 335px;
     margin-top: 140px;
   }
 
-  .title_one_line{
-    margin: 25px;
+  .title_one_line {
+    margin: 25px 15px;
     padding: 10px;
     font-size: 21px;
   }
@@ -394,7 +395,7 @@ ol {
 
   .main-header-bottom-bar {
     padding-bottom: 0;
-}
+  }
   .content-search {
     width: 420px;
     padding: 10px 13px;
@@ -404,12 +405,13 @@ ol {
     font-size: 16px;
   }
 
-  .banners{
-    height: 440px;
+  .banners {
+    height: 600px;
+    margin-top: 150px;
   }
 
-  .title_one_line{
-    margin: 35px;
+  .title_one_line {
+    margin: 5px 20px 30px;
     padding: 10px;
     font-size: 30px;
   }
