@@ -156,6 +156,7 @@ ol {
   width: 100%;
   top: 0;
   background-color: #fff;
+  z-index: 99;
 }
 .main-header-top-bar {
   width: 100%;
@@ -250,12 +251,19 @@ ol {
 }
 
 .title_one_line {
-  margin: 15px 15px 25px;
+  margin: 25px 15px 25px;
   padding: 5px;
   border-left: solid 3px #e86621;
   color: #612b13;
   font-size: 25px;
 }
+
+.title_one_line span {
+  font-weight: 400;
+  display: block;
+  color: #e86621;
+}
+
 .slider {
   position: relative;
   display: flex;
@@ -287,6 +295,21 @@ ol {
   vertical-align: top;
 }
 
+.background_recommended {
+  height: 205px;
+  background-image: url(../images/background_monthly_highlights.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.featured_monthly img {
+  position: absolute;
+  top: 12px;
+  left: 23px;
+  width: 34%;
+}
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -455,6 +478,10 @@ ol {
     animation-name: slide768;
   }
 
+  .background_recommended {
+    height: 500px;
+  }
+
   @keyframes slide768 {
     0% {
       transform: translateX(0);
@@ -493,7 +520,7 @@ ol {
   }
 
   .title_one_line {
-    margin: 5px 20px 30px;
+    margin: 25px 20px 30px;
     padding: 10px;
     font-size: 30px;
   }
@@ -501,5 +528,10 @@ ol {
   .slide {
     width: 22vw;
   }
+
+  .background_recommended {
+    height: 780px;
+  }
+
   /* Fin estilos Inicio */
 }
