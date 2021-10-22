@@ -371,6 +371,34 @@ ol {
   font-size: 12px;
 }
 
+.featured-generes p {
+  text-align: center;
+  font-size: 15px;
+  color: #3a3a3a;
+  margin-bottom: 30px;
+}
+
+.item_generes {
+  width: 100%;
+  font-size: 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.item_generes a {
+  margin: 1px;
+  padding: 1px;
+  border-right: solid 1px #707070;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.item_generes a:hover {
+  color: #e86621;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -578,6 +606,7 @@ ol {
 
   .item_featured {
     margin-bottom: 10px;
+    align-items: baseline;
   }
   .button_white {
     width: 30%;
