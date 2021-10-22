@@ -310,6 +310,67 @@ ol {
   left: 23px;
   width: 34%;
 }
+.sinopsis_featured,
+.item_featured,
+.author,
+.content-raiting {
+  display: none;
+}
+
+.button_white {
+  display: flex;
+  border: solid 1px #fff;
+  padding: 2px 10px 3px 3px;
+  border-radius: 30px;
+  flex-direction: row;
+  align-items: center;
+  transition: all 400ms ease-out;
+  width: 70%;
+}
+
+.button_white i {
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 20px;
+  color: #14070f;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+.button_white a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 200ms ease-out;
+}
+
+.button_white:hover {
+  background-color: #fff;
+  transition: all 200ms ease-out;
+}
+
+.button_white:hover a {
+  color: #14070f;
+  transition: all 200ms ease-out;
+}
+
+.info_featured {
+  color: #fff;
+  margin-left: 168px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.info_featured span {
+  font-weight: 400;
+  display: block;
+  font-size: 12px;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -481,7 +542,60 @@ ol {
   .background_recommended {
     height: 500px;
   }
+  .info_featured {
+    margin-left: 335px;
+    font-size: 12px;
+    padding: 30px 30px 0 30px;
+  }
+  .info_featured h5,
+  h6 {
+    font-size: 13px !important;
+  }
+  .info_featured h3 {
+    font-size: 30px;
+  }
 
+  .featured_monthly img {
+    position: absolute;
+    top: 41px;
+    left: 60px;
+    width: 27%;
+  }
+
+  .info_featured span {
+    font-size: 23px;
+  }
+
+  .sinopsis_featured,
+  .item_featured,
+  .author,
+  .content-raiting {
+    display: flex;
+  }
+  .content-raiting {
+    flex-direction: row;
+  }
+
+  .item_featured {
+    margin-bottom: 10px;
+  }
+  .button_white {
+    width: 30%;
+  }
+  .sinopsis_featured {
+    flex-direction: column;
+  }
+
+  .item_featured p,
+  .author p {
+    margin-left: 5px;
+  }
+  .sinopsis_featured p {
+    width: 95%;
+    margin-top: 11px;
+    text-align: justify;
+    font-size: 10px;
+  }
   @keyframes slide768 {
     0% {
       transform: translateX(0);
@@ -530,8 +644,34 @@ ol {
   }
 
   .background_recommended {
-    height: 780px;
+    height: 690px;
   }
 
+  .info_featured {
+    margin-left: 600px;
+    font-size: 16px;
+  }
+
+  .featured_monthly img {
+    top: 50px;
+    left: 120px;
+    max-width: 300px;
+  }
+  .info_featured h3 {
+    font-size: 40px;
+  }
+
+  .info_featured h5,
+  h6 {
+    font-size: 18px !important;
+  }
+
+  .sinopsis_featured p {
+    width: 85%;
+    font-size: 15px;
+  }
+  .button_white {
+    max-width: 115px;
+  }
   /* Fin estilos Inicio */
 }
