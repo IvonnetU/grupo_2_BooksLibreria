@@ -427,6 +427,25 @@ ol {
   -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
 }
 
+.content-attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-attributes h3 {
+  color: #14070f !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+.content-attributes h3 span {
+  color: #183837 !important;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -669,6 +688,21 @@ ol {
   .item_generes a {
     padding: 0 12px;
   }
+
+  .content-attributes {
+    flex-direction: row;
+    padding: 10px;
+  }
+  .content-attributes img {
+    width: 80%;
+  }
+  .content-attributes h3 {
+    font-size: 12px;
+  }
+  .content-attributes h3 span {
+    font-size: 14px;
+  }
+
   @keyframes slide768 {
     0% {
       transform: translateX(0);
@@ -758,6 +792,20 @@ ol {
   }
   .item_generes {
     font-size: 18px;
+  }
+
+  .content-attributes {
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .content-attributes img {
+    width: 100%;
+  }
+  .content-attributes h3 {
+    font-size: 14px;
+  }
+  .content-attributes h3 span {
+    font-size: 16px;
   }
   /* Fin estilos Inicio */
 }
