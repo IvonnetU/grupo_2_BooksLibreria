@@ -36,7 +36,7 @@ ol {
   width: 80%;
   height: 430px;
   position: relative;
-  background:#ffffff;
+  background: #ffffff;
   color: #000000;
   opacity: 0.7;
   top: 260px;
@@ -57,7 +57,7 @@ ol {
   position: relative;
   left: calc(50% - 50px);
   margin: 10px 0 10px;
-  }
+}
 
 .login-box h5 {
   text-align: center;
@@ -70,7 +70,7 @@ ol {
 }
 
 .login-box input[type="text"],
-.login-box input[type="password"], 
+.login-box input[type="password"],
 .login-box input[type="color"] {
   left: 50%;
   width: 85%;
@@ -81,9 +81,9 @@ ol {
   color: #dddddd;
   border: none;
   padding-left: 8px;
-  text-align:start;
-  background-color:#000000;
- }
+  text-align: start;
+  background-color: #000000;
+}
 
 .login-box .boton_ingresar {
   position: relative;
@@ -110,8 +110,8 @@ ol {
   left: -50px;
 }
 
-.login-box .a{
-  text-decoration:none;
+.login-box .a {
+  text-decoration: none;
   line-height: 25px;
   color: #000000;
   position: relative;
@@ -119,7 +119,7 @@ ol {
 }
 
 .login-box a:hover {
-  color: #E86621;
+  color: #e86621;
 }
 
 .line {
@@ -131,7 +131,7 @@ ol {
 
 .social-media_login_01 {
   display: flex;
-  margin:auto;
+  margin: auto;
   padding-top: -5px;
   justify-content: space-between;
   width: 33%;
@@ -144,7 +144,7 @@ ol {
   flex-direction: column;
   width: 100%;
   height: 70px;
-  background:#ffffff;
+  background: #ffffff;
   color: #000000;
   opacity: 0.8;
   text-align: center;
@@ -154,14 +154,13 @@ ol {
   left: 0;
 }
 
-.login-box02  h5{
- margin-bottom: 10px;
- margin-top: -15px;
- padding-bottom: 20px;
+.login-box02 h5 {
+  margin-bottom: 10px;
+  margin-top: -15px;
+  padding-bottom: 20px;
 }
 
 .social-media_login_02 {
-  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -172,43 +171,6 @@ ol {
   padding-bottom: 10px;
   font-weight: bold;
 }
-
-/*styles login @media(min-width: 768px)*/
-
-@media (min-width: 768px){
-  .login-box h5{
-   font-size: 16px; 
-   margin-bottom: 20px;
-  }
-
- .login-box input[type="text"],
- .login-box input[type="password"], 
- .login-box input[type="color"] {
-  width: 65%;
-  height: 43px;
-  margin-top: -10px;
-  margin-bottom: 20px; /* pendiente de cambio*/
-  padding-left: 20px;
-  }
-
-  .login-box {
-  width: 50%;
-  }
-
-  .login-box .boton_ingresar {
-  width: 32%;
-  /* aca voy */
-    
-  }
-
-
-/*styles login @media (min-width: 1200px)*/
-
-@media (min-width: 1200px){
-
-}
-
-
 
 /* end styles login */
 
@@ -267,7 +229,7 @@ ol {
 }
 .btn_circle {
   padding: 10px;
-  border: solid #cacaca 1px;    
+  border: solid #cacaca 1px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -547,6 +509,32 @@ ol {
 /* Fin estilos Inicio */
 
 @media (min-width: 768px) {
+  /* Estilos login */
+  .login-box h5 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .login-box input[type="text"],
+  .login-box input[type="password"],
+  .login-box input[type="color"] {
+    width: 65%;
+    height: 43px;
+    margin-top: -10px;
+    margin-bottom: 20px; /* pendiente de cambio*/
+    padding-left: 20px;
+  }
+
+  .login-box {
+    width: 50%;
+  }
+
+  .login-box .boton_ingresar {
+    width: 32%;
+    /* aca voy */
+  }
+  /* Fin estilos login */
+
   /* Estilos Inicio */
   .main-header {
     padding: 15px 15px 0 15px;
