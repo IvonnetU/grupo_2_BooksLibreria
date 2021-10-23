@@ -23,8 +23,8 @@ ul,
 ol {
   list-style: none;
 }
-/*estilos del login*/
 
+/*styles login*/
 .body_login {
   background: url(../images/background_login.jpg) no-repeat center top;
   background-size: cover;
@@ -33,121 +33,184 @@ ol {
 }
 
 .login-box {
-  width: 50%;
-  height: 80%;
-  background: rgb(180, 173, 173);
-  color: rgb(51, 49, 49);
-  opacity: 0.9;
-  top: 45%;
+  width: 80%;
+  height: 430px;
+  position: relative;
+  background:#ffffff;
+  color: #000000;
+  opacity: 0.7;
+  top: 260px;
   left: 50%;
-  position: absolute;
   transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  padding: 80px 30px;
-  border-radius: 8%;
+  padding: 10px 10px;
+  border-radius: 5%;
   text-align: center;
   font-size: 18px;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-box .books {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  position: absolute;
-  top: 3%;
+  position: relative;
   left: calc(50% - 50px);
-  margin-right: auto;
-  box-sizing: border-box;
-}
+  margin: 10px 0 10px;
+  }
 
-.login-box h1 {
+.login-box h5 {
   text-align: center;
   display: block;
-  font-size: 18px;
-  margin-top: 15%;
-  margin-bottom: 3%;
-}
-
-.login-box .input {
+  font-size: 12px;
+  border: 10px;
+  padding: 10px;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .login-box input[type="text"],
-.login-box input[type="password"] {
+.login-box input[type="password"], 
+.login-box input[type="color"] {
   left: 50%;
-  width: 80%;
+  width: 85%;
   height: 40px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-size: 10px;
   border-radius: 15px;
-  color: rgb(145, 62, 62);
+  color: #dddddd;
   border: none;
-  background: white;
-  padding-left: 10px;
-}
+  padding-left: 8px;
+  text-align:start;
+  background-color:#000000;
+ }
 
 .login-box .boton_ingresar {
   position: relative;
-  left: 30%;
-  width: 40%;
-  height: 40px;
-  margin-bottom: 20px;
-  font-size: 16px;
+  left: 25%;
+  width: 45%;
+  height: 28px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  font-size: 12px;
   background: transparent;
-  color: #14070f;
-  opacity: 0.8;
-  border-color: orangered;
+  color: #000000;
+  opacity: 0.7;
+  border-color: #e86621;
   border-radius: 25px;
   display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.login-box a {
-  text-decoration: none;
-  font-size: 12px;
-  line-height: 20px;
-  color: #14070f;
+.password_rec {
+  font-size: 9px;
+  color: #000000;
   position: relative;
-  right: 20%;
+  left: -50px;
+}
+
+.login-box .a{
+  text-decoration:none;
+  line-height: 25px;
+  color: #000000;
+  position: relative;
+  right: 15%;
 }
 
 .login-box a:hover {
-  color: rgb(138, 134, 134);
+  color: #E86621;
 }
 
-.linea {
-  border-top: 1px solid rgb(73, 72, 72);
-  height: 2px;
+.line {
+  border-top: 2px solid #dddddd;
   padding: 0;
-  margin: 20px auto 0 auto;
+  margin: 10px auto 0 auto;
   width: 85%;
 }
 
-.social {
-  width: 95%;
-  max-width: 900px;
-  padding: 0px;
+.social-media_login_01 {
+  display: flex;
+  margin:auto;
+  padding-top: -5px;
+  justify-content: space-between;
+  width: 33%;
+}
+
+.login-box02 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  background:#ffffff;
+  color: #000000;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 0px;
+  top: 110px;
+  left: 0;
+}
+
+.login-box02  h5{
+ margin-bottom: 10px;
+ margin-top: -15px;
+ padding-bottom: 20px;
+}
+
+.social-media_login_02 {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: auto;
+  margin-top: -25px;
+  width: 40%;
+  font-size: 14px;
+  padding-bottom: 10px;
+  font-weight: bold;
 }
 
-.icono_google {
-  color: orangered;
-  border-radius: 50%;
-  border: solid 2px orangered;
-  padding: 10px;
-  left: -10%;
-  margin: 0 20px 0 0;
+/*styles login @media(min-width: 768px)*/
+
+@media (min-width: 768px){
+  .login-box h5{
+   font-size: 16px; 
+   margin-bottom: 20px;
+  }
+
+ .login-box input[type="text"],
+ .login-box input[type="password"], 
+ .login-box input[type="color"] {
+  width: 65%;
+  height: 43px;
+  margin-top: -10px;
+  margin-bottom: 20px; /* pendiente de cambio*/
+  padding-left: 20px;
+  }
+
+  .login-box {
+  width: 50%;
+  }
+
+  .login-box .boton_ingresar {
+  width: 32%;
+  /* aca voy */
+    
+  }
+
+
+/*styles login @media (min-width: 1200px)*/
+
+@media (min-width: 1200px){
+
 }
 
-.icono_facebook {
-  color: orangered;
-  border-radius: 50%;
-  border: solid 2px orangered;
-  padding: 10px;
-  left: -10%;
-}
+
+
+/* end styles login */
 
 /* Estilos Inicio */
 .main-header {
@@ -204,7 +267,7 @@ ol {
 }
 .btn_circle {
   padding: 10px;
-  border: solid #e86621 1px;
+  border: solid #cacaca 1px;    
   border-radius: 50%;
   width: 30px;
   height: 30px;
