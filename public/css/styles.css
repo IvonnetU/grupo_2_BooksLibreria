@@ -229,7 +229,7 @@ ol {
 }
 .btn_circle {
   padding: 10px;
-  border: solid #cacaca 1px;
+  border: solid #e86621 1px;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -471,6 +471,74 @@ ol {
   display: block;
 }
 
+.section-newsletter p {
+  text-align: center;
+  font-size: 16px;
+  color: #14070f;
+}
+
+.content-form-newsletter {
+  margin-top: 20px;
+}
+
+.content-form-newsletter form {
+  padding: 10px;
+}
+.content-form-newsletter input[type="email"] {
+  font-size: 12px;
+  width: 60%;
+  padding: 11px;
+  border-radius: 20px;
+  border: solid 1px #e86621;
+  margin-bottom: 10px;
+}
+.content-form-newsletter h5 {
+  font-size: 12px;
+  color: #14070f;
+  display: inline;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.content-form-newsletter h5 a span {
+  color: #e86621;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-orange {
+  width: auto;
+  background-color: #fff;
+  font-size: 11px;
+  padding: 3px;
+  border: solid 1px #e86621;
+  border-radius: 20px;
+  color: #14070f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.btn-orange i {
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  background-color: #e86621;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.btn-orange:hover {
+  background-color: #e86621;
+  color: #fff;
+  transition: all 200ms ease-out;
+}
+
+.checkbox-polity {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
 @keyframes slide {
   0% {
     transform: translateX(0);
@@ -754,6 +822,31 @@ ol {
     font-size: 14px;
   }
 
+  .content-form-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-form-newsletter form {
+    width: 530px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  .content-form-newsletter input[type="email"] {
+    width: 70%;
+  }
+
+  .btn-orange {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 10px;
+  }
   @keyframes slide768 {
     0% {
       transform: translateX(0);
