@@ -27,8 +27,10 @@ Personas entre 18 a 50 años, en América Latina, con acceso a internet y apasio
 Nació en Colombia, tiene 24 años, actualmente se encuentra cursando el 8° semestre de Ingeniería en Sistemas, le apasiona el mundo de la programación desde que se encontraba en el colegio, desde hace 2 años es coordinadora del área digital en una empresa de publicidad.
 
 ### Ivonne Torres 👩‍🏫
-De Colombia 39 años, mami de un peque de 7, fanática del café, apasionada :star_struck: de la literatura romántica con un toque de comedia y erotismo,  matemática  con 15 años de experiencia en educación, sin experiencia en programación pero con muchísimas!!! ganas de aprender.
 
+De Colombia 39 años, mami de un peque de 7, fanática del café, apasionada 🤩 de la literatura romántica con un toque de comedia y erotismo, matemática con 15 años de experiencia en educación, sin experiencia en programación pero con muchísimas!!! ganas de aprender.
+
+### Ana Vargas 👩‍🎓
 
 ## 📜 Tablero de Trello:
 
