@@ -30,19 +30,20 @@ ol {
   background-size: cover;
   height: 100vh;
   align-content: center;
+  margin: 0px;
+  padding: auto;
 }
 
 .login-box {
   width: 80%;
-  height: 430px;
-  position: relative;
+  height: 380px;
+  position: absolute;
   background: #ffffff;
   color: #000000;
   opacity: 0.7;
-  top: 260px;
+  top: 230px;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px 10px;
   border-radius: 5%;
   text-align: center;
   font-size: 18px;
@@ -56,17 +57,19 @@ ol {
   border-radius: 50%;
   position: relative;
   left: calc(50% - 50px);
-  margin: 10px 0 10px;
+  margin: 10px 0 0 0;
 }
 
 .login-box h5 {
+  position: relative;
   text-align: center;
-  display: block;
+  display: flex;
   font-size: 12px;
   border: 10px;
-  padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-weight: normal;
+  align-self: center;
+  
 }
 
 .login-box input[type="text"],
@@ -74,7 +77,7 @@ ol {
 .login-box input[type="color"] {
   left: 50%;
   width: 85%;
-  height: 40px;
+  height: 35px;
   margin-bottom: 10px;
   font-size: 10px;
   border-radius: 15px;
@@ -138,7 +141,7 @@ ol {
 }
 
 .login-box02 {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -149,28 +152,53 @@ ol {
   opacity: 0.8;
   text-align: center;
   font-size: 12px;
-  margin-top: 0px;
-  top: 110px;
-  left: 0;
+  top: 475px;
 }
 
 .login-box02 h5 {
-  margin-bottom: 10px;
-  margin-top: -15px;
-  padding-bottom: 20px;
+  position: absolute;
+  display: flex;
+  padding: 0px 0px 0px 0px;
+  font-style: bold;
+  width: 100%px;
+  border: 0px 0px 0px 0px;
+  justify-content: center;
 }
 
 .social-media_login_02 {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto;
   margin-top: -25px;
-  width: 40%;
+  width: 60%;
   font-size: 14px;
   padding-bottom: 10px;
   font-weight: bold;
-}
+  margin:auto;
+}  
+  
+  .btn_circle_login {
+    padding: 10px;
+    border: solid #e86621 1px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #e86621 !important;
+    cursor: pointer;
+    transition: all 400ms ease-out;
+    margin-left: 10px;
+  }
+  
+  .btn_circle_login:hover {
+    background-color: #e86621;
+    color: #fff !important;
+    transition: all 400ms ease-out;
+  }
+
 
 /* end styles login */
 
@@ -596,27 +624,69 @@ ol {
   /* Estilos login */
   .login-box h5 {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .login-box input[type="text"],
   .login-box input[type="password"],
   .login-box input[type="color"] {
-    width: 65%;
-    height: 43px;
-    margin-top: -10px;
-    margin-bottom: 20px; /* pendiente de cambio*/
+    width: 68%;
+    height: 35px;
+    margin-top: -20px;
+    margin-bottom: 10px; /* pendiente de cambio*/
     padding-left: 20px;
   }
 
   .login-box {
-    width: 50%;
+    width: 45%;
+    left: 50%;
+  }
+
+  .social-media_login_01 {
+    font-size: 20px;
+    width: 25%;
   }
 
   .login-box .boton_ingresar {
+    display: flex;
     width: 32%;
-    /* aca voy */
+    margin-top: 10px;
+    display: flex;
+    align-self: flex-start;
+    left: 33%;
+   }
   }
+
+  .social-media_login_02 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 31px;
+    width: 26%;
+    font-size: 14px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    left: 40%;
+  }
+
+    .login-box02 h5 {
+      position: absolute;
+      display: flex;
+      margin-top: -12px;
+      font-style: bold;
+      left: 40%;
+      padding-bottom: 10px;
+      margin:-20px 10px 10px -20px;
+    }
+
+   .login-box02 {
+     display: flex;
+     align-self: flex-start;
+   }
+
+    /* aca voy */
+
+   
   /* Fin estilos login */
 
   /* Estilos Inicio */
@@ -875,9 +945,34 @@ ol {
     }
   }
   /* Fin estilos Inicio */
-}
+
 
 @media (min-width: 1200px) {
+ /* Estilos login */
+ 
+ .login-box {
+  width: 33%;
+  left: 52%;
+}
+
+
+.login-box02 h5 {
+ left: 44%;
+}
+
+.social-media_login_02 {
+  padding-bottom: 0px;
+  align-items: center;  
+}
+
+.login-box .a {
+  align-content: center;
+}
+
+  /* Fin estilos login */
+ 
+ 
+ 
   /* Estilos Inicio */
   .main-header {
     padding: 20px 20px 5px 20px;
