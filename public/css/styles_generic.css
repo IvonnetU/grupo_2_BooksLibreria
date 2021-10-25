@@ -673,8 +673,75 @@ ol {
   font-size: 12px;
   text-align: left;
 }
-
+.content-btn-car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 /* Fin estilos detalle del producto */
+
+/* Inicio estilos carrito */
+.content-gift {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
+}
+.data-container_gift {
+  background-color: #183837;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-gift {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  width: 100%;
+  border: 0;
+  margin: 10px 0;
+}
+.container-checkbox {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-checkbox p span {
+  font-weight: bold;
+  font-size: 13px;
+}
+.items-checkbox {
+  margin-left: 10px;
+}
+
+.images-payment {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-cart {
+  margin: 20px 0;
+}
+
+.content-gift .note-payment {
+  font-size: 13px;
+  text-align: center;
+}
+/* Fin estilos carrito */
 
 @media (min-width: 768px) {
   /* Estilos Inicio */
@@ -1021,6 +1088,15 @@ ol {
     font-size: 14px;
   }
   /* Fin estilos detalle del producto */
+  /* Inicio estilos  del carrito */
+  .data-container_gift {
+    flex-direction: row;
+  }
+  .input-gift {
+    width: 30%;
+  }
+
+  /* Fin estilos  del carrito */
 }
 
 @media (min-width: 1200px) {
@@ -1170,7 +1246,9 @@ ol {
     width: 33%;
   }
   .btn-car {
-    width: 28%;
+    width: auto;
+    position: absolute;
+    padding: 5px;
   }
   .info-product p {
     font-size: 14px;
@@ -1208,4 +1286,18 @@ ol {
     font-size: 15px;
   }
   /* Fin estilos detalle del producto */
+  /* Inicio estilos carrito */
+  .data-container_gift {
+    padding: 30px;
+  }
+  .container-checkbox p {
+    font-size: 14px;
+  }
+  .container-checkbox p span {
+    font-size: 16px;
+  }
+  .payment-cart {
+    margin: 30px 0;
+  }
+  /* Fin estilos carrito */
 }
