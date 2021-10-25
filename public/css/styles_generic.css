@@ -24,6 +24,10 @@ ol {
   list-style: none;
 }
 
+.mt-0 {
+  margin: 0 !important;
+}
+
 /* Estilos Inicio */
 .main-header {
   padding: 10px;
@@ -740,6 +744,76 @@ ol {
 .content-gift .note-payment {
   font-size: 13px;
   text-align: center;
+}
+.car-completed {
+  display: grid;
+  grid-template-columns: 100%;
+  column-gap: 10px;
+  margin: 20px;
+}
+.container-buy-book-left {
+}
+
+.container-buy-book-left h4 {
+  color: #14070f;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.container-buy-book-right {
+  background-color: yellow;
+}
+.delete_and_image {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.icon-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon-delete a {
+  color: #14070f;
+}
+
+.icon-delete a i {
+  color: #fff;
+  background-color: #612b13;
+  border-radius: 15px;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.info_article_book h6,
+.info_article_book h5 {
+  color: #183837;
+  font-weight: bold;
+  font-size: 14px;
+}
+.info_article_book h5 {
+  text-align: center;
+  margin: 15px;
+}
+.info_article_book h6,
+.info_article_book p {
+  display: inline;
+}
+
+.info_article_book p {
+  font-size: 13px;
+}
+
+.container-price h3 {
+  color: #183837;
+  font-size: 20px;
 }
 /* Fin estilos carrito */
 
