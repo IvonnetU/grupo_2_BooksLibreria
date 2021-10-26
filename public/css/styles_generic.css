@@ -751,8 +751,6 @@ ol {
   column-gap: 10px;
   margin: 20px;
 }
-.container-buy-book-left {
-}
 
 .container-buy-book-left h4 {
   color: #14070f;
@@ -760,7 +758,10 @@ ol {
   margin-top: 20px;
 }
 .container-buy-book-right {
-  background-color: yellow;
+  background-color: #fff;
+  border-top: 1px solid #183837;
+  border-radius: 15px;
+  padding-top: 10px;
 }
 .delete_and_image {
   display: flex;
