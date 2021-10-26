@@ -572,10 +572,6 @@ ol {
   text-align: center;
 }
 
-.btn-car {
-  margin: auto;
-  width: 50%;
-}
 .btn-car span {
   margin-left: 10px;
 }
@@ -596,13 +592,9 @@ ol {
 }
 
 .item_product {
-  width: 80%;
   background: #fff;
-  padding: 10px;
+  padding: 40px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
@@ -613,7 +605,7 @@ ol {
   color: #183837;
   font-weight: bold;
   font-size: 15px;
-  margin-bottom: 5px;
+  height: 30px;
 }
 .item_product p {
   color: #14070f;
@@ -623,11 +615,6 @@ ol {
 }
 .item_product img {
   margin-bottom: 20px;
-}
-.btn-car-product {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .section-filter {
@@ -679,7 +666,7 @@ ol {
 }
 .content-btn-car {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: row;
 }
@@ -761,7 +748,7 @@ ol {
   background-color: #fff;
   border-top: 1px solid #183837;
   border-radius: 15px;
-  padding-top: 10px;
+  padding: 10px;
 }
 .delete_and_image {
   display: flex;
@@ -815,6 +802,26 @@ ol {
 }
 .title_tablet {
   display: none;
+}
+.container-buy-book-right p {
+  font-size: 14px;
+}
+
+.container-top {
+  padding: 10px;
+  border-bottom: solid 1px #183837;
+  margin-bottom: 10px;
+}
+
+.container-top > h3,
+.info-address {
+  margin-bottom: 10px;
+}
+
+.content-receive {
+  display: flex;
+  margin-bottom: 36px;
+  align-items: center;
 }
 /* Fin estilos carrito */
 
@@ -1057,11 +1064,12 @@ ol {
   }
 
   .btn-orange {
-    width: 25%;
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
     align-items: baseline;
-    padding-left: 10px;
+  }
+  .btn-car-product span {
+    margin-left: 10px;
   }
   .container-footer {
     width: 90%;
@@ -1109,7 +1117,7 @@ ol {
   }
   .btn-car {
     width: 22%;
-    justify-content: normal;
+    justify-content: space-between;
     padding-left: 2px;
   }
   .content-review {
@@ -1135,17 +1143,17 @@ ol {
     width: 22%;
     margin: 10px;
     margin-bottom: 20px;
+    padding: 10px;
   }
   .item_product h5 {
     font-size: 14px;
+    margin-bottom: 5px;
   }
 
   .item_product img {
     width: 65%;
   }
-  .btn-car-product {
-    width: 100% !important;
-  }
+
   .article-review {
     padding: 30px;
   }
@@ -1204,7 +1212,9 @@ ol {
     margin-bottom: 0;
     text-align: center;
   }
-
+  .container-buy-book-right {
+    padding: 30px;
+  }
   /* Fin estilos  del carrito */
 }
 
@@ -1369,12 +1379,13 @@ ol {
     font-size: 14px;
   }
   .item_product img {
-    width: 85%;
+    width: 50%;
   }
-  .btn-car-product {
-    width: 85% !important;
+
+  .btn-orange {
+    display: block;
+    width: 175px;
     margin: auto;
-    align-items: center;
   }
 
   .item_product p {
@@ -1413,6 +1424,10 @@ ol {
   }
   .car-completed h6 {
     font-size: 13px !important;
+  }
+  .container-top {
+    padding: 0px;
+    height: 200px;
   }
   /* Fin estilos carrito */
 }
