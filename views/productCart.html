@@ -178,23 +178,33 @@
         </div>
         <div class="container-bottom">
           <h4>Agregar cupón:</h4>
-          <div>
-            <input type="text" name="" id="" placeholder="Escribir cupón">
-            <button>Validar</button>
+          <div class="content-coupon">
+            <input type="text" name="coupon" class="input-coupon" placeholder="Escribir cupón">
+            <div class="btn-validate">
+              <a href="#">
+                <span>Validar</span>
+              </a>
+            </div>
           </div>
-          <div>
-            <h5>Subtotal</h5>
-            <p>$85.800</p>
-            <h5>Envío</h5>
-            <p>$7.000</p>
-            <h5>Descuentos</h5>
-            <p>$0</p>
+          <div class="content-total">
+            <div class="content-sum">
+              <h5>Subtotal:</h5>
+              <p>$85.800</p>
+            </div>
+            <div class="content-sum">
+              <h5>Envío:</h5>
+              <p>$7.000</p>
+            </div>
+            <div class="content-sum">
+              <h5>Descuentos:</h5>
+              <p>$0</p>
+            </div>
           </div>
-          <div>
-            <h5>Total a pagar</h5>
+          <div class="total-buy">
+            <h5>Total a pagar:</h5>
             <p>$92.800</p>
           </div>
-          <div>
+          <div class="info-card">
             <h5>Pagar con</h5>
             <p>Tc Visa XX9665</p>
           </div>
@@ -204,8 +214,10 @@
               <i class="fas fa-credit-card"></i>
             </div>
           </div>
-          <div>
-            <span>Pagar/Confirmar</span>
+          <div class="btn-payment">
+            <a href="#">
+              <span>Pagar/Confirmar</span>
+            </a>
           </div>
         </div>
       </div>

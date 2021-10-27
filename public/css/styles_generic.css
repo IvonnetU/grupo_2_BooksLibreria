@@ -746,7 +746,7 @@ ol {
 }
 .container-buy-book-right {
   background-color: #fff;
-  border-top: 1px solid #183837;
+  border: 1px solid #183837;
   border-radius: 15px;
   padding: 10px;
 }
@@ -822,6 +822,62 @@ ol {
   display: flex;
   margin-bottom: 36px;
   align-items: center;
+}
+.content-sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+.total-buy {
+  display: flex;
+  justify-content: flex-end;
+}
+.info-card {
+  margin: 10px 0;
+}
+.total-buy h5 {
+  margin-right: 5px;
+}
+.btn-payment {
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #e86621;
+  color: #fff;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.btn-payment:hover,
+.btn-validate:hover {
+  background-color: #fff;
+  color: #e86621;
+}
+.btn-payment a,
+.btn-validate a {
+  color: #fff;
+}
+.content-coupon {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 15px;
+}
+.input-coupon {
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 1px #dadada;
+  font-size: 12px;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
+}
+.btn-validate {
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #e86621;
+  color: #fff;
+  cursor: pointer;
 }
 /* Fin estilos carrito */
 
@@ -1116,7 +1172,7 @@ ol {
     width: 30%;
   }
   .btn-car {
-    width: 22%;
+    width: auto;
     justify-content: space-between;
     padding-left: 2px;
   }
@@ -1214,6 +1270,18 @@ ol {
   }
   .container-buy-book-right {
     padding: 30px;
+  }
+  .content-coupon {
+    justify-content: flex-start;
+  }
+  .input-coupon {
+    margin-right: 10px;
+  }
+  .total-buy h5 {
+    margin-right: 30px;
+  }
+  .btn-payment {
+    width: 35%;
   }
   /* Fin estilos  del carrito */
 }
@@ -1365,7 +1433,7 @@ ol {
     width: 33%;
   }
   .btn-car {
-    width: auto;
+    width: auto !important;
     position: absolute;
     padding: 5px;
   }
@@ -1428,6 +1496,12 @@ ol {
   .container-top {
     padding: 0px;
     height: 200px;
+  }
+  .btn-payment {
+    width: auto;
+  }
+  .content-btn-car {
+    margin: 44px 0;
   }
   /* Fin estilos carrito */
 }
