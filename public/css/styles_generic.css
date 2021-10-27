@@ -1102,7 +1102,11 @@ ol {
 .btn-payment:hover,
 .btn-validate:hover {
   background-color: #fff;
-  color: #e86621;
+  border: solid 1px #e86621;
+}
+.btn-payment:hover a,
+.btn-validate:hover a {
+  color: #e86621 !important;
 }
 .btn-payment a,
 .btn-validate a {
