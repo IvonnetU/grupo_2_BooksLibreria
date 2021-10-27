@@ -480,6 +480,101 @@ ol {
 
 /* Fin estilos Inicio */
 
+/* Inicio estilos login*/
+.body-login {
+  height: 100%;
+  background-image: url(../images/background_login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 15px;
+  width: auto;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.image-logo {
+  margin: auto;
+}
+
+.btn-login-in {
+  width: auto;
+  margin: 10px auto;
+  padding-right: 10px;
+}
+
+.login-box h1 {
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.checkbox-password {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #888888;
+  padding-bottom: 10px;
+}
+.checkbox-password h5 a,
+.content-register h5 a {
+  color: #14070f;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.content-register h5 {
+  text-align: center;
+}
+.checkbox-password h5 a:hover,
+.content-register h5 a:hover {
+  color: #e86621;
+}
+.input-login {
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  margin: 10px 0;
+  border: none;
+}
+.social-media-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.social-media-login a {
+  margin: 0 10px;
+}
+.section-footer-bottom {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+}
+.social-media-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-footer a {
+  margin: 5px;
+}
+/* Fin estilos login*/
 /* Inicio estilos detalle del producto */
 .breadcrumb {
   margin-top: 75px;
@@ -1151,6 +1246,18 @@ ol {
     }
   }
   /* Fin estilos Inicio */
+  /* Inicio Estilos login */
+  .login-box {
+    width: 55%;
+    margin: 10px auto;
+  }
+  .btn-login-in {
+    padding-right: 20px;
+  }
+  .btn-login-in i {
+    margin-right: 10px;
+  }
+  /* Fin estilos login */
   /* Inicio estilos detalle del producto */
   .breadcrumb {
     margin-top: 160px;
@@ -1387,6 +1494,17 @@ ol {
     font-size: 14px !important;
   }
   /* Fin estilos Inicio */
+
+  /* Inicio estilos login */
+  .login-box {
+    width: 35%;
+  }
+  .btn-login-in {
+    width: auto !important;
+    margin: 10px auto !important;
+  }
+
+  /* Fin estilos login */
   /* Inicio estilos detalle del producto */
   .breadcrumb ul {
     font-size: 14px;
