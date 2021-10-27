@@ -25,11 +25,28 @@ ol {
 }
 
 /*styles login*/
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
 .body_login {
   background: url(../images/background_login.jpg) no-repeat center top;
   background-size: cover;
-  height: 100vh;
-  align-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+
+.login-box-encabezado {
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-box {
@@ -48,6 +65,38 @@ ol {
   font-size: 18px;
   display: flex;
   flex-direction: column;
+}
+
+a.password_rec {
+  margin: auto;
+  font-size: 9px;
+  color: #000000;
+  position: relative;
+  /* left: 10%; */
+  display: flex;
+  justify-content: flex-start;
+  width: 85%;
+}
+
+.btn_circle_login {
+  padding: 10px;
+  border: solid #e86621 1px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #e86621 !important;
+  cursor: pointer;
+  transition: all 400ms ease-out;
+}
+
+.btn_circle_login:hover {
+  background-color: #e86621;
+  color: #fff !important;
+  transition: all 400ms ease-out;
 }
 
 .login-box .books {
@@ -87,27 +136,30 @@ ol {
 
 .login-box .boton_ingresar {
   position: relative;
-  left: 25%;
-  width: 45%;
+  display: flex;
+  justify-content: center;
+  width: 120px;
   height: 28px;
   margin-bottom: 15px;
-  padding-left: 30px;
   font-size: 12px;
   background: transparent;
   color: #000000;
   opacity: 0.7;
   border-color: #e86621;
   border-radius: 25px;
-  display: block;
   font-weight: bold;
   text-align: center;
 }
 
-.password_rec {
-  font-size: 9px;
-  color: #000000;
+.social-media_login_01 {
   position: relative;
-  left: -50px;
+  display: flex;
+  margin: auto;
+  padding-top: -5px;
+  justify-content: space-between;
+  width: 35%;
+  height: 35%;
+  flex-direction: row;
 }
 
 .login-box .a {
@@ -129,13 +181,6 @@ ol {
   width: 85%;
 }
 
-.social-media_login_01 {
-  display: flex;
-  margin: auto;
-  padding-top: -5px;
-  justify-content: space-between;
-  width: 33%;
-}
 
 .login-box02 {
   position: relative;
@@ -143,31 +188,24 @@ ol {
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
-  height: 70px;
+  height: 17%;
   background: #ffffff;
   color: #000000;
   opacity: 0.8;
   text-align: center;
   font-size: 12px;
-  margin-top: 0px;
-  top: 110px;
+  margin-top: 85px;
   left: 0;
 }
 
-.login-box02 h5 {
-  margin-bottom: 10px;
-  margin-top: -15px;
-  padding-bottom: 20px;
-}
 
 .social-media_login_02 {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-top: -25px;
-  width: 40%;
+  width: 35%;
   font-size: 14px;
   padding-bottom: 10px;
   font-weight: bold;
@@ -467,25 +505,13 @@ label#t-and-c {
 
   .login-box .boton_ingresar {
     display: flex;
-    width: 32%;
+    width: 120px;
     margin-top: 10px;
     display: flex;
     align-self: flex-start;
     left: 33%;
   }
 
-
-.social-media_login_02 {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 31px;
-  width: 26%;
-  font-size: 14px;
-  padding-bottom: 20px;
-  font-weight: bold;
-  left: 40%;
-}
 
 .login-box02 h5 {
   position: absolute;
@@ -500,6 +526,18 @@ label#t-and-c {
 .login-box02 {
   display: flex;
   align-self: flex-start;
+}
+
+.social-media_login_02 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 20%;
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
 /* aca voy */
@@ -589,11 +627,6 @@ div#container-t-and-c {
 
   .login-box02 h5 {
     left: 44%;
-  }
-
-  .social-media_login_02 {
-    padding-bottom: 0px;
-    align-items: center;
   }
 
   .login-box .a {
