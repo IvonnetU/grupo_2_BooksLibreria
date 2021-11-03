@@ -1,0 +1,335 @@
+<%- include('../partials/head')%>
+
+  <body>
+    <header class="main-header">
+      <div class="main-header-top-bar">
+        <div class="content-social-media">
+          <h5>Síguenos:</h5>
+          <a class="btn_circle"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn_circle"><i class="fab fa-instagram"></i></a>
+          <a class="btn_circle"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="content-search">
+          <input type="search" id="gsearch" name="gsearch" placeholder="Buscar...">
+          <span><i class="fas fa-search"></i></span>
+        </div>
+        <div class="button">
+          <i class="far fa-user"></i>
+          <a href="/login">
+            Iniciar Sesión
+          </a>
+        </div>
+        <a href="#" class="hamburguer-button">
+          <i class="fas fa-bars"></i>
+        </a>
+      </div>
+      <div class="main-header-bottom-bar">
+        <a href="/" class="logo">
+          <img src=".././images/Logo_BooksLibreria.png" alt="logo_books" title="logo_books">
+        </a>
+        <nav class="main-navbar">
+          <ul class="list-menu">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Bonos</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li>
+              <a href="/carrito" class="btn_circle">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="breadcrumb">
+      <ul>
+        <li>Inicio</li>
+        <li>/</li>
+        <li class="active_book">Carrito</li>
+      </ul>
+    </section>
+    <section class="section_car_payment">
+      <h2 class="title_one_line"><span>CARRITO</span>DE COMPRAS</h2>
+      <div class="car-completed">
+        <div class="container-buy-book-left">
+          <div class="title_tablet">
+            <h4>Artículos</h4>
+            <h4>Cantidad</h4>
+            <h4>Precio</h4>
+          </div>
+          <h4 class="title_mobile">Artículos</h4>
+          <div class="content-shopping">
+            <article class="article_book_buy">
+              <div class="delete_and_image">
+                <div class="icon-delete">
+                  <a href="#">
+                    <i class="fas fa-trash-alt"></i>
+                    <p>Eliminar</p>
+                  </a>
+                </div>
+                <img src="../images/image_car_infierno.jpg" alt="El quinto infierno" title="El quinto infierno">
+              </div>
+              <div class="info_article_book">
+                <h5>El Quinto Infierno</h5>
+                <div>
+                  <h6>Autor:</h6>
+                  <p>Nombre del autor</p>
+                </div>
+                <div>
+                  <h6>SKU:</h6>
+                  <p>97884417144152</p>
+                </div>
+                <div>
+                  <h6>Editorial:</h6>
+                  <p>Nombre de la editorial</p>
+                </div>
+                <div>
+                  <h6>Tipo:</h6>
+                  <p>Libro - Pasta Dura - 266pág</p>
+                </div>
+              </div>
+            </article>
+            <h4 class="title_mobile">Cantidad</h4>
+            <div class="quantity mt-0">
+              <input type="number" step="1" min="1" max="218" name="quantity" value="1" title="Cantidad" size="4"
+                inputmode="numeric">
+            </div>
+            <h4 class="title_mobile">Precio</h4>
+            <div class="container-price">
+              <h3>$50.000</h3>
+            </div>
+          </div>
+          <div class="content-shopping">
+            <article class="article_book_buy">
+              <div class="delete_and_image">
+                <div class="icon-delete">
+                  <a href="#">
+                    <i class="fas fa-trash-alt"></i>
+                    <p>Eliminar</p>
+                  </a>
+                </div>
+                <img src="../images/image_car_infierno.jpg" alt="El quinto infierno" title="El quinto infierno">
+              </div>
+              <div class="info_article_book">
+                <h5>Bajo la misma estrella</h5>
+                <div>
+                  <h6>Autor:</h6>
+                  <p>Nombre del autor</p>
+                </div>
+                <div>
+                  <h6>SKU:</h6>
+                  <p>97884417144152</p>
+                </div>
+                <div>
+                  <h6>Editorial:</h6>
+                  <p>Nombre de la editorial</p>
+                </div>
+                <div>
+                  <h6>Tipo:</h6>
+                  <p>Libro - Pasta Dura - 266pág</p>
+                </div>
+              </div>
+            </article>
+            <h4 class="title_mobile">Cantidad</h4>
+            <div class="quantity mt-0">
+              <input type="number" step="1" min="1" max="218" name="quantity" value="1" title="Cantidad" size="4"
+                inputmode="numeric">
+            </div>
+            <h4 class="title_mobile">Precio</h4>
+            <div class="container-price">
+              <h3>$35.800</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container-buy-book-right">
+          <div class="container-top">
+            <h3>Enviar a:</h3>
+            <div class="info-address">
+              <p>Dirección residencia</p>
+              <p>Ciudad-País</p>
+              <p>Código postal</p>
+            </div>
+            <div class="content-receive">
+              <h4>Recibe:</h4>
+              <p>Nombre cliente</p>
+            </div>
+            <div class="content-btn-car">
+              <div class="btn-orange btn-car">
+                <span>Editar dirección</span>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="container-bottom">
+            <h4>Agregar cupón:</h4>
+            <div class="content-coupon">
+              <input type="text" name="coupon" class="input-coupon" placeholder="Escribir cupón">
+              <div class="btn-validate">
+                <a href="#">
+                  <span>Validar</span>
+                </a>
+              </div>
+            </div>
+            <div class="content-total">
+              <div class="content-sum">
+                <h5>Subtotal:</h5>
+                <p>$85.800</p>
+              </div>
+              <div class="content-sum">
+                <h5>Envío:</h5>
+                <p>$7.000</p>
+              </div>
+              <div class="content-sum">
+                <h5>Descuentos:</h5>
+                <p>$0</p>
+              </div>
+            </div>
+            <div class="total-buy">
+              <h5>Total a pagar:</h5>
+              <p>$92.800</p>
+            </div>
+            <div class="info-card">
+              <h5>Pagar con</h5>
+              <p>Tc Visa XX9665</p>
+            </div>
+            <div class="content-btn-car">
+              <div class="btn-orange btn-car">
+                <span>Cambiar método de pago</span>
+                <i class="fas fa-credit-card"></i>
+              </div>
+            </div>
+            <div class="btn-payment">
+              <a href="#">
+                <span>Pagar/Confirmar</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="content-gift">
+      <div class="data-container_gift">
+        <div class="container-checkbox">
+          <input type="checkbox" name="" id="">
+          <div class="items-checkbox">
+            <p><span>¿Deseas empacarlo como regalo?</span></p>
+            <p>Puedes agregar remitente o destinatario</p>
+          </div>
+        </div>
+        <input type="text" name="" class="input-gift" id="" placeholder="¿Quién lo envía?">
+        <input type="text" name="" class="input-gift" id="" placeholder="¿Quién lo recibe?">
+      </div>
+      <div class="payment_method payment-cart">
+        <h5>Métodos de pago</h5>
+        <div class="images-payment">
+          <img src="../images/logo_pse.png" alt="pse" title="pse">
+          <img src="../images/logo_paypal.png" alt="paypal" title="paypal">
+        </div>
+      </div>
+      <p class="note-payment">Los tiempos de despacho pueden presentar retrasos debito a temas de orden público que se
+        presentan en algunas
+        ciudades
+        del país y a la emergencia sanitaria.</p>
+    </section>
+    <section class="related-products">
+      <h2 class="title_one_line"><span>TE PUEDE</span>INTERESAR</h2>
+      <div class="products">
+        <a href="#" class="item_product">
+          <article>
+            <h5>Pez Superventa 20xx</h5>
+            <p>$85.200</p>
+            <img src="../images/product_pez.png" alt="libro pez" title="libro pez">
+            <div class="btn-orange btn-car-product">
+              <i class="fas fa-cart-plus"></i>
+              <span>Añadir al carrito</span>
+            </div>
+          </article>
+        </a>
+        <a href="#" class="item_product">
+          <article>
+            <h5>El quinto infierno</h5>
+            <p>$50.000</p>
+            <img src="../images/product_infierno.png" alt="El quinto infierno" title="El quinto infierno">
+            <div class="btn-orange btn-car-product">
+              <i class="fas fa-cart-plus"></i>
+              <span>Añadir al carrito</span>
+            </div>
+          </article>
+        </a>
+        <a href="#" class="item_product">
+          <article>
+            <h5>Bajo la misma</h5>
+            <p>$35.800</p>
+            <img src="../images/product_bajo_la_misma_estrella.png" alt="Bajo la misma estrella"
+              title="Bajo la misma estrella">
+            <div class="btn-orange btn-car-product">
+              <i class="fas fa-cart-plus"></i>
+              <span>Añadir al carrito</span>
+            </div>
+          </article>
+        </a>
+        <a href="#" class="item_product">
+          <article>
+            <h5>Tu mundo y El Mio</h5>
+            <p>$54.000</p>
+            <img src="../images/product_tu_mundo_en_el_mio.png" alt="Tu mundo en el mio" title="Tu mundo en el mio">
+            <div class="btn-orange btn-car-product">
+              <i class="fas fa-cart-plus"></i>
+              <span>Añadir al carrito</span>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="container-footer">
+          <div class="important_information">
+            <h5>Información importante</h5>
+            <ul>
+              <li>Calle 0 No. 75 B 28</li>
+              <li>Ciudad - Colombia</li>
+              <li>
+                <h6>Horario de atención:</h6>
+              </li>
+              <li>Lunes a Viernes: 8:30am a 6:00pm</li>
+              <li>Sábado: 9:00am - 5:00pm</li>
+            </ul>
+          </div>
+          <div class="we">
+            <h5>Nosotros</h5>
+            <ul>
+              <li><a href="#">Quiénes somos</a></li>
+              <li><a href="#">Sedes</a></li>
+              <li><a href="#">Regala un bono</a></li>
+            </ul>
+          </div>
+          <div class="we">
+            <h5>Centro de ayuda</h5>
+            <ul>
+              <li><a href="#">PQRS</a></li>
+              <li><a href="#">Preguntas Frecuentes</a></li>
+              <li><a href="#">Políticas tratamiento de datos</a></li>
+              <li><a href="#">Políticas para cambio de mercancía</a></li>
+              <li><a href="#">Reversiones</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="payment_method">
+          <h5>Métodos de pago</h5>
+          <div>
+            <img src="../images/logo_pse.png" alt="pse" title="pse">
+            <img src="../images/logo_paypal.png" alt="paypal" title="paypal">
+          </div>
+        </div>
+
+      </div>
+      <div class="container-green">
+        <p>Copyright © 2021 - Libreria Books | Todos los derechos reservados</p>
+      </div>
+    </footer>
+  </body>
+
+  </html>

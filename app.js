@@ -7,25 +7,24 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+// Rutas
+const routesMain = require('./routers/mainRouters.js');
+const routesProduct = require('./routers/productRouters.js');
+
+// Invocar template engine EJS
+app.set('view engine','ejs');
+
 // Asignando el servidor
 app.listen(3030, () => {
     console.log("Servidor ejecutandose en el puerto 3030");
 });
 
 // Declarando la ruta del archivo inicio
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
-});
+app.use('/', routesMain);
 
-// Declarando la ruta del archivo detalle del producto
-app.get('/detalle-producto', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
-});
+// Declarando la ruta del archivo detalle del producto y carrito de compras
+app.use('/productos', routesProduct);
 
-// Declarando la ruta del archivo carrito de compras
-app.get('/carrito', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productCart.html'));
-});
 
 // Declarando la ruta del archivo registro
 app.get('/registro', (req, res) => {

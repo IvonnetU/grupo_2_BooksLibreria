@@ -1772,9 +1772,8 @@ ol {
     font-size: 15px;
   }
   .btn-car-product {
-    width: 60%;
-    display: flex;
-    justify-content: start;
+    width: auto;
+    display: table;
     margin: auto;
   }
   /* Fin estilos detalle del producto */
@@ -1799,7 +1798,7 @@ ol {
   }
   .container-top {
     padding: 0px;
-    height: 200px;
+    height: 220px;
   }
   .btn-payment {
     width: auto;

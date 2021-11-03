@@ -17,13 +17,14 @@
     "Node",
     "Express"
   ],
-  "author": "Kate, Ivonne, Ana",
+  "author": "Kate, Ivonne",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/IvonnetU/grupo_2_BooksLibreria/issues"
   },
   "homepage": "https://github.com/IvonnetU/grupo_2_BooksLibreria#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
