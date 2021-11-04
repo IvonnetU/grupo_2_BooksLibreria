@@ -14,6 +14,9 @@ let productController = {
   car: (req, res) => {
     return res.render('./products/productCart');
   },
+  list: (req, res) => {
+    return res.render('./products/productList');
+  },
 }
 
 module.exports = productController;

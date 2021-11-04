@@ -1136,6 +1136,25 @@ ol {
 }
 /* Fin estilos carrito */
 
+/* Inicio estilos lista de productos */
+.content-filter {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
+}
+
+.content-filter hr,
+.content-filter h3,
+.content-filter h2 {
+  margin: 10px 0;
+  color: #14070f;
+}
+/* Fin estilos lista de productos */
+
 @media (min-width: 768px) {
   /* Estilos Inicio */
   .main-header {
