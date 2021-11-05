@@ -1137,7 +1137,8 @@ ol {
 /* Fin estilos carrito */
 
 /* Inicio estilos lista de productos */
-.content-filter {
+.content-filter,
+.article-product-list {
   background-color: #fff;
   padding: 20px;
   margin: 10px;
@@ -1147,11 +1148,38 @@ ol {
   -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
 }
 
+.article-product-list {
+  width: 80%;
+  margin: 20px auto;
+}
 .content-filter hr,
 .content-filter h3,
 .content-filter h2 {
   margin: 10px 0;
   color: #14070f;
+}
+
+.article-product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content-btn-list-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-btn-list-product a {
+  margin: 0 5px;
+}
+.article-product-list h5 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.article-product-list p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 /* Fin estilos lista de productos */
 
