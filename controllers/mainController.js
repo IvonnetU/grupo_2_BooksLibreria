@@ -11,6 +11,12 @@ let mainController = {
   index: function(req,res){
     return res.render('./main/index');
   },
+  login: function(req,res){
+    return res.render('./main/login');
+  },
+  register: function(req,res){
+    return res.render('./main/register');
+  },
 }
 
 module.exports = mainController;

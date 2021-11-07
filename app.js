@@ -25,14 +25,10 @@ app.use('/', routesMain);
 // Declarando la ruta del archivo detalle del producto y carrito de compras
 app.use('/productos', routesProduct);
 
-
 // Declarando la ruta del archivo registro
-app.get('/registro', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
-});
+app.use('/register', routesMain);
 
 // Declarando la ruta del archivo login
-app.get('/login', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/login.html'));
-});
+app.use('/login', routesMain);
+
 
