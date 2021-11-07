@@ -1,48 +1,7 @@
 <%- include('../partials/head')%>
 
   <body>
-    <header class="main-header">
-      <div class="main-header-top-bar">
-        <div class="content-social-media">
-          <h5>Síguenos:</h5>
-          <a class="btn_circle"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn_circle"><i class="fab fa-instagram"></i></a>
-          <a class="btn_circle"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <div class="content-search">
-          <input type="search" id="gsearch" name="gsearch" placeholder="Buscar...">
-          <span><i class="fas fa-search"></i></span>
-        </div>
-        <div class="button">
-          <i class="far fa-user"></i>
-          <a href="/login">
-            Iniciar Sesión
-          </a>
-        </div>
-        <a href="#" class="hamburguer-button">
-          <i class="fas fa-bars"></i>
-        </a>
-      </div>
-      <div class="main-header-bottom-bar">
-        <a href="/" class="logo">
-          <img src=".././images/Logo_BooksLibreria.png" alt="logo_books" title="logo_books">
-        </a>
-        <nav class="main-navbar">
-          <ul class="list-menu">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/productos">Tienda</a></li>
-            <li><a href="#">Promociones</a></li>
-            <li><a href="#">Bonos</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li>
-              <a href="./productos/carrito" class="btn_circle">
-                <i class="fas fa-shopping-cart"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%- include('../partials/header')%>
     <div class="banners">
     </div>
     <section class="section-news">
@@ -224,53 +183,7 @@
         </form>
       </div>
     </section>
-    <footer>
-      <div class="footer">
-        <div class="container-footer">
-          <div class="important_information">
-            <h5>Información importante</h5>
-            <ul>
-              <li>Calle 0 No. 75 B 28</li>
-              <li>Ciudad - Colombia</li>
-              <li>
-                <h6>Horario de atención:</h6>
-              </li>
-              <li>Lunes a Viernes: 8:30am a 6:00pm</li>
-              <li>Sábado: 9:00am - 5:00pm</li>
-            </ul>
-          </div>
-          <div class="we">
-            <h5>Nosotros</h5>
-            <ul>
-              <li><a href="#">Quiénes somos</a></li>
-              <li><a href="#">Sedes</a></li>
-              <li><a href="#">Regala un bono</a></li>
-            </ul>
-          </div>
-          <div class="we">
-            <h5>Centro de ayuda</h5>
-            <ul>
-              <li><a href="#">PQRS</a></li>
-              <li><a href="#">Preguntas Frecuentes</a></li>
-              <li><a href="#">Políticas tratamiento de datos</a></li>
-              <li><a href="#">Políticas para cambio de mercancía</a></li>
-              <li><a href="#">Reversiones</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="payment_method">
-          <h5>Métodos de pago</h5>
-          <div>
-            <img src="../images/logo_pse.png" alt="pse" title="pse">
-            <img src="../images/logo_paypal.png" alt="paypal" title="paypal">
-          </div>
-        </div>
-
-      </div>
-      <div class="container-green">
-        <p>Copyright © 2021 - Libreria Books | Todos los derechos reservados</p>
-      </div>
-    </footer>
+   <%- include('../partials/footer')%>
   </body>
 
   </html>
