@@ -30,8 +30,6 @@ Nació en Colombia, tiene 24 años, actualmente se encuentra cursando el 8° sem
 
 De Colombia 39 años, mami de un peque de 7, fanática del café, apasionada 🤩 de la literatura romántica con un toque de comedia y erotismo, matemática con 15 años de experiencia en educación, sin experiencia en programación pero con muchísimas!!! ganas de aprender.
 
-### Ana Vargas 👩‍🎓
-
 ## 📜 Tablero de Trello:
 
 https://trello.com/b/vuDHztOz/cronograma-sprints

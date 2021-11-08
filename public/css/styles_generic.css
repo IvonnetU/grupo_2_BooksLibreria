@@ -591,6 +591,7 @@ ol {
   justify-content: center;
   align-items: center;
   margin: 20px 0 5px;
+  
 }
 .content-register-form p {
   text-align: center;
@@ -598,22 +599,33 @@ ol {
   font-weight: 400;
   color: #14070f;
 }
+
+.section-left-register h5 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
 .section-left-register h1 {
   text-align: center;
   color: #e86621;
+  margin-top: 25px;
 }
 
 .info {
   padding: 5px;
   border-radius: 15px;
   border: solid 1px #e86621;
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 12px;
-  width: 100%;
+  width: 87%;
+  height: 35px;
+  align-content: center;
 }
 
 .content-info-register {
-  width: 90%;
+  width: 85%;
+  text-align: center;
 }
 
 .asterisk_input:after {
@@ -636,6 +648,8 @@ ol {
 .polity label a {
   color: #e86621;
   font-weight: bold;
+  
+  
 }
 
 .btn-register {
@@ -1490,6 +1504,10 @@ ol {
   .section-left-register {
     padding: 20px;
   }
+
+  .info {
+    width: 100%;
+  }
   /* Fin estilos registro */
   /* Inicio estilos detalle del producto */
   .breadcrumb {
@@ -1767,8 +1785,13 @@ ol {
   /* Fin estilos login */
   /* Inicio estilos registro */
   .section-left-register {
-    padding: 70px;
+    padding: 55px;
   }
+
+  .info{
+  height: 40px; ;
+  }
+
   .required {
     font-size: 12px !important;
   }

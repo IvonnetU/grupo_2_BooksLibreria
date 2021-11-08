@@ -9,10 +9,10 @@ app.use(express.static(publicPath));
 
 let usersController = {
   
-  log: function(req,res){
+  login: function(req,res){
     return res.render('./users/login');
   },
-  regis: function(req,res){
+  register: function(req,res){
     return res.render('./users/register');
   },
 }
