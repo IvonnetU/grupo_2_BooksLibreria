@@ -7,10 +7,14 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-let mainController = {
-  index: function(req,res){
-    return res.render('./main/index');
+let usersController = {
+  
+  log: function(req,res){
+    return res.render('./users/login');
+  },
+  regis: function(req,res){
+    return res.render('./users/register');
   },
 }
 
-module.exports = mainController;
+module.exports = usersController;

@@ -10,6 +10,7 @@ app.use(express.static(publicPath));
 // Rutas
 const routesMain = require('./routers/mainRouters.js');
 const routesProduct = require('./routers/productRouters.js');
+const routesUsers = require('./routers/usersRouters.js');
 
 // Invocar template engine EJS
 app.set('view engine','ejs');
@@ -25,10 +26,10 @@ app.use('/', routesMain);
 // Declarando la ruta del archivo detalle del producto y carrito de compras
 app.use('/productos', routesProduct);
 
-// Declarando la ruta del archivo registro
-app.use('/register', routesMain);
+// Declarando la ruta del archivo registro1 
+app.use('/register', routesUsers);
 
 // Declarando la ruta del archivo login
-app.use('/login', routesMain);
+app.use('/login', routesUsers);
 
 
