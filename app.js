@@ -11,6 +11,7 @@ app.use(express.static(publicPath));
 const routesMain = require('./routers/mainRouters.js');
 const routesProduct = require('./routers/productRouters.js');
 const routesUsers = require('./routers/usersRouters.js');
+const routesAdmin = require('./routers/adminRouters.js');
 
 // Invocar template engine EJS
 app.set('view engine','ejs');
@@ -32,4 +33,5 @@ app.use('/register', routesUsers);
 // Declarando la ruta del archivo login
 app.use('/login', routesUsers);
 
-
+// Declarando la ruta del archivo login
+app.use('/admin', routesAdmin);
