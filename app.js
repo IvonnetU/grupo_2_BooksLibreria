@@ -28,10 +28,9 @@ app.use('/', routesMain);
 app.use('/productos', routesProduct);
 
 // Declarando la ruta del archivo registro1 
-app.use('/register', routesUsers);
+app.use('/usuario', routesUsers);
 
-// Declarando la ruta del archivo login
-app.use('/login', routesUsers);
+
 
 // Declarando la ruta del archivo login
 app.use('/admin', routesAdmin);
