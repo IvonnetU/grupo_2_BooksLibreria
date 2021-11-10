@@ -46,16 +46,30 @@
 
 ###### Kate Castaño:
 
+- Weekly semana2.
+- Creación pagina de crud de productos (admin).
+
 ###### Ivonne Torres:
+
+- Weekly semana2.
+- Crear y colocar a cada vista archivos parciales.
 
 ## 🛑 Impedimentos:
 
 ###### Kate Castaño:
 
+- Tiempo de diseño para las nuevas páginas. Pero fue solucionado
+
 ###### Ivonne Torres:
+
+- Diferentes rutas en un mismo router. Pero fue solucionado y aclarado con el equipo.
 
 ## ⏳ Que se hará esta semana:
 
 ###### Kate Castaño:
 
+- Se acaba el sprint no aplica mas actividades.
+
 ###### Ivonne Torres:
+
+- Se acaba el sprint no aplica mas actividades.
