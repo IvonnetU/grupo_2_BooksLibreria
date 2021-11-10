@@ -498,9 +498,6 @@ ol {
   justify-content: center;
   flex-direction: column;
 }
-.image-logo {
-  margin: auto;
-}
 
 .btn-login-in {
   width: auto;
@@ -591,7 +588,6 @@ ol {
   justify-content: center;
   align-items: center;
   margin: 20px 0 5px;
-  
 }
 .content-register-form p {
   text-align: center;
@@ -648,8 +644,6 @@ ol {
 .polity label a {
   color: #e86621;
   font-weight: bold;
-  
-  
 }
 
 .btn-register {
@@ -1207,6 +1201,68 @@ ol {
 }
 /* Fin estilos lista de productos */
 
+/* Inicio estilos Manejo de productos */
+.body-manage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.section-btn-add-manage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.btn-add {
+  width: auto;
+  background-color: #fff;
+  font-size: 11px;
+  padding: 4px 4px;
+  border: solid 1px #e86621;
+  border-radius: 20px;
+  color: #14070f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+.btn-add i {
+  width: 30px;
+  height: 30px;
+  padding: 9px;
+  background-color: #e86621;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+}
+.section-list-products-manage {
+  margin-top: 30px;
+}
+
+.section-list-products-manage article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image-book-manage {
+  width: 20%;
+}
+
+.image-book-manage img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-action a {
+  margin: 0 2px;
+}
+/* Fin estilos Manejo de productos */
+
 @media (min-width: 768px) {
   /* Estilos Inicio */
   .main-header {
@@ -1667,6 +1723,30 @@ ol {
     font-size: 16px;
   }
   /* Fin estilos lista de productos */
+  /* Inicio estilo manejo productos */
+  .section-list-products-manage article {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .section-list-products-manage article h5 {
+    font-size: 20px;
+  }
+  .image-book-manage {
+    width: 75%;
+  }
+  .section-list-products-manage article .btn_circle {
+    width: 50px;
+    height: 50px;
+  }
+  .section-list-products-manage article .btn_circle i {
+    font-size: 20px;
+  }
+  .btn-add {
+    font-size: 15px;
+  }
+  /* Fin estilo manejo productos */
 }
 
 @media (min-width: 1200px) {
@@ -1788,8 +1868,8 @@ ol {
     padding: 55px;
   }
 
-  .info{
-  height: 40px; ;
+  .info {
+    height: 40px;
   }
 
   .required {
@@ -1929,4 +2009,9 @@ ol {
     font-size: 16px;
   }
   /* Fin estilos lista de productos */
+  /* Inicio estilo manejo productos */
+  .section-list-products-manage article {
+    grid-template-columns: 15% 70% 11% !important;
+  }
+  /* Fin estilo manejo productos */
 }
