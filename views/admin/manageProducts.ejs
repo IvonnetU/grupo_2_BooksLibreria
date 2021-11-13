@@ -1,78 +1,83 @@
-<%- include('../partials/head')%>
+<%- include('../partials/head-admin')%>
 
-  <body class="body-manage">
-    <section class="image-logo">
-      <a href="/">
-        <img class="books" src='../../images/Logo_BooksLibreria.png' alt="logo Books librería"
-          title="logo Books librería">
-      </a>
-    </section>
-    <section class="section-btn-add-manage">
-      <a href="#" class="btn-add">
-        <i class="fas fa-plus"></i>
-        <span>Agregar nuevo</span>
-      </a>
-    </section>
-    <section class="section-list-products-manage">
-      <article>
-        <div class="image-book-manage">
-          <img src="../../images/libro_pez.jpg" alt="libro_pez" title="libro_pez" />
-        </div>
-        <h5>Pez Superventa 20xx</h5>
-        <div class="content-action">
-          <a href="/" class="btn_circle">
-            <i class="fas fa-edit"></i>
-          </a>
-          <a href="/" class="btn_circle">
-            <i class="fas fa-trash-alt"></i>
-          </a>
-        </div>
-      </article>
-      <article>
-        <div class="image-book-manage">
-          <img src="../../images/libro_tu_mundo_en_el_mio.jpg" alt="libro_tu_mundo_en_el_mio"
-            title="libro_tu_mundo_en_el_mio" />
-        </div>
-        <h5>Tu mundo en el mio</h5>
-        <div class="content-action">
-          <a href="/" class="btn_circle">
-            <i class="fas fa-edit"></i>
-          </a>
-          <a href="/" class="btn_circle">
-            <i class="fas fa-trash-alt"></i>
-          </a>
-        </div>
-      </article>
-      <article>
-        <div class="image-book-manage">
-          <img src="../../images/libro_el_principito.jpg" alt="libro_el_principito" title="libro_el_principito" />
-        </div>
-        <h5>El principito</h5>
-        <div class="content-action">
-          <a href="/" class="btn_circle">
-            <i class="fas fa-edit"></i>
-          </a>
-          <a href="/" class="btn_circle">
-            <i class="fas fa-trash-alt"></i>
-          </a>
-        </div>
-      </article>
-      <article>
-        <div class="image-book-manage">
-          <img src="../../images/libro_bajo_la_misma_estrella.jpg" alt="libro_bajo_la_misma_estrella"
-            title="libro_bajo_la_misma_estrella" />
-        </div>
-        <h5>Bajo la misma estrella</h5>
-        <div class="content-action">
-          <a href="/" class="btn_circle">
-            <i class="fas fa-edit"></i>
-          </a>
-          <a href="/" class="btn_circle">
-            <i class="fas fa-trash-alt"></i>
-          </a>
-        </div>
-      </article>
-    </section>
+  <body class="body-admin">
+    <%- include('../partials/header-admin')%>
+      <section class="section-view-admin">
+        <section class="main-top-bar flex">
+          <div class="button-exit ani">
+            <a href="#">
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Cerrar Sesión</span>
+            </a>
+          </div>
+        </section>
+        <section class="section-title flex">
+          <h1>Productos</h1>
+          <div class="button-add ani">
+            <a href="#">
+              <span>Agregar nuevo</span>
+              <i class="fas fa-plus"></i>
+            </a>
+          </div>
+        </section>
+        <section class="section-filter-admin boxShadow">
+          <div class="row-filter">
+            <div>
+              <label for="sku" class="label-filter">SKU</label>
+              <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico">
+            </div>
+            <div>
+              <label for="name_book" class="label-filter">Nombre del libro</label>
+              <input type="text" name="name_book" class="input-filter" placeholder="Ingresa nombre">
+            </div>
+            <div>
+              <label for="author" class="label-filter">Autor</label>
+              <select name="author" id="author-book" class="input-filter">
+                <option value="0">Selecciona el autor</option>
+                <option value="autor1">Autor 1</option>
+                <option value="autor2">Autor 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="row-filter">
+            <div>
+              <label for="category" class="label-filter">Categoria</label>
+              <select name="category" id="category-book" class="input-filter">
+                <option value="0">Selecciona la Categoria</option>
+                <option value="categoria1">Categoria 1</option>
+                <option value="categoria2">Categoria 2</option>
+              </select>
+            </div>
+            <div>
+              <label for="date-star" class="label-filter">Fecha de creación </label>
+              <input type="date" name="date-star" class="input-filter" placeholder="Desde...">
+            </div>
+            <div>
+              <label for="date-end" class="label-filter">Hasta</label>
+              <input type="date" name="date-end" class="input-filter" placeholder="Hasta...">
+            </div>
+          </div>
+        </section>
+        <section class="list-products-admin">
+          <div class="title-list">
+            <h3 class="disabled">Imagen</h3>
+            <h3>SKU</h3>
+            <h3 class="disabled">Nombre del producto</h3>
+            <h3>Acciones</h3>
+          </div>
+          <section class="title-list">
+            <article class="article-product">
+              <img src="../../images/libro_pez.jpg" alt="libro_pez" title="libro_pez" class="disabled">
+              <h5>95476231086</h5>
+              <h6 class="disabled">Pez - Supervivencia 20xx</h6>
+              <div class="content-actions">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+          </section>
+        </section>
+      </section>
   </body>
 
   </html>
