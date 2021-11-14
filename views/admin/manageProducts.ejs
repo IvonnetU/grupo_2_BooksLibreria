@@ -59,29 +59,44 @@
           </div>
         </section>
         <section class="list-products-admin">
-          <div class="title-list">
-            <h3 class="disabled">Imagen</h3>
-            <h3>SKU</h3>
-            <h3 class="disabled">Nombre del producto</h3>
-            <h3>Acciones</h3>
-          </div>
-          <section class="title-list">
-            <article class="article-product">
-              <img src="../../images/libro_pez.jpg" alt="libro_pez" title="libro_pez" class="disabled">
-              <h5>95476231086</h5>
-              <h6 class="disabled">Pez - Supervivencia 20xx</h6>
-              <div class="content-actions">
-                <button>Editar</button>
-                <button>Eliminar</button>
-              </div>
-            </article>
-          </section>
+          <table class="table-products">
+            <tr>
+              <th class="disabledPc">Imagen</th>
+              <th>SKU</th>
+              <th class="disabled">Nombre del producto</th>
+              <th>Acciones</th>
+            </tr>
+            <% for(let i=0; i < 5; i++) {%>
+              <tr class="article-product-admin">
+                <td class="disabledPc">
+                  <img src="../../images/libro_pez.jpg" alt="libro_pez" title="libro_pez">
+                </td>
+                <td>95476231086</td>
+                <td class="disabled">
+                  Pez - Supervivencia 20xx
+                </td>
+                <td class="td-actions">
+                  <div class="content-actions flexV">
+                    <a href="#" class="btn-edit ani">
+                      <i class="fas fa-edit"></i>
+                      <span>Editar</span>
+                    </a>
+                    <a href="#" class="btn-delete ani">
+                      <i class="fas fa-trash-alt"></i>
+                      <span>Eliminar</span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <% }%>
+
+          </table>
         </section>
       </section>
   </body>
 
-<body>
+  <body>
 
-</body>
+  </body>
 
-</html>
+  </html>

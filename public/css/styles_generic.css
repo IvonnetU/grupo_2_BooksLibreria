@@ -46,11 +46,7 @@ ol {
   -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.78);
 }
 .ani {
-  transition: all 100ms ease-out;
-}
-
-.disabled {
-  display: none;
+  transition: all 400ms ease-out;
 }
 
 /* Estilos menu administrador*/
@@ -93,6 +89,10 @@ ol {
 /* Fin estilos menu administrador*/
 
 /* Estilos view products*/
+.disabled,
+.disabledPc {
+  display: none;
+}
 .main-top-bar {
   padding: 20px;
   border-bottom: solid 2px #dddddd;
@@ -176,11 +176,58 @@ ol {
   font-weight: bold;
   margin: 5px 0 0;
 }
-.title-list,
-.article-product,
-.content-actions {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.table-products {
+  width: 100%;
+  background-color: #b5cfce;
+  border-radius: 15px 15px 0 0;
+  padding: 10px;
+}
+
+.table-products tr th {
+  color: #183837;
+  font-size: 20px;
+}
+.article-product-admin {
+  width: 100%;
+  height: 100%;
+}
+.article-product-admin td {
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.78);
+}
+.btn-delete,
+.btn-edit {
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 85px;
+  cursor: pointer;
+  color: #fff;
+  margin: 0 auto;
+  transition: all 400ms ease-out;
+}
+
+.btn-delete {
+  background-color: #eb1515;
+}
+.btn-edit {
+  background-color: #eba015;
+}
+.btn-delete span,
+.btn-edit span,
+.btn-delete:hover i,
+.btn-edit:hover i {
+  display: none;
+  transition: all 400ms ease-out;
+}
+.btn-delete:hover span,
+.btn-edit:hover span {
+  display: block;
+  transition: all 400ms ease-out;
 }
 /* Fin stilos view products*/
 
@@ -191,7 +238,7 @@ ol {
     grid-template-columns: 1fr 2fr;
   }
   .header-admin {
-    height: 100vh;
+    height: 100%;
   }
   .button-exit a i,
   .button-add a i {
@@ -212,6 +259,9 @@ ol {
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
+  .disabled {
+    display: table-cell;
+  }
 }
 /* Responsive pc */
 @media (min-width: 1200px) {
@@ -221,5 +271,18 @@ ol {
   .row-filter {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+  }
+  .disabledPc {
+    display: table-cell;
+    width: 15%;
+  }
+  .disabledPc img {
+    width: 25%;
+  }
+  .td-actions {
+    width: 20%;
+  }
+  .article-product-admin td {
+    padding: 5px;
   }
 }
