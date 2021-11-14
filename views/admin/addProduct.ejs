@@ -1,0 +1,76 @@
+<%- include('../partials/head-admin')%>
+
+  <body class="body-add">
+    <section class="container-formAdd boxShadow">
+      <h2>Agregar Producto Nuevo</h2>
+      <section class="form-group">
+        <div>
+          <div>
+            <label for="nameBook" class="label-filter">Nombre del libro</label>
+            <input type="text" name="nameBook" class="input-filter" placeholder="Ingresa nombre del libro">
+          </div>
+          <div>
+            <label for="author" class="label-filter">Autor(a)</label>
+            <input type="text" name="author" class="input-filter" placeholder="Ingresa autor(a) de libro">
+          </div>
+          <div>
+            <label for="price" class="label-filter">Precio</label>
+            <input type="text" name="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA">
+          </div>
+          <div>
+            <label for="edit" class="label-filter">Editorial</label>
+            <input type="text" name="edit" class="input-filter" placeholder="Nombre de la editorial">
+          </div>
+          <div>
+            <label for="format" class="label-filter">Formato</label>
+            <input type="text" name="format" class="input-filter" placeholder="Formato del libro ej:Libro">
+          </div>
+          <div>
+            <label for="category" class="label-filter">Categoria</label>
+            <select name="category" id="category-book" class="input-filter">
+              <option value="0">Selecciona la Categoria</option>
+              <option value="categoria1">Categoria 1</option>
+              <option value="categoria2">Categoria 2</option>
+            </select>
+          </div>
+          <div>
+            <label for="sku" class="label-filter">SKU</label>
+            <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico">
+          </div>
+        </div>
+        <div>
+          <div>
+            <label for="language" class="label-filter">Idioma</label>
+            <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro">
+          </div>
+          <div>
+            <label for="edition" class="label-filter">Edición</label>
+            <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro">
+          </div>
+          <div>
+            <label for="pages" class="label-filter">Número de Páginas</label>
+            <input type="text" name="pages" class="input-filter" placeholder="Cantidad de páginas del libro">
+          </div>
+          <div>
+            <label for="cap" class="label-filter">Número de Capitulos</label>
+            <input type="text" name="cap" class="input-filter" placeholder="Cantidad de capitulos del libro">
+          </div>
+          <div>
+            <label for="dimesions" class="label-filter">Dimensiones</label>
+            <input type="text" name="dimesions" class="input-filter" placeholder="Ej: Ancho: 14cm - Akto:12cm">
+          </div>
+          <div>
+            <label for="description" class="label-filter">Descripción</label>
+            <textarea name="description" id="" cols="30" rows="6" class="input-filter"
+              placeholder="Descripción del libro"></textarea>
+          </div>
+        </div>
+      </section>
+      <section class="flexV containerBtn">
+        <a href="#" class="btn-cancel ">Cancelar</a>
+        <a href="#" class="btn-add">Añadir</a>
+      </section>
+    </section>
+  </body>
+
+  </html>

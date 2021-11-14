@@ -30,7 +30,5 @@ app.use('/productos', routesProduct);
 // Declarando la ruta del archivo registro1 
 app.use('/usuario', routesUsers);
 
-
-
 // Declarando la ruta del archivo login
 app.use('/admin', routesAdmin);

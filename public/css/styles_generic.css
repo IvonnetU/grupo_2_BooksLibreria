@@ -151,6 +151,9 @@ ol {
   background-color: #fff;
   color: #183837;
 }
+.button-add:hover a i {
+  transform: rotate(250deg);
+}
 .section-filter-admin {
   padding: 10px;
   border-radius: 15px;
@@ -229,7 +232,46 @@ ol {
   display: block;
   transition: all 400ms ease-out;
 }
-/* Fin stilos view products*/
+/* Fin estilos view products*/
+
+/*Inicio estilos add products*/
+.body-add {
+  background-color: rgba(24, 56, 55, 0.4);
+  padding: 20px;
+}
+.container-formAdd {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+}
+.container-formAdd h2 {
+  text-align: center;
+}
+.btn-cancel,
+.btn-add {
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  width: 40%;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-cancel:hover,
+.btn-add:hover {
+  filter: brightness(0.8);
+}
+.btn-cancel {
+  background: #83a1a0;
+}
+.btn-add {
+  background: #183837;
+}
+.containerBtn {
+  justify-content: space-around;
+}
+/* Fin estilos add products*/
 
 /* Responsive tablet */
 @media (min-width: 768px) {
@@ -261,6 +303,19 @@ ol {
   }
   .disabled {
     display: table-cell;
+  }
+  .form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .btn-cancel,
+  .btn-add {
+    width: 20%;
+    margin: 20px 20px 0;
+  }
+  .containerBtn {
+    justify-content: center;
   }
 }
 /* Responsive pc */
