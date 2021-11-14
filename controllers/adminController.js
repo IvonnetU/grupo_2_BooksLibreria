@@ -14,6 +14,9 @@ let adminController = {
   add: function(req,res){
     return res.render('./admin/addProduct');
   },
+  edit: function(req,res){
+    return res.render('./admin/editProduct');
+  },
 }
 
 module.exports = adminController;

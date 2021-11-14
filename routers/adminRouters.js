@@ -7,4 +7,7 @@ router.get('/', mainController.index);
 
 router.get('/add', mainController.add);
 
+router.get('/edit', mainController.edit);
+
+
 module.exports = router;
