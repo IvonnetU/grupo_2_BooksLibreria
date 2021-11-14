@@ -17,6 +17,9 @@ let adminController = {
   edit: function(req,res){
     return res.render('./admin/editProduct');
   },
+  delete: function(req,res){
+    return res.render('./admin/deleteProduct');
+  },
 }
 
 module.exports = adminController;

@@ -5,9 +5,10 @@ const mainController = require('../controllers/adminController.js');
 
 router.get('/', mainController.index);
 
-router.get('/add', mainController.add);
+router.get('/agregar', mainController.add);
 
-router.get('/edit', mainController.edit);
+router.get('/editar', mainController.edit);
 
+router.get('/eliminar', mainController.delete);
 
 module.exports = router;

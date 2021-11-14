@@ -239,13 +239,18 @@ ol {
   background-color: rgba(24, 56, 55, 0.4);
   padding: 20px;
 }
-.container-formAdd {
+.container-formAdd,
+.container-delete {
   background-color: #fff;
   border-radius: 15px;
   padding: 20px;
   width: 100%;
 }
-.container-formAdd h2 {
+.container-formAdd h2,
+.container-delete h2 {
+  text-align: center;
+}
+.container-delete {
   text-align: center;
 }
 .btn-cancel,
@@ -339,5 +344,8 @@ ol {
   }
   .article-product-admin td {
     padding: 5px;
+  }
+  .container-delete {
+    width: 50%;
   }
 }
