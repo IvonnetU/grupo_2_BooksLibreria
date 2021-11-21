@@ -17,6 +17,7 @@ const routesAdmin = require('./routers/adminRouters.js');
 app.set('view engine','ejs');
 
 // Asignando el servidor
+
 app.listen(3030, () => {
     console.log("Servidor ejecutandose en el puerto 3030");
 });
