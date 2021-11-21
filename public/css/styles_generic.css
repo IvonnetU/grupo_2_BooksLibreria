@@ -1,4 +1,4 @@
-/* Importando Tipografia Poppins de Google Font (Ligth, italic, regular, bold) */
+/* Importing Typography Poppins de Google Font (Ligth, italic, regular, bold) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap");
 
 * {
@@ -49,7 +49,7 @@ ol {
   transition: all 400ms ease-out;
 }
 
-/* Estilos menu administrador*/
+/* Styles Administrator Menu */
 .header-admin {
   background-color: #183837;
 }
@@ -86,9 +86,9 @@ ol {
   margin-right: 10px;
   font-size: 25px;
 }
-/* Fin estilos menu administrador*/
+/* End Styles Administrator Menu*/
 
-/* Estilos view products*/
+/* Styles View Products*/
 .disabled,
 .disabledPc {
   display: none;
@@ -232,9 +232,9 @@ ol {
   display: block;
   transition: all 400ms ease-out;
 }
-/* Fin estilos view products*/
+/* End Styles View Products*/
 
-/*Inicio estilos add products*/
+/* Styles Add Products*/
 .body-add {
   background-color: rgba(24, 56, 55, 0.4);
   padding: 20px;
@@ -276,9 +276,9 @@ ol {
 .containerBtn {
   justify-content: space-around;
 }
-/* Fin estilos add products*/
+/* End Styles Add Products*/
 
-/* Responsive tablet */
+/*  Tablet Responsive*/
 @media (min-width: 768px) {
   .body-admin {
     display: grid;
@@ -323,7 +323,7 @@ ol {
     justify-content: center;
   }
 }
-/* Responsive pc */
+/* Laptop Responsive */
 @media (min-width: 1200px) {
   .body-admin {
     grid-template-columns: 1fr 4fr;

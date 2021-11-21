@@ -1,4 +1,4 @@
-/* Importando Tipografia Poppins de Google Font (Ligth, italic, regular, bold) */
+/* Importing Typography Poppins de Google Font (Ligth, italic, regular, bold) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100&display=swap");
 
 * {
@@ -28,7 +28,7 @@ ol {
   margin: 0 !important;
 }
 
-/* Estilos Inicio */
+/* Styles Home */
 .main-header {
   padding: 10px;
   position: fixed;
@@ -478,9 +478,9 @@ ol {
   }
 }
 
-/* Fin estilos Inicio */
+/* End Styles Home */
 
-/* Inicio estilos login*/
+/* Styles login*/
 .body-login {
   height: 100%;
   background-image: url(../images/background_login.jpg);
@@ -573,9 +573,9 @@ ol {
 .social-media-footer a {
   margin: 5px;
 }
-/* Fin estilos login*/
+/* End Styles Login*/
 
-/*Inicio estilos registro*/
+/*Styles register*/
 .content-register-form {
   display: grid;
   grid-template-columns: 100%;
@@ -738,8 +738,8 @@ ol {
   margin: 10px;
   text-shadow: 1px 1px 2px #111111;
 }
-/*Fin estilos registro*/
-/* Inicio estilos detalle del producto */
+/*End Styles Register*/
+/*Styles Product Detail*/
 .breadcrumb {
   margin-top: 75px;
 }
@@ -929,9 +929,9 @@ ol {
   align-items: center;
   flex-direction: row;
 }
-/* Fin estilos detalle del producto */
+/* End Styles Product Detail */
 
-/* Inicio estilos carrito */
+/* Styles Cart */
 .content-gift {
   background: #fff;
   padding: 20px;
@@ -1142,9 +1142,9 @@ ol {
   color: #fff;
   cursor: pointer;
 }
-/* Fin estilos carrito */
+/* End Styles Cart */
 
-/* Inicio estilos lista de productos */
+/* Styles Product List */
 .content-filter,
 .article-product-list {
   background-color: #fff;
@@ -1199,9 +1199,9 @@ ol {
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* Fin estilos lista de productos */
+/* End Styles Product List */
 
-/* Inicio estilos Manejo de productos */
+/* Styles Product Management */
 .body-manage {
   display: flex;
   justify-content: center;
@@ -1261,10 +1261,10 @@ ol {
 .content-action a {
   margin: 0 2px;
 }
-/* Fin estilos Manejo de productos */
+/* Styles Product Management */
 
 @media (min-width: 768px) {
-  /* Estilos Inicio */
+  /* Styles Home */
   .main-header {
     padding: 15px 15px 0 15px;
   }
@@ -1532,8 +1532,8 @@ ol {
       transform: translateX(0);
     }
   }
-  /* Fin estilos Inicio */
-  /* Inicio Estilos login */
+  /* End Styles Home */
+  /* Styles login */
   .login-box {
     width: 55%;
     margin: 10px auto;
@@ -1544,9 +1544,9 @@ ol {
   .btn-login-in i {
     margin-right: 10px;
   }
-  /* Fin estilos login */
+  /* End Styles login */
 
-  /* Inicio estilos registro */
+  /* Styles Register */
   .content-register-form {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -1564,8 +1564,8 @@ ol {
   .info {
     width: 100%;
   }
-  /* Fin estilos registro */
-  /* Inicio estilos detalle del producto */
+  /* End Styles Register */
+  /* Styles Product Detail */
   .breadcrumb {
     margin-top: 160px;
   }
@@ -1640,8 +1640,8 @@ ol {
   .article-review p {
     font-size: 14px;
   }
-  /* Fin estilos detalle del producto */
-  /* Inicio estilos  del carrito */
+  /* End Styles Product Detail */
+  /* Styles Cart */
   .data-container_gift {
     flex-direction: row;
   }
@@ -1697,8 +1697,8 @@ ol {
   .btn-payment {
     width: 35%;
   }
-  /* Fin estilos  del carrito */
-  /* Inicio estilos lista de productos */
+  /* End Styles Cart */
+  /* Styles Product List */
   .section-list-products {
     display: grid;
     grid-template-columns: 35% 65%;
@@ -1722,8 +1722,8 @@ ol {
   .content-filter h3 {
     font-size: 16px;
   }
-  /* Fin estilos lista de productos */
-  /* Inicio estilo manejo productos */
+  /* End Styles Product List */
+  /* Styles Product Management */
   .section-list-products-manage article {
     display: grid;
     grid-template-columns: 15% 70% 15%;
@@ -1746,11 +1746,11 @@ ol {
   .btn-add {
     font-size: 15px;
   }
-  /* Fin estilo manejo productos */
+  /* End Styles Product Management */
 }
 
 @media (min-width: 1200px) {
-  /* Estilos Inicio */
+  /* Styles Home */
   .main-header {
     padding: 20px 20px 5px 20px;
   }
@@ -1849,9 +1849,9 @@ ol {
   .footer ul li h6 {
     font-size: 14px !important;
   }
-  /* Fin estilos Inicio */
+  /* End Styles Home */
 
-  /* Inicio estilos login */
+  /* Styles Login */
   .login-box {
     width: 35%;
   }
@@ -1862,8 +1862,8 @@ ol {
   .image-logo-register {
     margin: 70px auto 20px;
   }
-  /* Fin estilos login */
-  /* Inicio estilos registro */
+  /* End Styles Login */
+  /* Styles Register */
   .section-left-register {
     padding: 55px;
   }
@@ -1875,8 +1875,8 @@ ol {
   .required {
     font-size: 12px !important;
   }
-  /* Fin estilos registro */
-  /* Inicio estilos detalle del producto */
+  /* End Styles Register */
+  /* Styles Product Detail */
   .breadcrumb ul {
     font-size: 14px;
     padding: 25px;
@@ -1961,8 +1961,8 @@ ol {
     display: table;
     margin: auto;
   }
-  /* Fin estilos detalle del producto */
-  /* Inicio estilos carrito */
+  /* End Styles Product Detail */
+  /* styles Cart */
   .data-container_gift {
     padding: 30px;
   }
@@ -1991,8 +1991,8 @@ ol {
   .content-btn-car {
     margin: 44px 0;
   }
-  /* Fin estilos carrito */
-  /* Inicio estilos lista de productos */
+  /* End Styles Cart  */
+  /* Styles Products List */
   .section-list-products {
     grid-template-columns: 25% 75%;
     gap: 0px;
@@ -2008,10 +2008,10 @@ ol {
   .content-filter ul li {
     font-size: 16px;
   }
-  /* Fin estilos lista de productos */
-  /* Inicio estilo manejo productos */
+  /* End Styles Products List */
+  /* Styles Product Management */
   .section-list-products-manage article {
     grid-template-columns: 15% 70% 11% !important;
   }
-  /* Fin estilo manejo productos */
+  /* End Styles Product Management */
 }
