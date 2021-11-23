@@ -158,5 +158,21 @@
   "chapters": "10",
   "description": "El reputado historiador Stanley Payne nos ofrece sus tesis más controvertidas sobre nuestra propia historia, así como una visión interna de dos guerras mundiales: la revolución de la primera guerra mundial, donde realizará un análisis de la Europa conflictiva de la época que desembocaría en esta primera gran guerra; el conflicto español como un suceso extraordinario dentro de las guerras civiles europeas; y las revoluciones o guerras internas en Europa al amparo de la segunda guerra mundial.",
   "image": "libro-la-europa-revolucionaria.jpg"
- } 
+ },
+ {
+    "id": "11",    //aca 
+    "sku":"9788499980997",
+    "name": "La Europa Revolucionaria",
+    "author": "Payne Stanley",
+    "price": 39000,
+    "publisher": "Booket",
+    "format": "Libro",
+    "category": "Historia",
+    "language": "Español",
+    "edition": "1",
+    "pages": "413",
+    "chapters": "10",
+    "description": "El reputado historiador Stanley Payne nos ofrece sus tesis más controvertidas sobre nuestra propia historia, así como una visión interna de dos guerras mundiales: la revolución de la primera guerra mundial, donde realizará un análisis de la Europa conflictiva de la época que desembocaría en esta primera gran guerra; el conflicto español como un suceso extraordinario dentro de las guerras civiles europeas; y las revoluciones o guerras internas en Europa al amparo de la segunda guerra mundial.",
+    "image": "libro-la-europa-revolucionaria.jpg"
+   } 
 ]
