@@ -26,10 +26,10 @@ app.listen(3030, () => {
 app.use('/', routesMain);
 
 // Declarando la ruta del archivo detalle del producto y carrito de compras
-app.use('/productos', routesProduct);
+app.use('/products', routesProduct);
 
 // Declarando la ruta del archivo registro1 
-app.use('/usuario', routesUsers);
+app.use('/users', routesUsers);
 
 // Declarando la ruta del archivo login
 app.use('/admin', routesAdmin);
