@@ -1,49 +1,41 @@
 <%- include('../partials/head')%>
 
-<body class="body-login">
-  <div>
+  <body class="body-login">
+    <div>
 
 
-    <div class="login-box">
-      <div class="image-logo">
-        <a href="/">
-          <img class="books" src='../../images/Logo_BooksLibreria.png' alt="logo Books librería" title="logo Books librería">
-        </a>
+      <div class="login-box">
+        <div class="image-logo">
+          <a href="/">
+            <img class="books" src='../../images/Logo_BooksLibreria.png' alt="logo Books librería"
+              title="logo Books librería">
+          </a>
+        </div>
+        <h1>¡Bienvenido de nuevo!</h1>
+        <div>
+          <input type="email" name="email" class="input-login" placeholder="Correo electrónico" required>
+          <input type="password" name="pass" class="input-login" placeholder="Contraseña" required>
+        </div>
+        <div class="btn-orange btn-login-in">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Ingresar</span>
+        </div>
+        <div class="checkbox-password">
+          <input type="checkbox" name="recovery-pass">
+          <h5>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </h5>
+        </div>
       </div>
-      <h1>¡Bienvenido de nuevo!</h1>
-      <div>
-        <input type="email" name="email" class="input-login" placeholder="Correo electrónico" required>
-        <input type="password" name="pass" class="input-login" placeholder="Contraseña" required>
-      </div>
-      <div class="btn-orange btn-login-in">
-        <i class="fas fa-sign-in-alt"></i>
-        <span>Ingresar</span>
-      </div>
-      <div class="checkbox-password">
-        <input type="checkbox" name="recovery-pass">
-        <h5>
-          <a href="#">¿Olvidaste tu contraseña?</a>
-        </h5>
-      </div>
-      <div class="content-register">
-        <h5>
-          <a href="/usuario/register">¿Deseas crear una cuenta?</a>
-        </h5>
-      </div>
-      <div class="social-media-login">
-        <a href="#" class="btn_circle"><i class="fab fa-google"></i></a>
-        <a href="#" class="btn_circle"><i class="fab fa-facebook-f"></i></a>
+      <div class="section-footer-bottom">
+        <h6>¡Síguenos en nuestras redes sociales!</h6>
+        <div class="social-media-footer">
+          <a href="#" class="btn_circle"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="btn_circle"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="btn_circle"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
     </div>
-    <div class="section-footer-bottom">
-      <h6>¡Síguenos en nuestras redes sociales!</h6>
-      <div class="social-media-footer">
-        <a href="#" class="btn_circle"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="btn_circle"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="btn_circle"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 
-</html>
+  </html>
