@@ -13,7 +13,7 @@ router.get('/create', productsController.create);
 router.post('/create', productsController.store); 
 
 /*** Consultar un libro***/ 
-router.get('/:id/', productsController.detail); 
+router.get('/:id', productsController.detail); 
 
 /*** Editar un libro ***/ 
 router.get('/:id/edit', productsController.edit); 

@@ -17,7 +17,11 @@ let productController = {
     res.render('./products/productList',{ dataBooks: products });
   },
   detail: (req, res) => {
-    res.render('./products/productDetail');
+    let idProduct = req.params.id;
+    product = products.find(function(item){
+      return item.id === idProduct;
+    });
+    res.render('./products/productDetail',{product});
   },
   car: (req, res) => {
     res.render('./products/productCart');

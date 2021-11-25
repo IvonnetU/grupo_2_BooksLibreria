@@ -47,7 +47,7 @@
         <section class="section-article-products">
           <% dataBooks.forEach(book=>{%>
             <article class="article-product-list">
-              <img src="../../images/product-list-infierno.jpg" alt="">
+              <img src="../../images/books/<%= book.image %>" alt="<%= book.name %>" title="<%= book.name %>">
               <h5>
                 <%= book.name %>
               </h5>
