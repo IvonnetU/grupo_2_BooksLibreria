@@ -262,6 +262,8 @@ ol {
   width: 40%;
   text-align: center;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 .btn-cancel:hover,
 .btn-add:hover {

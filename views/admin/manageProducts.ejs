@@ -14,7 +14,7 @@
         <section class="section-title flex">
           <h1>Productos</h1>
           <div class="button-add ani">
-            <a href="#">
+            <a href="/admin/create">
               <span>Agregar nuevo</span>
               <i class="fas fa-plus"></i>
             </a>
@@ -66,29 +66,31 @@
               <th class="disabled">Nombre del producto</th>
               <th>Acciones</th>
             </tr>
-            <% for(let i=0; i < 5; i++) {%>
+            <% dataBooks.forEach(book=>{%>
               <tr class="article-product-admin">
                 <td class="disabledPc">
-                  <img src="../../images/libro_pez.jpg" alt="libro_pez" title="libro_pez">
+                  <img src="../../images/books/<%= book.image %>" alt="<%= book.name %>" title="<%= book.name %>">
                 </td>
-                <td>95476231086</td>
+                <td>
+                  <%= book.sku %>
+                </td>
                 <td class="disabled">
-                  Pez - Supervivencia 20xx
+                  <%= book.name %>
                 </td>
                 <td class="td-actions">
                   <div class="content-actions flexV">
-                    <a href="#" class="btn-edit ani">
+                    <a href="admin/edit/<%= book.id %>" class="btn-edit ani">
                       <i class="fas fa-edit"></i>
                       <span>Editar</span>
                     </a>
-                    <a href="#" class="btn-delete ani">
+                    <a href="admin/delete/<%= book.id %>" class="btn-delete ani">
                       <i class="fas fa-trash-alt"></i>
                       <span>Eliminar</span>
                     </a>
                   </div>
                 </td>
               </tr>
-              <% }%>
+              <%}); %>
 
           </table>
         </section>

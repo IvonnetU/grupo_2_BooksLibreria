@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 //asignando la carpeta public como recurso estatico
 const publicPath = path.resolve(__dirname, './public');
@@ -12,6 +13,9 @@ const routesMain = require('./routers/mainRouters.js');
 const routesProduct = require('./routers/productRouters.js');
 const routesUsers = require('./routers/usersRouters.js');
 const routesAdmin = require('./routers/adminRouters.js');
+
+//Middlewares
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 // Invocar template engine EJS
 app.set('view engine','ejs');

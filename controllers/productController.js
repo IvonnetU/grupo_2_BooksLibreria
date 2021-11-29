@@ -13,9 +13,12 @@ const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 let productController = {  
+  // Root - Show all products
   list: (req, res) => {
     res.render('./products/productList',{ dataBooks: products });
   },
+
+  // Detail - Detail from one product
   detail: (req, res) => {
     let idProduct = req.params.id;
     product = products.find(function(item){
@@ -23,24 +26,12 @@ let productController = {
     });
     res.render('./products/productDetail',{product});
   },
+  // Car - show buy
   car: (req, res) => {
     res.render('./products/productCart');
-  },
-  create:(req, res) => {
-    res.render('./admin/addProduct');
-  },
-  store:(req, res) => {
-    res.render('./admin/productList');
-  },
-  edit:(req, res) => {
-    res.render('./admin/editProduct');
-  },
-  update: (req, res) => {
-    res.render('./products/productDetail');
-  },
-  destroy: (req, res) => {
-    res.render('./products/deleteProduct');
-  },
+  }
+
+ 
 }
 
 module.exports = productController;
