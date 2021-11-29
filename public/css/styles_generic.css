@@ -217,6 +217,11 @@ ol {
 .btn-delete {
   background-color: #eb1515;
 }
+.name_delete {
+  color: #183837;
+  font-weight: bold;
+  margin: 10px 0;
+}
 .btn-edit {
   background-color: #eba015;
 }
@@ -254,7 +259,8 @@ ol {
   text-align: center;
 }
 .btn-cancel,
-.btn-add {
+.btn-add,
+.btn-destroy {
   padding: 10px;
   border-radius: 10px;
   color: #fff;
@@ -264,6 +270,11 @@ ol {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+}
+.btn-destroy {
+  width: 100%;
+  background: #183837;
+  border: 1px solid transparent;
 }
 .btn-cancel:hover,
 .btn-add:hover {
@@ -277,6 +288,7 @@ ol {
 }
 .containerBtn {
   justify-content: space-around;
+  align-items: baseline;
 }
 /* End Styles Add Products*/
 

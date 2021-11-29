@@ -15,11 +15,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let adminController = {
   //Index - Mostrar el administrador de productos
   index: function(req,res){
-    res.render('./admin/manageProducts',{ dataBooks: products });
+    return res.render('./admin/manageProducts',{ dataBooks: products });
   },
    // Añadir - formulario de crear
   add:(req, res) => {
-    res.render('./admin/addProduct');
+    return res.render('./admin/addProduct');
   },
   // Crear -  Metodo de crear en la tienda
   store:(req, res) => {
@@ -43,7 +43,7 @@ let adminController = {
 		}
 		products.push(dataNew);
 		fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
-    res.render('./admin/manageProducts',{ dataBooks: products });		
+    // return res.render('./admin/manageProducts',{ dataBooks: products });		
   },
 
   // Edit - formulario de editar
@@ -54,9 +54,23 @@ let adminController = {
   update: (req, res) => {
     //code
   },
-  // Borrar - Eliminar un producto de la BD
+  // Eliminar - Formulario de confirmar eliminado
   delete: (req, res) => {
-    //code
+    let idProduct = req.params.id;
+		productDelete = products.find(item => item.id == idProduct);
+    return res.render('./admin/deleteProduct',{productDelete});
+  },
+  // Borrar - Eliminar un producto de la BD
+  destroy: (req, res) => {
+    let idBook = req.params.id;
+		const booksNews = [];
+		products.map(item =>{
+			if(item.id != idBook){
+				booksNews.push(item);
+			}			
+		});		
+		fs.writeFileSync(productsFilePath,JSON.stringify(booksNews),'utf-8');
+		// return res.render('./admin/manageProducts',{ dataBooks: booksNews });
   }
 }
 

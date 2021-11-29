@@ -4,9 +4,14 @@
     <section class="container-delete boxShadow">
       <h2>Eliminar producto</h2>
       <p>¿Esta seguro que deseas eliminar el producto?</p>
+      <p class="name_delete">
+        <%= productDelete.name %>
+      </p>
       <section class="flexV containerBtn">
         <a href="/admin" class="btn-cancel ">Cancelar</a>
-        <a href="#" class="btn-add">Eliminar</a>
+        <form action="/admin/delete/<%= productDelete.id %>?_method=DELETE" method="POST">
+          <button type="submit" class="btn-destroy">Eliminar</button>
+        </form>
       </section>
     </section>
   </body>

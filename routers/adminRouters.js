@@ -35,7 +35,8 @@ router.put('/edit/:id', adminController.update);
 
 
 /*** ELIMINAR UN PRODUCTO***/ 
-router.delete('/delete/:id', adminController.delete); 
+router.get('/delete/:id', adminController.delete); 
+router.delete('/delete/:id', adminController.destroy); 
 
 
 module.exports = router;
