@@ -3,6 +3,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const bodyParser = require('body-parser')
+
+
 
 // ************ Controller Require ************
 const adminController = require('../controllers/adminController');
@@ -31,7 +34,7 @@ router.post('/create',fileUpload.single('imagebook'), adminController.store);
 
 /*** EDITAR UN PRODUCTO ***/ 
 router.get('/edit/:id', adminController.edit); 
-router.put('/edit/:id', adminController.update); 
+router.put('/edit/:id',fileUpload.single('imagebook'), adminController.update); 
 
 
 /*** ELIMINAR UN PRODUCTO***/ 

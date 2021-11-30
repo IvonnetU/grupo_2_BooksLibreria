@@ -290,6 +290,9 @@ ol {
   justify-content: space-around;
   align-items: baseline;
 }
+#imageEdit {
+  width: 10%;
+}
 /* End Styles Add Products*/
 
 /*  Tablet Responsive*/
