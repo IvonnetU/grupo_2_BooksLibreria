@@ -293,6 +293,12 @@ ol {
 #imageEdit {
   width: 10%;
 }
+
+.alert-danger {
+  color: #b30f20;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
 /* End Styles Add Products*/
 
 /*  Tablet Responsive*/

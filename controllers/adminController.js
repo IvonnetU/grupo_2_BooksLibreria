@@ -1,14 +1,15 @@
-// Declarando los modulos externos de express
+// ************ Require's ************
 const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs');
+const {validationResult} = require('express-validator');
 
 //asignando la carpeta public como recurso estatico
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-//conectando json
+/*********conectando json***********/
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -16,35 +17,44 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let adminController = {
   //Index - Mostrar el administrador de productos
   index: function(req,res){
-    return res.render('./admin/manageProducts',{ dataBooks: products });
+    res.render('./admin/manageProducts',{ dataBooks: products });
   },
    // Añadir - formulario de crear
   add:(req, res) => {
-    return res.render('./admin/addProduct');
+    res.render('./admin/addProduct');
   },
   // Crear -  Metodo de crear en la tienda
   store:(req, res) => {
-    const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
-		let idPrev = products.length;
-		const dataNew = {
-			id: idPrev + 1,
-      sku,
-			name:nameBook, 
-      author,
-      price,
-      publisher,
-      format,
-      category,
-      language,
-      edition,
-      pages,
-      chapters,
-			description,
-      image: req.file.filename
-		}
-		products.push(dataNew);
-		fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
-    res.render('./admin/manageProducts',{dataBooks: products});				
+    let resultValidation = validationResult(req);
+    if(resultValidation.isEmpty()){
+      const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
+      let idPrev = products.length;
+      const dataNew = {
+        id: idPrev + 1,
+        sku,
+        name:nameBook, 
+        author,
+        price,
+        publisher,
+        format,
+        category,
+        language,
+        edition,
+        pages,
+        chapters,
+        description,
+        image: req.file.filename
+      }
+      products.push(dataNew);
+      fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
+      res.render('./admin/manageProducts',{dataBooks: products});
+    }else{
+      res.render('./admin/addProduct',{
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    }
+    				
   },
 
   // Edit - formulario de editar
@@ -55,7 +65,9 @@ let adminController = {
   },
   // Actualizar - método de actualizar
   update: (req, res) => {
-    const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description,image} = req.body;
+    let resultValidation = validationResult(req);
+    if(resultValidation.isEmpty()){
+      const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description,image} = req.body;
 		const idProduct = req.params.id;
     const fileNameBook = (req.file) ? req.file.filename : image;
     const booksNews = [];
@@ -81,7 +93,14 @@ let adminController = {
 			
 		});		
 		fs.writeFileSync(productsFilePath,JSON.stringify(booksNews),'utf-8');
-		res.render('./admin/manageProducts',{dataBooks: booksNews});		
+		res.render('./admin/manageProducts',{dataBooks: booksNews});	
+    }else{
+      res.render('./admin/editProduct',{
+        product : productEdit,
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    }    	
   },
   // Eliminar - Formulario de confirmar eliminado
   delete: (req, res) => {

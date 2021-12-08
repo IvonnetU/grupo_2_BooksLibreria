@@ -8,74 +8,164 @@
           <div>
             <div>
               <label for="nameBook" class="label-filter">Nombre del libro</label>
-              <input type="text" name="nameBook" class="input-filter" placeholder="Ingresa nombre del libro">
+              <input type="text" name="nameBook" class="input-filter" placeholder="Ingresa nombre del libro"
+                value="<%= locals.oldData && oldData.nameBook ? oldData.nameBook :''%>">
+              <% if(locals.errors && errors.nameBook){%>
+                <div class="alert-danger">
+                  <%= errors.nameBook.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="author" class="label-filter">Autor(a)</label>
-              <input type="text" name="author" class="input-filter" placeholder="Ingresa autor(a) de libro">
+              <input type="text" name="author" class="input-filter" placeholder="Ingresa autor(a) de libro"
+                value="<%= locals.oldData && oldData.author ? oldData.author :''%>">
+              <% if(locals.errors && errors.author){%>
+                <div class="alert-danger">
+                  <%= errors.author.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="price" class="label-filter">Precio</label>
-              <input type="text" name="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA">
+              <input type="number" name="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA"
+                value="<%= locals.oldData && oldData.price ? oldData.price :''%>">
+              <% if(locals.errors && errors.price){%>
+                <div class="alert-danger">
+                  <%= errors.price.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
-              <label for="edit" class="label-filter">Editorial</label>
-              <input type="text" name="edit" class="input-filter" placeholder="Nombre de la editorial">
+              <label for="publisher" class="label-filter">Editorial</label>
+              <input type="text" name="publisher" class="input-filter" placeholder="Nombre de la editorial"
+                value="<%= locals.oldData && oldData.publisher ? oldData.publisher :''%>">
+              <% if(locals.errors && errors.publisher){%>
+                <div class="alert-danger">
+                  <%= errors.publisher.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="format" class="label-filter">Formato</label>
-              <input type="text" name="format" class="input-filter" placeholder="Formato del libro ej:Libro">
+              <input type="text" name="format" class="input-filter" placeholder="Formato del libro ej:Libro"
+                value="<%= locals.oldData && oldData.format ? oldData.format :''%>">
+              <% if(locals.errors && errors.format){%>
+                <div class="alert-danger">
+                  <%= errors.format.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="category" class="label-filter">Categoria</label>
               <select name="category" id="category-book" class="input-filter">
-                <option value="0">Selecciona la Categoria</option>
-                <option value="Historia universal">Historia universal</option>
-                <option value="Novela histórica">Novela histórica</option>
-                <option value="Feminismo">Feminismo</option>
-                <option value="Young adult">Young adult</option>
-                <option value="Novela Gráfica">Novela Gráfica</option>
-                <option value="Acción">Acción</option>
-                <option value="Ficción">Ficción</option>
-                <option value="Romántica">Romántica</option>
-                <option value="Historia">Historia</option>
-                <option value="Suspenso y terror">Suspenso y terror</option>
-                <option value="Policiaca">Policiaca</option>
-                <option value="Fantástica y ciencia ficción">Fantástica y ciencia ficción</option>
-                <option value="Juvenil">Juvenil</option>
-                <option value="Novela histórica">Novela histórica</option>
+                <option value="">Selecciona la Categoria</option>
+                <option value="Historia universal" <%=locals.oldData && oldData.category=='Historia universal'
+                  ? 'selected' : '' ; %> >Historia universal</option>
+                <option value="Novela histórica" <%=locals.oldData && oldData.category=='Novela histórica' ? 'selected'
+                  : '' ; %> >Novela histórica</option>
+                <option value="Feminismo" <%=locals.oldData && oldData.category=='Feminismo' ? 'selected' : '' ; %>
+                  >Feminismo</option>
+                <option value="Young adult" <%=locals.oldData && oldData.category=='Young adult' ? 'selected' : '' ; %>
+                  >Young adult</option>
+                <option value="Novela Gráfica" <%=locals.oldData && oldData.category=='Novela Gráfica' ? 'selected' : ''
+                  ; %> >Novela Gráfica</option>
+                <option value="Acción" <%=locals.oldData && oldData.category=='Acción' ? 'selected' : '' ; %>
+                  >Acción</option>
+                <option value="Ficción" <%=locals.oldData && oldData.category=='Ficción' ? 'selected' : '' ; %>
+                  >Ficción</option>
+                <option value="Romántica" <%=locals.oldData && oldData.category=='Romántica' ? 'selected' : '' ; %>
+                  >Romántica</option>
+                <option value="Historia" <%=locals.oldData && oldData.category=='Historia' ? 'selected' : '' ; %>
+                  >Historia</option>
+                <option value="Suspenso y terror" <%=locals.oldData && oldData.category=='Suspenso y terror'
+                  ? 'selected' : '' ; %> >Suspenso y terror</option>
+                <option value="Policiaca" <%=locals.oldData && oldData.category=='Policiaca' ? 'selected' : '' ; %>
+                  >Policiaca</option>
+                <option value="Fantástica y ciencia ficción" <%=locals.oldData &&
+                  oldData.category=='Fantástica y ciencia ficción' ? 'selected' : '' ; %>>Fantástica y ciencia
+                  ficción</option>
+                <option value="Juvenil" <%=locals.oldData && oldData.category=='Juvenil' ? 'selected' : '' ; %>
+                  >Juvenil</option>
+                <option value="Novela histórica" <%=locals.oldData && oldData.category=='Novela histórica' ? 'selected'
+                  : '' ; %> >Novela histórica</option>
               </select>
+              <% if(locals.errors && errors.category){%>
+                <div class="alert-danger">
+                  <%= errors.category.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="sku" class="label-filter">SKU</label>
-              <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico">
+              <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico"
+                value="<%= locals.oldData && oldData.sku ? oldData.sku :''%>">
+              <% if(locals.errors && errors.sku){%>
+                <div class="alert-danger">
+                  <%= errors.sku.msg %>
+                </div>
+                <%} %>
             </div>
           </div>
           <div>
             <div>
               <label for="language" class="label-filter">Idioma</label>
-              <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro">
+              <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro"
+                value="<%= locals.oldData && oldData.language ? oldData.language :''%>">
+              <% if(locals.errors && errors.language){%>
+                <div class="alert-danger">
+                  <%= errors.language.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="edition" class="label-filter">Edición</label>
-              <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro">
+              <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro"
+                value="<%= locals.oldData && oldData.edition ? oldData.edition :''%>">
+              <% if(locals.errors && errors.edition){%>
+                <div class="alert-danger">
+                  <%= errors.edition.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="pages" class="label-filter">Número de Páginas</label>
-              <input type="text" name="pages" class="input-filter" placeholder="Cantidad de páginas del libro">
+              <input type="text" name="pages" class="input-filter" placeholder="Cantidad de páginas del libro"
+                value="<%= locals.oldData && oldData.pages ? oldData.pages :''%>">
+              <% if(locals.errors && errors.pages){%>
+                <div class="alert-danger">
+                  <%= errors.pages.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
-              <label for="cap" class="label-filter">Número de Capitulos</label>
-              <input type="text" name="cap" class="input-filter" placeholder="Cantidad de capitulos del libro">
+              <label for="chapters" class="label-filter">Número de Capitulos</label>
+              <input type="text" name="chapters" class="input-filter" placeholder="Cantidad de capitulos del libro"
+                value="<%= locals.oldData && oldData.chapters ? oldData.chapters :''%>">
+              <% if(locals.errors && errors.chapters){%>
+                <div class="alert-danger">
+                  <%= errors.chapters.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="image" class="label-filter">Imagen</label>
               <input type="file" name="imagebook" class="input-filter">
+              <% if(locals.errors && errors.imagebook){%>
+                <div class="alert-danger">
+                  <%= errors.imagebook.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="description" class="label-filter">Descripción</label>
               <textarea name="description" id="" cols="30" rows="6" class="input-filter"
-                placeholder="Descripción del libro"></textarea>
+                placeholder="Descripción del libro"><%= locals.oldData && oldData.description ? oldData.description : ''%></textarea>
+              <% if(locals.errors && errors.description){%>
+                <div class="alert-danger">
+                  <%= errors.description.msg %>
+                </div>
+                <%} %>
             </div>
           </div>
         </section>

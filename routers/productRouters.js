@@ -14,7 +14,7 @@ router.get('/:id', productsController.detail);
 
 
 /*** Ruta carrito***/ 
-router.get('/carrito', productsController.car);
+router.get('/car', productsController.car);
 
 
 
