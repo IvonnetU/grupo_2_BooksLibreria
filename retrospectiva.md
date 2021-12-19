@@ -1,29 +1,4 @@
 ====================================================================
-# Retrospectiva 4 Grupo_2_BooksLibreria 🔎 Sprint# 5
-====================================================================
-## 🔵 Comenzar a hacer:
-
-1. Aclarar las dudas que se tengan en cada tema, para poder aplicarlo al proyecto.
-
-## ⚪ Hacer más:
-
-1. Disponer de un tiempo establecido para el desarrollo del Sprint.
-
-## 🟢 Continuar haciendo:
-
-1. Seguir manteniendo la comunicación entre las integrantes del grupo, por medio de WhatsAap o Meet, sobre los avances, las limitaciones, y aclaraciones.
-2. Aprovechar en el trabajo en equipo para conseguir la entrega completa de cada Sprint.
-3. Hacer los ajustes y/o sugerencias realizadas en la retroalimentacion del sprint #4.
-
-## 🟠 Hacer menos:
-
-1. Mantener dudas sin aclarar.
-
-## 🔴 Dejar de hacer:
-
-1. Finalización y entrega del sprint al limite de tiempo.
-
-====================================================================
 # Retrospectiva 3 Grupo_2_BooksLibreria 🔎 Sprint#4
 ====================================================================
 ## 🔵 Comenzar a hacer:
