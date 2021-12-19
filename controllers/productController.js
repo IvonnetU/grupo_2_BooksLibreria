@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
- const fs = require('fs');
+const fs = require('fs');
 
 //asignando la carpeta public como recurso estatico
 const publicPath = path.resolve(__dirname, './public');
@@ -30,7 +30,6 @@ let productController = {
   car: (req, res) => {
     res.render('./products/productCart');
   }
-
  
 }
 
