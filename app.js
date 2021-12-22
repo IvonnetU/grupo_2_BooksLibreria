@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
 
 //asignando la carpeta public como recurso estatico
 const publicPath = path.resolve(__dirname, './public');

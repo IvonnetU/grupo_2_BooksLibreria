@@ -7,14 +7,21 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+// //conectando json
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const products = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 let usersController = {
   
   login: function(req,res){
-    return res.render('./users/login');
+    res.render('./users/login');
   },
   register: function(req,res){
-    return res.render('./users/register');
+    res.render('./users/register');
   },
+  create: function(req,res){
+    res.render('./users/register');
+  }
 }
 
 module.exports = usersController;
