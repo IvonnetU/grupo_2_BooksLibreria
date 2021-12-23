@@ -1965,7 +1965,7 @@ ol {
   }
   .article-product-list {
     width: 23%;
-    height: 275px;
+    height: auto;
   }
   .content-filter ul li a,
   .content-filter ul li {

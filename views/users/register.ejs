@@ -1,66 +1,93 @@
 <%- include('../partials/head')%>
 
-<body>
-  <div class=content-register-form>
-    <section class="section-left-register">
-      <h1>Regístrate</h1>
-      <h5>Registrate utilizando tus datos personales y correo electrónico</h5>
-      <form action="#" method="post">
-        <div class="content-info-register">
-          <input name="name" type="text" class="info" placeholder="Nombre" required>
-          <span class="asterisk_input"></span>
+  <body>
+    <div class=content-register-form>
+      <section class="section-left-register">
+        <h1>Regístrate</h1>
+        <h5>Registrate utilizando tus datos personales y correo electrónico</h5>
+        <form action="/users/register" method="post">
+          <div class="content-info-register">
+            <input name="name" type="text" class="info" placeholder="Nombres">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.name){%>
+              <div class="alert-danger">
+                <%= errors.name.msg %>
+              </div>
+              <%} %>
+          </div>
+          <div class="content-info-register">
+            <input name="lastname" type="text" class="info" placeholder="Apellidos">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.lastname){%>
+              <div class="alert-danger">
+                <%= errors.lastname.msg %>
+              </div>
+              <%} %>
+          </div>
+          <div class="content-info-register">
+            <input name="email" type="email" class="info" placeholder="Correo electrónico">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.email){%>
+              <div class="alert-danger">
+                <%= errors.email.msg %>
+              </div>
+              <%} %>
+          </div>
+          <div class="content-info-register">
+            <input name="phone" type="tel" class="info" placeholder="Teléfono celular">
+          </div>
+          <div class="content-info-register">
+            <input name="city" type="text" class="info" placeholder="Ciudad">
+          </div>
+          <div class="content-info-register">
+            <input name="pass" type="password" class="info" placeholder="Contraseña">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.pass){%>
+              <div class="alert-danger">
+                <%= errors.pass.msg %>
+              </div>
+              <%} %>
+          </div>
+          <div class="content-info-register">
+            <input name="confirmpass" type="password" class="info" placeholder="Confirmacion de contraseña">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.confirmpass){%>
+              <div class="alert-danger">
+                <%= errors.confirmpass.msg %>
+              </div>
+              <%} %>
+          </div>
+          <h6 clase="required">* Datos obligatorios en el registro</h6>
+          <br>
+          <div class="polity">
+            <input type="checkbox" name="condictions">
+            <label for="condictions">Acepto las <a href="#"><span> politicas de privacidad</span></a>
+              y manejo de datos.</label>
+          </div>
+          <button class="btn-register" type="submit"><i class="far fa-user"></i>Registrarme</button>
+        </form>
+      </section>
+      <section class="section-right-register">
+        <div class="image-logo image-logo-register">
+          <a href="/">
+            <img class="books" src='../../images/Logo_BooksLibreria.png' alt="logo Books librería"
+              title="logo Books librería">
+          </a>
         </div>
-        <div class="content-info-register">
-          <input name="email" type="email" class="info" placeholder="Correo electrónico" required>
-          <span class="asterisk_input"></span>
+        <h2>Con redes sociales</h2>
+        <h5>Registrate utilizando tus redes sociales</h5>
+        <div class="content-social-register">
+          <div class="social-media-register">
+            <a href="#" class="btn_circle_register"><i class="fab fa-google"></i></a>
+            <span>Google</span>
+          </div>
+          <div class="social-media-register">
+            <a href="#" class="btn_circle_register"><i class="fab fa-facebook-f"></i></a>
+            <span>Facebook</span>
+          </div>
         </div>
-        <div class="content-info-register">
-          <input name="phone" type="tel" class="info" placeholder="Teléfono celular">
-        </div>
-        <div class="content-info-register">
-          <input name="city" type="text" class="info" placeholder="Ciudad">
-        </div>
-        <div class="content-info-register">
-          <input name="pass" type="password" class="info" placeholder="Contraseña" required>
-          <span class="asterisk_input"></span>
-        </div>
-        <div class="content-info-register">
-          <input name="confirm" type="password" class="info" placeholder="Confirmacion de contraseña" required>
-          <span class="asterisk_input"></span>
-        </div>
-        <h6 clase="required">* Datos obligatorios en el registro</h6>
-        <br>
-        <div class="polity">
-          <input type="checkbox" name="condictions">
-          <label for="condictions">Acepto las <a href="#"><span> politicas de privacidad</span></a>
-            y manejo de datos.</label>
-        </div>
-        <div class="btn-register">
-          <i class="far fa-user"></i>
-          <span>Registrarme</span>
-        </div>
-      </form>
-    </section>
-    <section class="section-right-register">
-      <div class="image-logo image-logo-register">
-        <a href="/">
-          <img class="books" src='../../images/Logo_BooksLibreria.png' alt="logo Books librería" title="logo Books librería">
-        </a>
-      </div>
-      <h2>Con redes sociales</h2>
-      <h5>Registrate utilizando tus redes sociales</h5>
-      <div class="content-social-register">
-        <div class="social-media-register">
-          <a href="#" class="btn_circle_register"><i class="fab fa-google"></i></a>
-          <span>Google</span>
-        </div>
-        <div class="social-media-register">
-          <a href="#" class="btn_circle_register"><i class="fab fa-facebook-f"></i></a>
-          <span>Facebook</span>
-        </div>
-      </div>
-    </section>
-  </div>
-</body>
+      </section>
+    </div>
+  </body>
 
-</html>
+  </html>

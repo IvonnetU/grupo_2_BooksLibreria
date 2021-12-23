@@ -13,13 +13,6 @@ app.use(express.static(publicPath));
 
 let mainController = {
   index: function(req,res){
-    // let filterGenere = (req.params) ? req.params.genere : "Young adult";
-		// productsGenere = products.filter(item => item.category == filterGenere);
-    // const booksFilter = [];
-    // products.reverse();
-    // for (let i = 0; i < 8; i++) {
-    //   booksFilter.push(products[i]);
-    // }
     res.render('./main/index', {dataBooks:products});
   }
 }
