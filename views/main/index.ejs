@@ -101,18 +101,19 @@
             <a href="#">Ciencia Ficción</a>
           </div>
           <div class="container-books-featured">
-            <% dataBooks.forEach(book=>{%>
-              <%#if(book.category=="Romántica"){%>
+            <% for(let i=0; i < 8; i++){%>
+              <%#if(dataBooks[i].category=="Romántica" ){%>
                 <div class="items_home">
-                  <a href="/products/<%= book.id %>">
-                    <img src="../../images/books/<%= book.image %>" alt="<%= book.name %>" title="<%= book.name %>">
+                  <a href="/products/<%= dataBooks[i].id %>">
+                    <img src="../../images/books/<%= dataBooks[i].image %>" alt="<%= dataBooks[i].name %>"
+                      title="<%= dataBooks[i].name %>">
                   </a>
                   <h4>
-                    <%= book.name %>
+                    <%= dataBooks[i].name %>
                   </h4>
                 </div>
                 <%#} %>
-                  <%}); %>
+                  <%}; %>
           </div>
         </section>
       </main>

@@ -5,9 +5,10 @@
       <section class="section-left-register">
         <h1>Regístrate</h1>
         <h5>Registrate utilizando tus datos personales y correo electrónico</h5>
-        <form action="/users/register" method="post">
+        <form action="/users/register" method="POST">
           <div class="content-info-register">
-            <input name="name" type="text" class="info" placeholder="Nombres">
+            <input name="name" type="text" class="info" placeholder="Nombres"
+              value="<%= locals.oldData && oldData.name ? oldData.name :''%>">
             <span class="asterisk_input"></span>
             <% if(locals.errors && errors.name){%>
               <div class="alert-danger">
@@ -16,7 +17,8 @@
               <%} %>
           </div>
           <div class="content-info-register">
-            <input name="lastname" type="text" class="info" placeholder="Apellidos">
+            <input name="lastname" type="text" class="info" placeholder="Apellidos"
+              value="<%= locals.oldData && oldData.lastname ? oldData.lastname :''%>">
             <span class="asterisk_input"></span>
             <% if(locals.errors && errors.lastname){%>
               <div class="alert-danger">
@@ -25,7 +27,8 @@
               <%} %>
           </div>
           <div class="content-info-register">
-            <input name="email" type="email" class="info" placeholder="Correo electrónico">
+            <input name="email" type="email" class="info" placeholder="Correo electrónico"
+              value="<%= locals.oldData && oldData.email ? oldData.email :''%>">
             <span class="asterisk_input"></span>
             <% if(locals.errors && errors.email){%>
               <div class="alert-danger">
@@ -34,10 +37,12 @@
               <%} %>
           </div>
           <div class="content-info-register">
-            <input name="phone" type="tel" class="info" placeholder="Teléfono celular">
+            <input name="phone" type="tel" class="info" placeholder="Teléfono celular"
+              value="<%= locals.oldData && oldData.phone ? oldData.phone :''%>">
           </div>
           <div class="content-info-register">
-            <input name="city" type="text" class="info" placeholder="Ciudad">
+            <input name="city" type="text" class="info" placeholder="Ciudad"
+              value="<%= locals.oldData && oldData.city ? oldData.city :''%>">
           </div>
           <div class="content-info-register">
             <input name="pass" type="password" class="info" placeholder="Contraseña">
@@ -63,6 +68,11 @@
             <input type="checkbox" name="condictions">
             <label for="condictions">Acepto las <a href="#"><span> politicas de privacidad</span></a>
               y manejo de datos.</label>
+            <% if(locals.errors && errors.condictions){%>
+              <div class="alert-danger">
+                <%= errors.condictions.msg %>
+              </div>
+              <%} %>
           </div>
           <button class="btn-register" type="submit"><i class="far fa-user"></i>Registrarme</button>
         </form>

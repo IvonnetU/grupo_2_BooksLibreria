@@ -9,7 +9,7 @@
     "password": "TIdwKWjLa",
     "confirmpass": "TIdwKWjLa",
     "image": "https://robohash.org/etdoloredignissimos.png?size=50x50&set=set1",
-    "role": "Engineer"
+    "role": "user"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "password": "JifAEsnyBaai",
     "confirmpass": "JifAEsnyBaai",
     "image": "https://robohash.org/exmodialiquam.png?size=50x50&set=set1",
-    "role": "Supervisor"
+    "role": "user"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "password": "tLMbAZkzBD",
     "confirmpass": "tLMbAZkzBD",
     "image": "https://robohash.org/suscipitsuntcorporis.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
+    "role": "user"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "password": "jqIZhr",
     "confirmpass": "jqIZhr",
     "image": "https://robohash.org/molestiaedoloresipsa.png?size=50x50&set=set1",
-    "role": "Supervisor"
+    "role": "admin"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "password": "w3usFgcVC",
     "confirmpass": "w3usFgcVC",
     "image": "https://robohash.org/istequaspossimus.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
+    "role": "user"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "password": "to7Hl3U",
     "confirmpass": "to7Hl3U",
     "image": "https://robohash.org/nemosimiliquequod.png?size=50x50&set=set1",
-    "role": "Project Manager"
+    "role": "user"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "password": "22jthBRqud6",
     "confirmpass": "22jthBRqud6",
     "image": "https://robohash.org/utdoloresanimi.png?size=50x50&set=set1",
-    "role": "Construction Manager"
+    "role": "user"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "password": "ShIk4aPB",
     "confirmpass": "ShIk4aPB",
     "image": "https://robohash.org/laudantiuminventorenihil.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
+    "role": "user"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "password": "MsgpdIZdQU7V",
     "confirmpass": "MsgpdIZdQU7V",
     "image": "https://robohash.org/dictalaborumodit.png?size=50x50&set=set1",
-    "role": "Engineer"
+    "role": "admin"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "password": "aZpxpM1WR0m",
     "confirmpass": "aZpxpM1WR0m",
     "image": "https://robohash.org/nonvoluptatibusautem.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
+    "role": "user"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "password": "jSMewz",
     "confirmpass": "jSMewz",
     "image": "https://robohash.org/consequaturconsequunturminima.png?size=50x50&set=set1",
-    "role": "Subcontractor"
+    "role": "admin"
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
     "password": "HlR6P3a",
     "confirmpass": "HlR6P3a",
     "image": "https://robohash.org/ipsumestullam.png?size=50x50&set=set1",
-    "role": "Architect"
+    "role": "user"
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
     "password": "tIN6TPzsG",
     "confirmpass": "tIN6TPzsG",
     "image": "https://robohash.org/quamaliquamsed.png?size=50x50&set=set1",
-    "role": "Construction Worker"
+    "role": "user"
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
     "password": "9jYKzCjJ2mm",
     "confirmpass": "9jYKzCjJ2mm",
     "image": "https://robohash.org/distinctiopraesentiumpariatur.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
+    "role": "user"
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
     "password": "qhm03R",
     "confirmpass": "qhm03R",
     "image": "https://robohash.org/minusfacerequi.png?size=50x50&set=set1",
-    "role": "Estimator"
+    "role": "user"
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
     "password": "ERMEqR",
     "confirmpass": "ERMEqR",
     "image": "https://robohash.org/doloremqueexercitationemin.png?size=50x50&set=set1",
-    "role": "Construction Worker"
+    "role": "user"
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
     "password": "bFn9YuAjs885",
     "confirmpass": "bFn9YuAjs885",
     "image": "https://robohash.org/ullamliberodolore.png?size=50x50&set=set1",
-    "role": "Subcontractor"
+    "role": "user"
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
     "password": "AEpxYLbo",
     "confirmpass": "AEpxYLbo",
     "image": "https://robohash.org/voluptatumestiure.png?size=50x50&set=set1",
-    "role": "Architect"
+    "role": "user"
   },
   {
     "id": 19,
@@ -225,7 +225,7 @@
     "password": "yfChUSXog",
     "confirmpass": "yfChUSXog",
     "image": "https://robohash.org/asperioresconsequaturenim.png?size=50x50&set=set1",
-    "role": "Construction Manager"
+    "role": "user"
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
     "password": "921wdps2uiiT",
     "confirmpass": "921wdps2uiiT",
     "image": "https://robohash.org/velquiamolestias.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
+    "role": "user"
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
     "password": "OMCdLmq",
     "confirmpass": "OMCdLmq",
     "image": "https://robohash.org/corporisilloeaque.png?size=50x50&set=set1",
-    "role": "Estimator"
+    "role": "user"
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
     "password": "8z2JlOAzRIb1",
     "confirmpass": "8z2JlOAzRIb1",
     "image": "https://robohash.org/providentomniset.png?size=50x50&set=set1",
-    "role": "Electrician"
+    "role": "admin"
   },
   {
     "id": 23,
@@ -273,7 +273,7 @@
     "password": "wTjwpla022",
     "confirmpass": "wTjwpla022",
     "image": "https://robohash.org/nihilquiset.png?size=50x50&set=set1",
-    "role": "Project Manager"
+    "role": "user"
   },
   {
     "id": 24,
@@ -285,318 +285,18 @@
     "password": "0AiBnymE872v",
     "confirmpass": "0AiBnymE872v",
     "image": "https://robohash.org/quaequout.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
+    "role": "user"
   },
   {
     "id": 25,
-    "name_user": "Hillier",
-    "last_name": "Weston",
-    "email": "hwestono@feedburner.com",
-    "city": "Ksawerów",
-    "phone": "151-504-2211",
-    "password": "V7UBRWxcbv",
-    "confirmpass": "V7UBRWxcbv",
-    "image": "https://robohash.org/voluptatesomnisquasi.png?size=50x50&set=set1",
-    "role": "Engineer"
-  },
-  {
-    "id": 26,
-    "name_user": "Harv",
-    "last_name": "Offen",
-    "email": "hoffenp@networksolutions.com",
-    "city": "Baracoa",
-    "phone": "307-319-7548",
-    "password": "wRYqqis6Gd",
-    "confirmpass": "wRYqqis6Gd",
-    "image": "https://robohash.org/voluptatesettempora.png?size=50x50&set=set1",
-    "role": "Construction Manager"
-  },
-  {
-    "id": 27,
-    "name_user": "Katti",
-    "last_name": "Filipchikov",
-    "email": "kfilipchikovq@webs.com",
-    "city": "Pidvolochys’k",
-    "phone": "595-837-1168",
-    "password": "PLofwh4ui",
-    "confirmpass": "PLofwh4ui",
-    "image": "https://robohash.org/saepeassumendamagni.png?size=50x50&set=set1",
-    "role": "Estimator"
-  },
-  {
-    "id": 28,
-    "name_user": "Grete",
-    "last_name": "Jovasevic",
-    "email": "gjovasevicr@acquirethisname.com",
-    "city": "Kalepasan",
-    "phone": "790-337-7235",
-    "password": "9mGHtDiFbqt",
-    "confirmpass": "9mGHtDiFbqt",
-    "image": "https://robohash.org/voluptasmolestiaenam.png?size=50x50&set=set1",
-    "role": "Project Manager"
-  },
-  {
-    "id": 29,
-    "name_user": "Noland",
-    "last_name": "Levick",
-    "email": "nlevicks@constantcontact.com",
-    "city": "Saint-Amand-les-Eaux",
-    "phone": "236-233-0693",
-    "password": "tlTb1WDq",
-    "confirmpass": "tlTb1WDq",
-    "image": "https://robohash.org/voluptatumnihilaccusantium.png?size=50x50&set=set1",
-    "role": "Surveyor"
-  },
-  {
-    "id": 30,
-    "name_user": "Grier",
-    "last_name": "Bedingfield",
-    "email": "gbedingfieldt@merriam-webster.com",
-    "city": "Krajan Dua Dawuan Wetan",
-    "phone": "536-161-8269",
-    "password": "aq54Vqx",
-    "confirmpass": "aq54Vqx",
-    "image": "https://robohash.org/sitofficiasequi.png?size=50x50&set=set1",
-    "role": "Estimator"
-  },
-  {
-    "id": 31,
-    "name_user": "Odessa",
-    "last_name": "Djekic",
-    "email": "odjekicu@bloomberg.com",
-    "city": "Benito Juarez",
-    "phone": "531-330-1135",
-    "password": "z1FrWx",
-    "confirmpass": "z1FrWx",
-    "image": "https://robohash.org/assumendaminusconsequuntur.png?size=50x50&set=set1",
-    "role": "Architect"
-  },
-  {
-    "id": 32,
-    "name_user": "Donny",
-    "last_name": "Scoyles",
-    "email": "dscoylesv@a8.net",
-    "city": "Cancela",
-    "phone": "856-809-1610",
-    "password": "atL0nK2I3",
-    "confirmpass": "atL0nK2I3",
-    "image": "https://robohash.org/quibusdampraesentiumquis.png?size=50x50&set=set1",
-    "role": "Architect"
-  },
-  {
-    "id": 33,
-    "name_user": "Wendi",
-    "last_name": "McRuvie",
-    "email": "wmcruview@huffingtonpost.com",
-    "city": "Illapel",
-    "phone": "866-689-7344",
-    "password": "ewmS8p",
-    "confirmpass": "ewmS8p",
-    "image": "https://robohash.org/autemnumquamprovident.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
-  },
-  {
-    "id": 34,
-    "name_user": "Cyndi",
-    "last_name": "MacMillan",
-    "email": "cmacmillanx@globo.com",
-    "city": "Karangpari",
-    "phone": "827-603-2923",
-    "password": "ZOUwF96fpzsM",
-    "confirmpass": "ZOUwF96fpzsM",
-    "image": "https://robohash.org/consequaturdoloremsoluta.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
-  },
-  {
-    "id": 35,
-    "name_user": "Sterling",
-    "last_name": "Aubin",
-    "email": "saubiny@google.fr",
-    "city": "Togur",
-    "phone": "275-964-6697",
-    "password": "lsY15HGB",
-    "confirmpass": "lsY15HGB",
-    "image": "https://robohash.org/etfacilisbeatae.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
-  },
-  {
-    "id": 36,
-    "name_user": "Pascal",
-    "last_name": "Schwaiger",
-    "email": "pschwaigerz@mlb.com",
-    "city": "Eksjö",
-    "phone": "918-339-3068",
-    "password": "wCvOMooR4g",
-    "confirmpass": "wCvOMooR4g",
-    "image": "https://robohash.org/nisietsaepe.png?size=50x50&set=set1",
-    "role": "Construction Worker"
-  },
-  {
-    "id": 37,
-    "name_user": "Mersey",
-    "last_name": "Mcall",
-    "email": "mmcall10@nationalgeographic.com",
-    "city": "Wanmao",
-    "phone": "943-414-1094",
-    "password": "9W8yH9TrG9nZ",
-    "confirmpass": "9W8yH9TrG9nZ",
-    "image": "https://robohash.org/velitcommodisunt.png?size=50x50&set=set1",
-    "role": "Construction Manager"
-  },
-  {
-    "id": 38,
-    "name_user": "Jolynn",
-    "last_name": "Bartoszinski",
-    "email": "jbartoszinski11@gmpg.org",
-    "city": "Berģi",
-    "phone": "111-101-3350",
-    "password": "fnmcZj",
-    "confirmpass": "fnmcZj",
-    "image": "https://robohash.org/voluptaseaut.png?size=50x50&set=set1",
-    "role": "Project Manager"
-  },
-  {
-    "id": 39,
-    "name_user": "Abelard",
-    "last_name": "Mulcahy",
-    "email": "amulcahy12@unicef.org",
-    "city": "Yuqunweng",
-    "phone": "557-718-1929",
-    "password": "naJL9GKGlP",
-    "confirmpass": "naJL9GKGlP",
-    "image": "https://robohash.org/officiaculpaet.png?size=50x50&set=set1",
-    "role": "Construction Worker"
-  },
-  {
-    "id": 40,
-    "name_user": "Fredek",
-    "last_name": "Cockrell",
-    "email": "fcockrell13@purevolume.com",
-    "city": "Przemyśl",
-    "phone": "191-476-2257",
-    "password": "tp8QBrmAfg7p",
-    "confirmpass": "tp8QBrmAfg7p",
-    "image": "https://robohash.org/rerumducimusreprehenderit.png?size=50x50&set=set1",
-    "role": "Construction Expeditor"
-  },
-  {
-    "id": 41,
-    "name_user": "Collin",
-    "last_name": "Toop",
-    "email": "ctoop14@cisco.com",
-    "city": "Banpu",
-    "phone": "519-759-0176",
-    "password": "VuNe9fok",
-    "confirmpass": "VuNe9fok",
-    "image": "https://robohash.org/fugiatoptioquia.png?size=50x50&set=set1",
-    "role": "Surveyor"
-  },
-  {
-    "id": 42,
-    "name_user": "Becka",
-    "last_name": "Blaise",
-    "email": "bblaise15@geocities.com",
-    "city": "Chaupimarca",
-    "phone": "405-361-5620",
-    "password": "RSM2L1LPC5ws",
-    "confirmpass": "RSM2L1LPC5ws",
-    "image": "https://robohash.org/expeditadistinctioveritatis.png?size=50x50&set=set1",
-    "role": "Construction Foreman"
-  },
-  {
-    "id": 43,
-    "name_user": "Bennie",
-    "last_name": "Abramovitz",
-    "email": "babramovitz16@livejournal.com",
-    "city": "Eindhoven",
-    "phone": "166-336-7730",
-    "password": "SJVr7jgTWhx8",
-    "confirmpass": "SJVr7jgTWhx8",
-    "image": "https://robohash.org/quieiusvelit.png?size=50x50&set=set1",
-    "role": "Supervisor"
-  },
-  {
-    "id": 44,
-    "name_user": "Jacky",
-    "last_name": "Dellenty",
-    "email": "jdellenty17@icq.com",
-    "city": "Binucayan",
-    "phone": "475-533-4485",
-    "password": "NIHnvh3",
-    "confirmpass": "NIHnvh3",
-    "image": "https://robohash.org/nequeautnemo.png?size=50x50&set=set1",
-    "role": "Project Manager"
-  },
-  {
-    "id": 45,
-    "name_user": "Alphard",
-    "last_name": "Rhule",
-    "email": "arhule18@google.it",
-    "city": "Lawepakam",
-    "phone": "406-438-2526",
-    "password": "O4ZnmfoRhu",
-    "confirmpass": "O4ZnmfoRhu",
-    "image": "https://robohash.org/uteaet.png?size=50x50&set=set1",
-    "role": "Surveyor"
-  },
-  {
-    "id": 46,
-    "name_user": "Rosetta",
-    "last_name": "Seman",
-    "email": "rseman19@delicious.com",
-    "city": "Lewopao",
-    "phone": "919-205-6021",
-    "password": "cymqMS",
-    "confirmpass": "cymqMS",
-    "image": "https://robohash.org/quaeminimaut.png?size=50x50&set=set1",
-    "role": "Engineer"
-  },
-  {
-    "id": 47,
-    "name_user": "Rae",
-    "last_name": "Meas",
-    "email": "rmeas1a@cam.ac.uk",
-    "city": "Nanzamu",
-    "phone": "321-436-6544",
-    "password": "3UHccqVK8",
-    "confirmpass": "3UHccqVK8",
-    "image": "https://robohash.org/itaquemaiorestempore.png?size=50x50&set=set1",
-    "role": "Surveyor"
-  },
-  {
-    "id": 48,
-    "name_user": "Minnnie",
-    "last_name": "Gallamore",
-    "email": "mgallamore1b@samsung.com",
-    "city": "Ermida",
-    "phone": "868-479-6782",
-    "password": "XRfZt3Jjb9l",
-    "confirmpass": "XRfZt3Jjb9l",
-    "image": "https://robohash.org/odioanimivoluptatem.png?size=50x50&set=set1",
-    "role": "Construction Manager"
-  },
-  {
-    "id": 49,
-    "name_user": "Mattie",
-    "last_name": "DeSousa",
-    "email": "mdesousa1c@squidoo.com",
-    "city": "Darhan",
-    "phone": "312-642-7648",
-    "password": "knz5Z6x",
-    "confirmpass": "knz5Z6x",
-    "image": "https://robohash.org/rationequieum.png?size=50x50&set=set1",
-    "role": "Supervisor"
-  },
-  {
-    "id": 50,
-    "name_user": "Egbert",
-    "last_name": "Kinmond",
-    "email": "ekinmond1d@chicagotribune.com",
-    "city": "Helsingborg",
-    "phone": "323-866-0442",
-    "password": "j87p47JE8",
-    "confirmpass": "j87p47JE8",
-    "image": "https://robohash.org/nesciuntsedeum.png?size=50x50&set=set1",
-    "role": "Estimator"
+    "name_user": "Kate2",
+    "last_name": "para borrar",
+    "email": "kate.castano@localhost.com",
+    "city": "Medellín",
+    "phone": "3000000000",
+    "password": "123456",
+    "confirmpass": "123456",
+    "image": "user-generic.png",
+    "role": "user"
   }
 ]

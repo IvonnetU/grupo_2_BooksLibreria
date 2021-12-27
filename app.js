@@ -8,20 +8,21 @@ const methodOverride =  require('method-override'); // Para poder usar los méto
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
-// Rutas
+/**********Rutas*************/
 const routesMain = require('./routers/mainRouters.js');
 const routesProduct = require('./routers/productRouters.js');
 const routesUsers = require('./routers/usersRouters.js');
 const routesAdmin = require('./routers/adminRouters.js');
 
-//Middlewares
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+/*************Middlewares**************/
 
-// Invocar template engine EJS
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(express.urlencoded({extended : false})); //recibir los valores de un formulario por POST
+
+/*********Invocar template engine EJS*********/
 app.set('view engine','ejs');
 
 // Asignando el servidor
-
 app.listen(3030, () => {
     console.log("Servidor ejecutandose en el puerto 3030");
 });
