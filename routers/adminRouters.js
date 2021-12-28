@@ -84,4 +84,7 @@ router.put("/edit/:id", fileUpload.single("imagebook"),validateFormEdit, adminCo
 router.get("/delete/:id", adminController.delete);
 router.delete("/delete/:id", adminController.destroy);
 
+/*** GET TODOS LOS CLIENTES ***/
+router.get("/customers", adminController.customers);
+
 module.exports = router;
