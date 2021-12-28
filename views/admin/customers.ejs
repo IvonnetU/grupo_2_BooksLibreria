@@ -16,7 +16,8 @@
           <% dataUsers.forEach(user=>{%>
             <tr class="article-product-admin">
               <td class="disabledPc">
-                <img src="<%= user.image %>" alt="<%= user.name_user %>" title="<%= user.name_user %>">
+                <img src="../../images/avatars/<%= user.image %>" alt="<%= user.name_user %>"
+                  title="<%= user.name_user %>">
               </td>
               <td>
                 <%= user.name_user+' '+user.last_name%>
@@ -26,11 +27,11 @@
               </td>
               <td class="td-actions">
                 <div class="content-actions flexV">
-                  <a href="/admin/edit/<%= user.id %>" class="btn-edit ani">
+                  <a href="/admin/customer/edit/<%= user.id %>" class="btn-edit ani">
                     <i class="fas fa-edit"></i>
                     <span>Editar</span>
                   </a>
-                  <a href="/admin/delete/<%= user.id %>" class="btn-delete ani">
+                  <a href="/admin/customer/delete/<%= user.id %>" class="btn-delete ani">
                     <i class="fas fa-trash-alt"></i>
                     <span>Eliminar</span>
                   </a>

@@ -1,0 +1,56 @@
+<%- include('../partials/head-admin')%>
+
+  <body class="body-add">
+    <section class="container-formAdd boxShadow">
+      <h2>Editar Cliente</h2>
+      <form action="/admin/customer/edit/<%= customer.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <section class="form-group">
+
+          <div>
+            <label for="name" class="label-filter">Nombres</label>
+            <input type="text" name="name" class="input-filter" value="<%= customer.name_user %>">
+          </div>
+          <div>
+            <label for="lastname" class="label-filter">Apellidos</label>
+            <input type="text" name="lastname" class="input-filter" value="<%= customer.last_name %>">
+          </div>
+          <div>
+            <label for="email" class="label-filter">Email</label>
+            <input type="email" name="email" class="input-filter" value="<%= customer.email %>">
+          </div>
+          <div>
+            <label for="city" class="label-filter">Ciudad</label>
+            <input type="text" name="city" class="input-filter" value="<%= customer.city %>">
+          </div>
+          <div>
+            <label for="pass" class="label-filter">Contraseña actual</label>
+            <input type="password" name="pass" class="input-filter" value="<%= customer.password %>">
+          </div>
+          <div>
+            <label for="confirm" class="label-filter">Confirmación Contraseña</label>
+            <input type="password" name="confirm" class="input-filter" value="<%= customer.confirmpass %>">
+          </div>
+          <div>
+            <label for="phone" class="label-filter">Teléfono</label>
+            <input type="text" name="phone" class="input-filter" value="<%= customer.phone %>">
+          </div>
+          <div>
+            <label for="role" class="label-filter">Rol</label>
+            <input type="text" name="role" class="input-filter" value="<%= customer.role %>">
+          </div>
+          <div>
+            <input type="hidden" name="image" value="<%= customer.image%>" />
+            <label for="image" class="label-filter">Imagen</label>
+            <img id="imageEdit" src=<%="/images/avatars/" +customer.image %> alt="<%= customer.image %>" title="
+              <%=customer.image %>"><input type="file" name="image" class="input-filter">
+          </div>
+        </section>
+        <section class="flexV containerBtn">
+          <a href="/admin/customers" class="btn-cancel ">Cancelar</a>
+          <button type="submit" class="btn-add">Editar</button>
+        </section>
+      </form>
+    </section>
+  </body>
+
+  </html>

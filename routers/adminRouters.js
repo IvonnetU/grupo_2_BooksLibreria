@@ -8,7 +8,7 @@ const { body } = require("express-validator");
 // ************ Controller Require ************
 const adminController = require("../controllers/adminController");
 
-/************** Declaración de multer ******/
+/************** Declaración de multer Productos ******/
 let multerDiskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
     let folder = path.join(__dirname, "../public/images/books");
@@ -21,6 +21,20 @@ let multerDiskStorage = multer.diskStorage({
 });
 
 let fileUpload = multer({ storage: multerDiskStorage });
+
+/************** Declaración de multer Clientes ******/
+let multerDiskStorageCustomers = multer.diskStorage({
+  destination: (req, file, callback) => {
+    let folder = path.join(__dirname, "../public/images/avatars");
+    callback(null, folder);
+  },
+  filename: (req, file, callback) => {
+    let imageName = "avatar-" + Date.now() + path.extname(file.originalname);
+    callback(null, imageName);
+  },
+});
+
+let fileUploadCustomer = multer({ storage: multerDiskStorageCustomers });
 
 /************** Validación del formulario ****************/
 const validateFormCreate = [
@@ -69,6 +83,17 @@ const validateFormEdit = [
   body('description').notEmpty().withMessage('Debes completar el campo de descripción'),
 ];
 
+const validateFormRegister = [
+  body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
+  body('lastname').notEmpty().withMessage('Debes completar el campo de apellido'),
+  body('email').notEmpty().withMessage('Debes completar el campo de email').isEmail().withMessage('Debes ingresar un email valido'),
+  body('city').notEmpty().withMessage('Debes completar la ciudad'),
+  body('phone').isMobilePhone().withMessage('Debes ingresar un número valido'),
+  body('pass').notEmpty().withMessage('Debes completar el campo de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres'),
+  body('confirmpass').notEmpty().withMessage('Debes completar el campo de confirmación de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres').custom((value, {req}) => (value === req.body.pass)).withMessage('las contraseñas no coinciden'),
+  body('condictions').exists().withMessage('Debes aceptar la politica de tratamiento de datos')
+];
+
 /*** GET TODOS LOS PRODUCTOS ***/
 router.get("/", adminController.index);
 
@@ -86,5 +111,13 @@ router.delete("/delete/:id", adminController.destroy);
 
 /*** GET TODOS LOS CLIENTES ***/
 router.get("/customers", adminController.customers);
+
+/*** EDITAR UN CLIENTE ***/
+router.get("/customer/edit/:id", adminController.editCustomers);
+router.put("/customer/edit/:id", fileUploadCustomer.single("image"),validateFormRegister, adminController.updateCustomer);
+
+/*** ELIMINAR UN CLIENTE***/
+router.get("/customer/delete/:id", adminController.delete);
+router.delete("/customer/delete/:id", adminController.destroy);
 
 module.exports = router;

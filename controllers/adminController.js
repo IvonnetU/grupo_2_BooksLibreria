@@ -128,7 +128,47 @@ let adminController = {
   // Clientes - Mostrar todos los clientes
   customers: (req, res) => {    
 		res.render('./admin/customers',{dataUsers: users});
-  }
+  },
+  // Edit - formulario de editar cliente
+  editCustomers:(req, res) => {
+    let idCustomer = req.params.id;
+		customerEdit = users.find(item => item.id == idCustomer);
+    res.render('./admin/editCustomer',{ customer : customerEdit });
+  },
+  // Actualizar - método de actualizar
+  updateCustomer: (req, res) => {
+    let resultValidation = validationResult(req);
+    if(resultValidation.isEmpty()){
+      const {name,lastname,email,phone,city,pass,confirmpass,role} = req.body;
+		const idCustomer = req.params.id;
+    const fileNameCustomer = (req.file) ? req.file.filename : image;
+    const customersNews = [];
+    users.map(item =>{
+			if(item.id == idCustomer){
+				item.name_user = name; 
+        item.last_name = lastname;
+        item.email = email; 
+        item.city = city;
+        item.phone = phone;
+        item.password = pass;
+        item.confirmpass = confirmpass;        
+        item.image = fileNameCustomer;
+        item.role = role;        
+        customersNews.push(item);
+			}else{
+        customersNews.push(item);
+      }			
+		});		
+		fs.writeFileSync(usersFilePath,JSON.stringify(customersNews),'utf-8');
+		res.render('./admin/customers',{dataUsers: customersNews});	
+    }else{
+      res.render('./admin/editCustomer',{
+        customer : customerEdit,
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    }    	
+  },
 }
 
 module.exports = adminController;
