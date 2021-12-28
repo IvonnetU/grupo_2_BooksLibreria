@@ -286,17 +286,5 @@
     "confirmpass": "0AiBnymE872v",
     "image": "https://robohash.org/quaequout.png?size=50x50&set=set1",
     "role": "user"
-  },
-  {
-    "id": 25,
-    "name_user": "Kate2",
-    "last_name": "para borrar",
-    "email": "kate.castano@localhost.com",
-    "city": "Medellín",
-    "phone": "3000000000",
-    "password": "123456",
-    "confirmpass": "123456",
-    "image": "user-generic.png",
-    "role": "user"
   }
 ]

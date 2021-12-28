@@ -12,9 +12,10 @@ const validateFormRegister = [
   body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
   body('lastname').notEmpty().withMessage('Debes completar el campo de apellido'),
   body('email').notEmpty().withMessage('Debes completar el campo de email').isEmail().withMessage('Debes ingresar un email valido'),
+  body('city').notEmpty().withMessage('Debes completar la ciudad'),
   body('phone').isMobilePhone().withMessage('Debes ingresar un número valido'),
   body('pass').notEmpty().withMessage('Debes completar el campo de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres'),
-  body('confirmpass').notEmpty().withMessage('Debes completar el campo de confirmación de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres').equals('pass').withMessage('La confirmación no esta igual a la contraseña'),
+  body('confirmpass').notEmpty().withMessage('Debes completar el campo de confirmación de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres').custom((value, {req}) => (value === req.body.pass)).withMessage('las contraseñas no coinciden'),
   body('condictions').exists().withMessage('Debes aceptar la politica de tratamiento de datos')
 ];
 

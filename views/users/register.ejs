@@ -37,12 +37,24 @@
               <%} %>
           </div>
           <div class="content-info-register">
-            <input name="phone" type="tel" class="info" placeholder="Teléfono celular"
-              value="<%= locals.oldData && oldData.phone ? oldData.phone :''%>">
-          </div>
-          <div class="content-info-register">
             <input name="city" type="text" class="info" placeholder="Ciudad"
               value="<%= locals.oldData && oldData.city ? oldData.city :''%>">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.city){%>
+              <div class="alert-danger">
+                <%= errors.city.msg %>
+              </div>
+              <%} %>
+          </div>
+          <div class="content-info-register">
+            <input name="phone" type="tel" class="info" placeholder="Teléfono celular"
+              value="<%= locals.oldData && oldData.phone ? oldData.phone :''%>">
+            <span class="asterisk_input"></span>
+            <% if(locals.errors && errors.phone){%>
+              <div class="alert-danger">
+                <%= errors.phone.msg %>
+              </div>
+              <%} %>
           </div>
           <div class="content-info-register">
             <input name="pass" type="password" class="info" placeholder="Contraseña">
