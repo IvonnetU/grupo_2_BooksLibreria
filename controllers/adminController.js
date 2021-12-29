@@ -169,6 +169,24 @@ let adminController = {
       });
     }    	
   },
+  // Eliminar - Formulario de confirmar eliminado cliente
+  deleteCustomer: (req, res) => {
+    let idCustomer = req.params.id;
+		customerDelete = users.find(item => item.id == idCustomer);
+    return res.render('./admin/deleteCustomer',{customerDelete});
+  },
+  // Borrar - Eliminar un cliente de la BD
+  destroyCustomer: (req, res) => {
+    let idCustomer = req.params.id;
+		const customersNews = [];
+		users.map(item =>{
+			if(item.id != idCustomer){
+				customersNews.push(item);
+			}			
+		});		
+		fs.writeFileSync(usersFilePath,JSON.stringify(customersNews),'utf-8');
+		res.render('./admin/customers',{dataUsers: customersNews});		
+  },
 }
 
 module.exports = adminController;

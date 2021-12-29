@@ -117,7 +117,7 @@ router.get("/customer/edit/:id", adminController.editCustomers);
 router.put("/customer/edit/:id", fileUploadCustomer.single("image"),validateFormEditCustomer, adminController.updateCustomer);
 
 /*** ELIMINAR UN CLIENTE***/
-router.get("/customer/delete/:id", adminController.delete);
-router.delete("/customer/delete/:id", adminController.destroy);
+router.get("/customer/delete/:id", adminController.deleteCustomer);
+router.delete("/customer/delete/:id", adminController.destroyCustomer);
 
 module.exports = router;
