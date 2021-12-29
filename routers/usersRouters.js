@@ -19,11 +19,22 @@ const validateFormRegister = [
   body('condictions').exists().withMessage('Debes aceptar la politica de tratamiento de datos')
 ];
 
-/*** Formulario de registro ***/
-router.get('/register', usersController.register);
+/************** Validación del formulario ****************/
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
+/*** Registro ***/
+router.get('/register',guestMiddleware, usersController.register);
 router.post('/register',validateFormRegister, usersController.create);
 
-/*** Formulario de ingreso ***/
-router.get('/login', usersController.login);
+/*** Login ***/
+router.get('/login',guestMiddleware, usersController.login);
+router.post('/login', usersController.loginProcess);
+
+/*** Profile***/
+router.get('/profile',authMiddleware, usersController.profile);
+
+/*** Log out***/
+router.get('/logout', usersController.logout);
 
 module.exports = router;

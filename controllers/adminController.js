@@ -22,7 +22,9 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 let adminController = {
   //Index - Mostrar el administrador de productos
   index: function(req,res){
-    res.render('./admin/manageProducts',{ dataBooks: products });
+    res.render('./admin/manageProducts',{ 
+      dataBooks: products
+    });
   },
    // Añadir - formulario de crear
   add:(req, res) => {

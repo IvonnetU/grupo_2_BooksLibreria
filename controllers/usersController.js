@@ -10,43 +10,87 @@ const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
 //conectando json
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+//Requerir modelo de usuarios
+const User = require('../models/User');
+const bcryptjs = require('bcryptjs');
 
 let usersController = {
   
   login: function(req,res){
     res.render('./users/login');
   },
+  loginProcess: (req, res) => {
+    let userToLogin = User.findByField('email', req.body.email);
+
+    if(userToLogin){
+      let isPassword = bcryptjs.compareSync(req.body.pass, userToLogin.password);
+      if(isPassword){
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;        
+        return res.redirect('/users/profile');           
+      }
+      return res.render('./users/login', {
+        errors:{
+          email:{
+            msg:'Las credenciales no son correctas'
+          }
+        }
+      });
+    }
+
+    return res.render('./users/login', {
+      errors:{
+        email:{
+          msg:'No se encuentra el usuario'
+        }
+      }
+    });
+  },
   register: function(req,res){
     res.render('./users/register');
   },
   create: function(req,res){
     let resultValidation = validationResult(req);
-    if(resultValidation.isEmpty()){
-      const {name,lastname,email,phone,city,pass,confirmpass} = req.body;
-      let idPrev = users.length;
-      const dataNew = {
-        id: idPrev + 1,
-        name_user:name,
-        last_name:lastname, 
-        email,
-        city,
-        phone,
-        password:pass,
-        confirmpass,
-        image: 'user-generic.png',
-        role: 'user'     
-      }
-      users.push(dataNew);
-      fs.writeFileSync(usersFilePath,JSON.stringify(users),'utf-8');
-      res.redirect('/');
-    }else{
-      res.render('./users/register',{
+
+    if(resultValidation.errors.length > 0){
+      return res.render('./users/register',{
         errors: resultValidation.mapped(),
         oldData: req.body
+      });      
+    }	
+
+    let userInDB = User.findByField('email', req.body.email);
+
+    if(userInDB){
+      return res.render('./users/register',{
+        errors: {
+          email:{
+            msg: 'Este email ya está registrado'
+          }
+        },
+        oldData: req.body
       });
-    }				
+    }
+
+    let userToCreate = {
+      ...req.body,
+      password: bcryptjs.hashSync(req.body.pass, 10),
+      confirmpass: bcryptjs.hashSync(req.body.confirmpass, 10),
+      image: 'user-generic.png',
+      role: 'user' 
+    }
+    User.create(userToCreate);
+    res.redirect('/users/login');
+  },
+  profile: function(req,res){
+    res.render('./users/profile',{user: req.session.userLogged });    
+  },
+  logout: function(req,res){
+    req.session.destroy();
+    res.redirect('/');
   }
 }
 

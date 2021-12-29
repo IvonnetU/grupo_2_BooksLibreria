@@ -1,5 +1,6 @@
 // Declarando los modulos externos de express
 const express = require('express');
+const session = require('express-session');
 const app = express();
 const path = require('path');
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
@@ -21,6 +22,18 @@ app.use(express.urlencoded({extended : false})); //recibir los valores de un for
 
 /*********Invocar template engine EJS*********/
 app.set('view engine','ejs');
+
+app.use(session({
+    secret: "Shhh, It's a secret",
+    resave: false,
+    saveUninitialized: false,
+}))//para generar sessiones en el sistema
+
+
+/**************** Middleware de aplicacion ******************/
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+// app.use(userLoggedMiddleware);
 
 // Asignando el servidor
 app.listen(3030, () => {

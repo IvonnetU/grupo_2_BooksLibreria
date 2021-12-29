@@ -1,0 +1,16 @@
+<%- include('../partials/head-admin')%>
+
+  <body class="body-admin">
+    <% if(user.role=='admin' ){%>
+      <%- include('../partials/header-admin')%>
+        <%}else{%>
+          <%- include('../partials/header-user')%>
+            <%} %>
+              <section class="section-title flex">
+                <h1>
+                  <%= user.name%>
+                </h1>
+              </section>
+  </body>
+
+  </html>

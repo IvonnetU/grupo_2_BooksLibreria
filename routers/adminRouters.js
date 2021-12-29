@@ -8,6 +8,9 @@ const { body } = require("express-validator");
 // ************ Controller Require ************
 const adminController = require("../controllers/adminController");
 
+// ************ Middlewares ************
+// const validations = require("../middlewares/validations")
+
 /************** Declaración de multer Productos ******/
 let multerDiskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
@@ -94,30 +97,33 @@ const validateFormEditCustomer = [
   body('role').notEmpty().withMessage('Rol no puede estar vacío')
 ];
 
+/************** Validación del formulario ****************/
+const authMiddleware = require('../middlewares/authMiddleware');
+
 /*** GET TODOS LOS PRODUCTOS ***/
-router.get("/", adminController.index);
+router.get("/", authMiddleware, adminController.index);
 
 /*** CREAR UN PRODUCTO ***/
-router.get("/create", adminController.add);
+router.get("/create",authMiddleware, adminController.add);
 router.post("/create",fileUpload.single("imagebook"),validateFormCreate,adminController.store);
 
 /*** EDITAR UN PRODUCTO ***/
-router.get("/edit/:id", adminController.edit);
+router.get("/edit/:id",authMiddleware, adminController.edit);
 router.put("/edit/:id", fileUpload.single("imagebook"),validateFormEdit, adminController.update);
 
 /*** ELIMINAR UN PRODUCTO***/
-router.get("/delete/:id", adminController.delete);
+router.get("/delete/:id",authMiddleware, adminController.delete);
 router.delete("/delete/:id", adminController.destroy);
 
 /*** GET TODOS LOS CLIENTES ***/
-router.get("/customers", adminController.customers);
+router.get("/customers",authMiddleware, adminController.customers);
 
 /*** EDITAR UN CLIENTE ***/
-router.get("/customer/edit/:id", adminController.editCustomers);
+router.get("/customer/edit/:id",authMiddleware, adminController.editCustomers);
 router.put("/customer/edit/:id", fileUploadCustomer.single("image"),validateFormEditCustomer, adminController.updateCustomer);
 
 /*** ELIMINAR UN CLIENTE***/
-router.get("/customer/delete/:id", adminController.deleteCustomer);
+router.get("/customer/delete/:id", authMiddleware, adminController.deleteCustomer);
 router.delete("/customer/delete/:id", adminController.destroyCustomer);
 
 module.exports = router;

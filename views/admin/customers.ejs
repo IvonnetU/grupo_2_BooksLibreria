@@ -16,11 +16,10 @@
           <% dataUsers.forEach(user=>{%>
             <tr class="article-product-admin">
               <td class="disabledPc">
-                <img src="../../../images/avatars/<%= user.image %>" alt="<%= user.name_user %>"
-                  title="<%= user.name_user %>">
+                <img src="../../../images/avatars/<%= user.image %>" alt="<%= user.name %>" title="<%= user.name %>">
               </td>
               <td>
-                <%= user.name_user+' '+user.last_name%>
+                <%= user.name+' '+user.lastname%>
               </td>
               <td class="disabled">
                 <%= user.role %>
