@@ -5,7 +5,6 @@
       <h2>Editar Cliente</h2>
       <form action="/admin/customer/edit/<%= customer.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <section class="form-group">
-
           <div>
             <label for="name" class="label-filter">Nombres</label>
             <input type="text" name="name" class="input-filter" value="<%= customer.name_user %>">
@@ -27,8 +26,8 @@
             <input type="password" name="pass" class="input-filter" value="<%= customer.password %>">
           </div>
           <div>
-            <label for="confirm" class="label-filter">Confirmación Contraseña</label>
-            <input type="password" name="confirm" class="input-filter" value="<%= customer.confirmpass %>">
+            <label for="confirmpass" class="label-filter">Confirmación Contraseña</label>
+            <input type="password" name="confirmpass" class="input-filter" value="<%= customer.confirmpass %>">
           </div>
           <div>
             <label for="phone" class="label-filter">Teléfono</label>

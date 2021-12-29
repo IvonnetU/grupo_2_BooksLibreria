@@ -139,7 +139,7 @@ let adminController = {
   updateCustomer: (req, res) => {
     let resultValidation = validationResult(req);
     if(resultValidation.isEmpty()){
-      const {name,lastname,email,phone,city,pass,confirmpass,role} = req.body;
+      const {name,lastname,email,phone,city,pass,confirmpass,role,image} = req.body;
 		const idCustomer = req.params.id;
     const fileNameCustomer = (req.file) ? req.file.filename : image;
     const customersNews = [];
