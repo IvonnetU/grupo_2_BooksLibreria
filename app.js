@@ -23,15 +23,14 @@ app.use(express.urlencoded({extended : false})); //recibir los valores de un for
 /*********Invocar template engine EJS*********/
 app.set('view engine','ejs');
 
+/**************** Middleware de aplicacion ******************/
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
 app.use(session({
     secret: "Shhh, It's a secret",
     resave: false,
     saveUninitialized: false,
 }))//para generar sessiones en el sistema
-
-
-/**************** Middleware de aplicacion ******************/
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // app.use(userLoggedMiddleware);
 

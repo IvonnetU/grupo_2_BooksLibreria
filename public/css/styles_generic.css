@@ -97,7 +97,7 @@ ol {
   padding: 20px;
   border-bottom: solid 2px #dddddd;
   margin-bottom: 10px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 .button-exit {
@@ -308,7 +308,7 @@ ol {
     grid-template-columns: 1fr 2fr;
   }
   .header-admin {
-    height: 100%;
+    height: 100vh;
   }
   .button-exit a i,
   .button-add a i {

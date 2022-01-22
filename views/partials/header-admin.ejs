@@ -1,7 +1,9 @@
 <header class="header-admin">
   <div class="flexH header-top">
     <img src="../../../images/logo_white.png" alt="logo" title="logo">
-    <h4>Nombre administrador</h4>
+    <h4>
+      <%=user.name%>
+    </h4>
   </div>
   <nav>
     <ul>
@@ -15,12 +17,3 @@
     </ul>
   </nav>
 </header>
-<section class="section-view-admin">
-  <section class="main-top-bar flex">
-    <div class="button-exit ani">
-      <a href="/users/logout">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Cerrar Sesión</span>
-      </a>
-    </div>
-  </section>

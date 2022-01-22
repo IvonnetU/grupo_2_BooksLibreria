@@ -11,13 +11,34 @@
       <span><i class="fas fa-search"></i></span>
     </div>
     <div class="btn-access">
-      <a href="/users/login">
-        Iniciar Sesión
-      </a>
-      |
-      <a href="/users/register">
-        Regístrate
-      </a>
+      <% if(locals.isLogged) { %>
+        <a href="/users/profile">
+          Perfil
+        </a>
+        |
+        <a href="/users/logout">
+          Cerrar sesión
+        </a>
+        <!-- <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="./images/avatars/user-generic.png" alt="avatar" title="avatar" width="40px" style="border-radius: 100%;">
+          Hi user
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="nav-dropdown">
+          <a class="dropdown-item" href="/users/profile">Perfil</a>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <a class="dropdown-item" href="/users/logout">Cerrar sesión</a>
+        </ul> -->
+        <%} else {%>
+        <a href="/users/login">
+          Iniciar Sesión
+        </a>
+        |
+        <a href="/users/register">
+          Regístrate
+        </a>
+        <%}%>
     </div>
     <a href="#" class="hamburguer-button">
       <i class="fas fa-bars"></i>

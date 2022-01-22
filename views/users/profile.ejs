@@ -6,11 +6,21 @@
         <%}else{%>
           <%- include('../partials/header-user')%>
             <%} %>
-              <section class="section-title flex">
-                <h1>
-                  <%= user.name%>
-                </h1>
-              </section>
+              <section class="section-view-admin">
+                <section class="main-top-bar flex">
+                  <div class="button-exit ani">
+                    <a href="/">
+                      <i class="fas fa-home"></i>
+                      <span>Volver a la tienda</span>
+                    </a>
+                  </div>
+                  <div class="button-exit ani">
+                    <a href="/users/logout">
+                      <i class="fas fa-sign-out-alt"></i>
+                      <span>Cerrar Sesión</span>
+                    </a>
+                  </div>
+                </section>
   </body>
 
   </html>
