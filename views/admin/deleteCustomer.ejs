@@ -1,0 +1,19 @@
+<%- include('../partials/head-admin')%>
+
+  <body class="body-add flexV">
+    <section class="container-delete boxShadow">
+      <h2>Eliminar Cliente</h2>
+      <p>¿Esta seguro que deseas eliminar el producto?</p>
+      <p class="name_delete">
+        <%= customerDelete.name + ' ' + customerDelete.lastname%>
+      </p>
+      <section class="flexV containerBtn">
+        <a href="/admin/customers" class="btn-cancel ">Cancelar</a>
+        <form action="/admin/customer/delete/<%= customerDelete.id %>?_method=DELETE" method="POST">
+          <button type="submit" class="btn-destroy">Eliminar</button>
+        </form>
+      </section>
+    </section>
+  </body>
+
+  </html>

@@ -8,7 +8,10 @@ const { body } = require("express-validator");
 // ************ Controller Require ************
 const adminController = require("../controllers/adminController");
 
-/************** Declaración de multer ******/
+// ************ Middlewares ************
+// const validations = require("../middlewares/validations")
+
+/************** Declaración de multer Productos ******/
 let multerDiskStorage = multer.diskStorage({
   destination: (req, file, callback) => {
     let folder = path.join(__dirname, "../public/images/books");
@@ -21,6 +24,20 @@ let multerDiskStorage = multer.diskStorage({
 });
 
 let fileUpload = multer({ storage: multerDiskStorage });
+
+/************** Declaración de multer Clientes ******/
+let multerDiskStorageCustomers = multer.diskStorage({
+  destination: (req, file, callback) => {
+    let folder = path.join(__dirname, "../public/images/avatars");
+    callback(null, folder);
+  },
+  filename: (req, file, callback) => {
+    let imageName = "avatar-" + Date.now() + path.extname(file.originalname);
+    callback(null, imageName);
+  },
+});
+
+let fileUploadCustomer = multer({ storage: multerDiskStorageCustomers });
 
 /************** Validación del formulario ****************/
 const validateFormCreate = [
@@ -69,19 +86,44 @@ const validateFormEdit = [
   body('description').notEmpty().withMessage('Debes completar el campo de descripción'),
 ];
 
+const validateFormEditCustomer = [
+  body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
+  body('lastname').notEmpty().withMessage('Debes completar el campo de apellido'),
+  body('email').notEmpty().withMessage('Debes completar el campo de email').isEmail().withMessage('Debes ingresar un email valido'),
+  body('city').notEmpty().withMessage('Debes completar la ciudad'),
+  body('phone').isMobilePhone().withMessage('Debes ingresar un número valido'),
+  body('pass').notEmpty().withMessage('Debes completar el campo de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres'),
+  body('confirmpass').notEmpty().withMessage('Debes completar el campo de confirmación de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres').custom((value, {req}) => (value === req.body.pass)).withMessage('las contraseñas no coinciden'),
+  body('role').notEmpty().withMessage('Rol no puede estar vacío')
+];
+
+/************** Validación del formulario ****************/
+const authMiddleware = require('../middlewares/authMiddleware');
+
 /*** GET TODOS LOS PRODUCTOS ***/
-router.get("/", adminController.index);
+router.get("/", authMiddleware, adminController.index);
 
 /*** CREAR UN PRODUCTO ***/
-router.get("/create", adminController.add);
+router.get("/create",authMiddleware, adminController.add);
 router.post("/create",fileUpload.single("imagebook"),validateFormCreate,adminController.store);
 
 /*** EDITAR UN PRODUCTO ***/
-router.get("/edit/:id", adminController.edit);
+router.get("/edit/:id",authMiddleware, adminController.edit);
 router.put("/edit/:id", fileUpload.single("imagebook"),validateFormEdit, adminController.update);
 
 /*** ELIMINAR UN PRODUCTO***/
-router.get("/delete/:id", adminController.delete);
+router.get("/delete/:id",authMiddleware, adminController.delete);
 router.delete("/delete/:id", adminController.destroy);
+
+/*** GET TODOS LOS CLIENTES ***/
+router.get("/customers",authMiddleware, adminController.customers);
+
+/*** EDITAR UN CLIENTE ***/
+router.get("/customer/edit/:id",authMiddleware, adminController.editCustomers);
+router.put("/customer/edit/:id", fileUploadCustomer.single("image"),validateFormEditCustomer, adminController.updateCustomer);
+
+/*** ELIMINAR UN CLIENTE***/
+router.get("/customer/delete/:id", authMiddleware, adminController.deleteCustomer);
+router.delete("/customer/delete/:id", adminController.destroyCustomer);
 
 module.exports = router;
