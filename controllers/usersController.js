@@ -29,8 +29,14 @@ let usersController = {
       let isPassword = bcryptjs.compareSync(req.body.pass, userToLogin.password);
       if(isPassword){
         delete userToLogin.password;
-        req.session.userLogged = userToLogin;        
-        return res.redirect('/users/profile');           
+        req.session.userLogged = userToLogin;   
+        
+        if(req.body.remember){
+          res.cookie('userEmail', req.body.email,{maxAge: (1000 * 60) * 60})
+        }
+
+        return res.redirect('/users/profile');      
+
       }
       return res.render('./users/login', {
         errors:{
@@ -86,9 +92,10 @@ let usersController = {
     res.redirect('/users/login');
   },
   profile: function(req,res){
-    res.render('./users/profile',{user: req.session.userLogged });    
+    res.render('./users/profile',{user: req.session.userLogged});    
   },
   logout: function(req,res){
+    res.clearCookie('userEmail');
     req.session.destroy();
     res.redirect('/');
   }

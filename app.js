@@ -1,6 +1,8 @@
 // Declarando los modulos externos de express
 const express = require('express');
 const session = require('express-session');
+const cookies = require('cookie-parser');
+
 const app = express();
 const path = require('path');
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
@@ -32,7 +34,13 @@ app.use(session({
     saveUninitialized: false,
 }))//para generar sessiones en el sistema
 
-// app.use(userLoggedMiddleware);
+
+//Utilizando Cookies
+app.use(cookies());
+
+//Utilizando session
+app.use(userLoggedMiddleware);
+
 
 // Asignando el servidor
 app.listen(3030, () => {
