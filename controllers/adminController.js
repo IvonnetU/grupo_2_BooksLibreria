@@ -23,7 +23,8 @@ let adminController = {
   //Index - Mostrar el administrador de productos
   index: function(req,res){
     res.render('./admin/manageProducts',{ 
-      dataBooks: products
+      dataBooks: products,
+      user: req.session.userLogged
     });
   },
    // Añadir - formulario de crear
@@ -129,7 +130,9 @@ let adminController = {
   },
   // Clientes - Mostrar todos los clientes
   customers: (req, res) => {    
-		res.render('./admin/customers',{dataUsers: users});
+		res.render('./admin/customers',{
+    dataUsers: users,
+    user: req.session.userLogged});
   },
   // Edit - formulario de editar cliente
   editCustomers:(req, res) => {
