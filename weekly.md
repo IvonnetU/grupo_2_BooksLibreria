@@ -1,4 +1,82 @@
 ================================================================================
+sprint# 6
+================================================================================
+# Weekly 12 Enero Grupo_2_BooksLibreria 🔎
+
+## ⌛ Qué hizo la semana pasada:
+
+###### Kate Castaño:
+
+- Weekly semana1.
+- Diagrama de Base de datos.
+- Función recordar usuarios. 
+
+###### Ivonne Torres:
+
+- Weekly semana1.
+- Actualización y asignación de actividades en el tablero Trello. 
+- Retro.md con las principales conclusiones de la retro del Sprint 5
+
+## 🛑 Impedimentos:
+
+###### Kate Castaño:
+
+- Dificultad para implementar función recordar usuarios, salía error.Pero fue solucionado.
+
+###### Ivonne Torres:
+
+- Package.json daba errores. Pero fue solucionado.
+
+## ⏳ Que se hará esta semana:
+
+###### Kate Castaño:
+
+- Weekly semana2.
+- Creación de carpeta Sequelize y archivos de modelos.
+- CRUD.
+
+###### Ivonne Torres:
+
+- Weekly semana2.
+- Script de datos.
+
+# Weekly 19 Enero Grupo_2_BooksLibreria 🔎
+
+## ⌛ Qué hizo la semana pasada:
+
+###### Kate Castaño:
+
+- Weekly semana2.
+- Creación de carpeta Sequelize y archivos de modelos.
+- CRUD.
+
+###### Ivonne Torres:
+
+- Weekly semana2.
+- Script de datos.
+
+## 🛑 Impedimentos:
+
+###### Kate Castaño:
+
+- Ninguno
+
+###### Ivonne Torres:
+
+- Ninguno
+
+## ⏳ Que se hará esta semana:
+
+###### Kate Castaño:
+
+- Se acaba el sprint no aplica mas actividades.
+
+###### Ivonne Torres:
+
+- Se acaba el sprint no aplica mas actividades.
+
+
+================================================================================
 sprint# 5
 ================================================================================
 # Weekly 9 Dic Grupo_2_BooksLibreria 🔎
@@ -48,9 +126,10 @@ sprint# 5
 
 ###### Kate Castaño:
 
+- Tareas pendientes y finalización del sprint
 
 ###### Ivonne Torres:
-
+ Tareas pendientes y finalización del sprint
 
 ## 🛑 Impedimentos:
 
