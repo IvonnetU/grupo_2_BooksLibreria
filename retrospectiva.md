@@ -1,4 +1,28 @@
 ====================================================================
+# Retrospectiva 5 Grupo_2_BooksLibreria 🔎 Sprint# 6
+====================================================================
+## 🔵 Comenzar a hacer:
+
+1. Comentar las tareas asignadas en Trello durante el desarrollo del Sprint para tener claridad en los avances.
+
+## ⚪ Hacer más:
+
+1. Aclarar las dudas que se tengan en el transcurso de cada tema de la cursada, y así aplicarlo al proyecto.
+
+## 🟢 Continuar haciendo:
+
+1. Trabajar de manera coordinada y orientada al objetivo común.
+2. Respetar el trabajo de los miembros del  equipo, solucionar los errores que se presenten.
+3. Generar un ambiente colaborativo y de respeto.
+
+## 🟠 Hacer menos:
+
+1. Mantener dudas sin aclarar.
+
+## 🔴 Dejar de hacer:
+
+1. Finalización y entrega del sprint al limite de tiempo.
+====================================================================
 # Retrospectiva 4 Grupo_2_BooksLibreria 🔎 Sprint# 5
 ====================================================================
 ## 🔵 Comenzar a hacer:
