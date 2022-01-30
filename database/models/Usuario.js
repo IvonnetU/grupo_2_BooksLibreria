@@ -92,6 +92,13 @@ module.exports = function(sequelize, dataTypes){
       as: "usuarios",
       foreignKey: "idRole"
     });
+
+    // Relaciones con la tabla ordenes 1:N
+    Usuario.belongsTo(models.Ordenes,{
+      as: "usuariosOrdenes",
+      foreignKey: "email"
+    });
+
   }
 
   return Usuario
