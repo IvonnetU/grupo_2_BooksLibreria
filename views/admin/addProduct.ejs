@@ -59,36 +59,12 @@
             <div>
               <label for="category" class="label-filter">Categoria</label>
               <select name="category" id="category-book" class="input-filter">
-                <option value="">Selecciona la Categoria</option>
-                <option value="Historia universal" <%=locals.oldData && oldData.category=='Historia universal'
-                  ? 'selected' : '' ; %> >Historia universal</option>
-                <option value="Novela histórica" <%=locals.oldData && oldData.category=='Novela histórica' ? 'selected'
-                  : '' ; %> >Novela histórica</option>
-                <option value="Feminismo" <%=locals.oldData && oldData.category=='Feminismo' ? 'selected' : '' ; %>
-                  >Feminismo</option>
-                <option value="Young adult" <%=locals.oldData && oldData.category=='Young adult' ? 'selected' : '' ; %>
-                  >Young adult</option>
-                <option value="Novela Gráfica" <%=locals.oldData && oldData.category=='Novela Gráfica' ? 'selected' : ''
-                  ; %> >Novela Gráfica</option>
-                <option value="Acción" <%=locals.oldData && oldData.category=='Acción' ? 'selected' : '' ; %>
-                  >Acción</option>
-                <option value="Ficción" <%=locals.oldData && oldData.category=='Ficción' ? 'selected' : '' ; %>
-                  >Ficción</option>
-                <option value="Romántica" <%=locals.oldData && oldData.category=='Romántica' ? 'selected' : '' ; %>
-                  >Romántica</option>
-                <option value="Historia" <%=locals.oldData && oldData.category=='Historia' ? 'selected' : '' ; %>
-                  >Historia</option>
-                <option value="Suspenso y terror" <%=locals.oldData && oldData.category=='Suspenso y terror'
-                  ? 'selected' : '' ; %> >Suspenso y terror</option>
-                <option value="Policiaca" <%=locals.oldData && oldData.category=='Policiaca' ? 'selected' : '' ; %>
-                  >Policiaca</option>
-                <option value="Fantástica y ciencia ficción" <%=locals.oldData &&
-                  oldData.category=='Fantástica y ciencia ficción' ? 'selected' : '' ; %>>Fantástica y ciencia
-                  ficción</option>
-                <option value="Juvenil" <%=locals.oldData && oldData.category=='Juvenil' ? 'selected' : '' ; %>
-                  >Juvenil</option>
-                <option value="Novela histórica" <%=locals.oldData && oldData.category=='Novela histórica' ? 'selected'
-                  : '' ; %> >Novela histórica</option>
+                <% for (let i=0; i < categorias.length; i++) {%>
+                  <option value="<%= categorias[i].idCategory%>" <%=locals.oldData &&
+                    oldData.category==categorias[i].nameCategory ? 'selected' : '' ; %> >
+                    <%= categorias[i].nameCategory%>
+                  </option>
+                  <% } %>
               </select>
               <% if(locals.errors && errors.category){%>
                 <div class="alert-danger">

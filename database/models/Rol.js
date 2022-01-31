@@ -13,7 +13,7 @@ module.exports = function(sequelize, dataTypes){
       }
     },
     nameRole:{
-      type: dataTypes.VARCHAR(20),
+      type: dataTypes.STRING(20),
       allowNull: false,
       validate:{
         notNull: true,

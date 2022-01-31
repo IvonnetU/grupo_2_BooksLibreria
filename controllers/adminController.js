@@ -4,6 +4,8 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const {validationResult} = require('express-validator');
+// base de datos 
+const db = require("../database/models");
 
 //asignando la carpeta public como recurso estatico
 const publicPath = path.resolve(__dirname, './public');
@@ -29,15 +31,18 @@ let adminController = {
   },
    // Añadir - formulario de crear
   add:(req, res) => {
-    res.render('./admin/addProduct');
+    db.Categorias.findAll()
+    .then(function(categorias){
+      res.render('./admin/addProduct',{categorias});
+    })
+    
   },
   // Crear -  Metodo de crear en la tienda
   store:(req, res) => {
     let resultValidation = validationResult(req);
     if(resultValidation.isEmpty()){
       const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
-      let idPrev = products.length;
-      const dataNew = {
+    db.Productos.create({
         id: idPrev + 1,
         sku,
         name:nameBook, 
@@ -52,9 +57,7 @@ let adminController = {
         chapters,
         description,
         image: req.file.filename
-      }
-      products.push(dataNew);
-      fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
+    })      
       res.render('./admin/manageProducts',{dataBooks: products});
     }else{
       res.render('./admin/addProduct',{
