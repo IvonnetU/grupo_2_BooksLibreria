@@ -124,6 +124,16 @@ module.exports = function(sequelize, dataTypes){
       as: "categorias",
       foreignKey: "idCategory"
     });
+
+    // Relaciones con la tabla ordenes N:M
+    Producto.belongsToMany(models.Ordenes,{
+      as: "ordenesPrductos",
+      through: "details_order", //tabla intermedia
+      foreignKey: "idProduct",
+      otherKey: "idOrder",
+      timestamps: false
+    });
+
   }
 
   return Producto

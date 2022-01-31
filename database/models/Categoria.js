@@ -13,7 +13,7 @@ module.exports = function(sequelize, dataTypes){
       }
     },
     nameCategory:{
-      type: dataTypes.VARCHAR(30),
+      type: dataTypes.STRING(30),
       allowNull: false,
       validate:{
         notNull: true,
