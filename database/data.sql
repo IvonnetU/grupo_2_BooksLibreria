@@ -1,3 +1,6 @@
+-- Usar la base de datos creada
+USE books_libreria;
+
 -- Insertar datos a la tabla roles
 INSERT INTO roles VALUES
 (DEFAULT, 'user'),
@@ -11,7 +14,7 @@ INSERT INTO users VALUES
 ('lwiskar3@unc.edu','Ludovika','Wiskar','Kawengan','873-942-3058','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',2,'molestiaedoloresipsa.png'),
 ('vbushaway4@slate.com','Valina','Bushaway','Boavista','765-243-0010','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'istequaspossimus.png'),
 ('kbruck5@cnbc.com','Kyle','Bruck','Kawęczyn','557-128-0693','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'nemosimiliquequod.png'),
-('eiuorio6@purevolume.com','Emmey','Iuorio','Nabari','994-234-1895','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'utdoloresanimi.png')
+('eiuorio6@purevolume.com','Emmey','Iuorio','Nabari','994-234-1895','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'utdoloresanimi.png'),
 ('csponder7@noaa.gov','Carolann','Sponder','Ribnica na Pohorju','330-943-8330','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'laudantiuminventorenihil.png'),
 ('mceyssen8@odnoklassniki.ru','Matthaeus','Ceyssen','Marianowo','973-340-7046','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',2,'dictalaborumodit.png'),
 ('rstretton9@engadget.com"','Robinet','Stretton','Zebrzydowice','291-423-4774','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','$2a$10$7ph.0N0HeTM.NjKg/RROP.iD1ZLJOF8j1ACWT9nCLNgehA/SGFHva','on',1,'nonvoluptatibusautem.png'),

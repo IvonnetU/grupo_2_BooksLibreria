@@ -18,8 +18,14 @@
             </div>
             <div>
               <label for="author" class="label-filter">Autor(a)</label>
-              <input type="text" name="author" class="input-filter" placeholder="Ingresa autor(a) de libro"
-                value="<%= locals.oldData && oldData.author ? oldData.author :''%>">
+              <select name="author" placeholder="Ingresa autor(a) de libro" class="input-filter">
+                <% for (let i=0; i < autores.length; i++) {%>
+                  <option value="<%= autores[i].idAuthor%>" <%=locals.oldData && oldData.author==autores[i].nameAuthor+' '+autores[i].surnameAuthor
+                    ? ' selected' : '' ; %> >
+                    <%= autores[i].nameAuthor+' '+autores[i].surnameAuthor%>
+                  </option>
+                  <% } %>
+              </select>
               <% if(locals.errors && errors.author){%>
                 <div class="alert-danger">
                   <%= errors.author.msg %>
@@ -48,8 +54,14 @@
             </div>
             <div>
               <label for="format" class="label-filter">Formato</label>
-              <input type="text" name="format" class="input-filter" placeholder="Formato del libro ej:Libro"
-                value="<%= locals.oldData && oldData.format ? oldData.format :''%>">
+              <select name="format" class="input-filter">
+              <% for (let i=0; i < formatos.length; i++) {%>
+                <option value="<%= formatos[i].idFormat%>"  <%=locals.oldData &&
+                  oldData.format==formatos[i].nameFormat ? ' selected' : '' ; %> >
+                      <%= formatos[i].nameFormat%>
+                  </option>
+                  <% } %>
+              </select>
               <% if(locals.errors && errors.format){%>
                 <div class="alert-danger">
                   <%= errors.format.msg %>
@@ -61,7 +73,7 @@
               <select name="category" id="category-book" class="input-filter">
                 <% for (let i=0; i < categorias.length; i++) {%>
                   <option value="<%= categorias[i].idCategory%>" <%=locals.oldData &&
-                    oldData.category==categorias[i].nameCategory ? 'selected' : '' ; %> >
+                    oldData.category==categorias[i].nameCategory ? ' selected' : '' ; %> >
                     <%= categorias[i].nameCategory%>
                   </option>
                   <% } %>

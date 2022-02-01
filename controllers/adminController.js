@@ -30,12 +30,16 @@ let adminController = {
     });
   },
    // Añadir - formulario de crear
-  add:(req, res) => {
-    db.Categorias.findAll()
-    .then(function(categorias){
-      res.render('./admin/addProduct',{categorias});
-    })
-    
+  add: async (req, res) => {
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
+    let formatos = await db.Formatos.findAll();
+
+    res.render('./admin/addProduct',{
+      categorias,
+      autores,
+      formatos
+    });
   },
   // Crear -  Metodo de crear en la tienda
   store:(req, res) => {
@@ -43,7 +47,6 @@ let adminController = {
     if(resultValidation.isEmpty()){
       const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
     db.Productos.create({
-        id: idPrev + 1,
         sku,
         name:nameBook, 
         author,
@@ -58,11 +61,15 @@ let adminController = {
         description,
         image: req.file.filename
     })      
-      res.render('./admin/manageProducts',{dataBooks: products});
+      res.render('./admin/manageProducts',{
+        dataBooks: products,
+        user: req.session.userLogged
+      });
     }else{
       res.render('./admin/addProduct',{
         errors: resultValidation.mapped(),
-        oldData: req.body
+        oldData: req.body,
+        user: req.session.userLogged
       });
     }
     				
@@ -109,7 +116,8 @@ let adminController = {
       res.render('./admin/editProduct',{
         product : productEdit,
         errors: resultValidation.mapped(),
-        oldData: req.body
+        oldData: req.body,
+        user: req.session.userLogged
       });
     }    	
   },
@@ -173,7 +181,8 @@ let adminController = {
       res.render('./admin/editCustomer',{
         customer : customerEdit,
         errors: resultValidation.mapped(),
-        oldData: req.body
+        oldData: req.body,
+        user: req.session.userLogged
       });
     }    	
   },
