@@ -91,50 +91,69 @@ let adminController = {
   },
 
   // Edit - formulario de editar
-  edit:(req, res) => {
-     let idProduct = req.params.id;
-		productEdit = products.find(item => item.id == idProduct);
-    res.render('./admin/editProduct',{ product : productEdit });	
+  edit: async (req, res) => {
+    let idProduct = req.params.id;
+
+		let productEdit = await db.Productos.findByPk(idProduct);
+
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
+    let formatos = await db.Formatos.findAll();
+
+    res.render('./admin/editProduct',{ 
+    product : productEdit, 
+    categorias, 
+    autores, 
+    formatos});
+    	
   },
   // Actualizar - método de actualizar
-  update: (req, res) => {
+  update: async (req, res) => {
     let resultValidation = validationResult(req);
+
     if(resultValidation.isEmpty()){
       const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description,image} = req.body;
-		const idProduct = req.params.id;
-    const fileNameBook = (req.file) ? req.file.filename : image;
-    const booksNews = [];
-    products.map(item =>{
-			if(item.id == idProduct){
-        item.sku = sku;
-				item.name = nameBook; 
-        item.author = author;
-        item.price = price; 
-        item.publisher = publisher;
-        item.format = format;
-        item.category = category;
-        item.language = language;        
-        item.edition = edition;
-        item.pages = pages;
-        item.chapters = chapters;
-				item.description = description;
-        item.image = fileNameBook;
-        booksNews.push(item);
-			}else{
-        booksNews.push(item);
+
+      const fileNameBook = (req.file) ? req.file.filename : image;
+    
+    db.Productos.update({
+        sku,
+        nameBook, 
+        idAuthor:author,
+        price,
+        publisher,
+        idFormat:format,
+        idCategory:category,
+        languageBook:language,
+        editionBook:edition,
+        pages,
+        chapters,
+        descriptionBook:description,
+        imageProduct: fileNameBook
+    },{
+      where:{
+        sku: req.params.id
       }
-			
-		});		
-		fs.writeFileSync(productsFilePath,JSON.stringify(booksNews),'utf-8');
-		res.render('./admin/manageProducts',{dataBooks: booksNews});	
+    });  
+
+    let productsUpdate = await db.Productos.findAll();
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
+    
+    res.render('./admin/manageProducts',{
+      dataBooks: productsUpdate,
+      categorias,
+      autores,
+      user: req.session.userLogged
+    });
     }else{
       res.render('./admin/editProduct',{
-        product : productEdit,
         errors: resultValidation.mapped(),
+        product : productEdit,
         oldData: req.body,
         user: req.session.userLogged
       });
-    }    	
+    }
   },
   // Eliminar - Formulario de confirmar eliminado
   delete: (req, res) => {

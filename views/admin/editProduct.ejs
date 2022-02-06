@@ -13,8 +13,14 @@
             </div>
             <div>
               <label for="author" class="label-filter">Autor(a)</label>
-              <input type="text" name="author" class="input-filter" placeholder="Ingresa autor(a) de libro"
-                value="<%= product.author %>">
+              <select name="author" class="input-filter">
+                <% for (let i=0; i < autores.length; i++) {%>
+                  <option value="<%= autores[i].idAuthor%>" <%=autores[i].idAuthor==product.idAuthor ? ' selected' : ''
+                    ; %> >
+                    <%= autores[i].nameAuthor+' '+autores[i].surnameAuthor%>
+                  </option>
+                <% } %>
+              </select>
             </div>
             <div>
               <label for="price" class="label-filter">Precio</label>
@@ -28,29 +34,24 @@
             </div>
             <div>
               <label for="format" class="label-filter">Formato</label>
-              <input type="text" name="format" class="input-filter" placeholder="Formato del libro ej:Libro"
-                value="<%= product.format %>">
+              <select name="format" class="input-filter">
+                <% for (let i=0; i < formatos.length; i++) {%>
+                  <option value="<%= formatos[i].idFormat%>" <%=formatos[i].idFormat==product.idFormat ? ' selected'
+                      : '' ; %> >
+                      <%= formatos[i].nameFormat%>
+                  </option>
+                  <% } %>
+              </select>
             </div>
             <div>
               <label for="category" class="label-filter">Categoria</label>
-              <select name="category" id="category-book" class="input-filter">
-                <option value="<%= product.category %>">
-                  <%= product.category %>
-                </option>
-                <option value="Historia universal">Historia universal</option>
-                <option value="Novela histórica">Novela histórica</option>
-                <option value="Feminismo">Feminismo</option>
-                <option value="Young adult">Young adult</option>
-                <option value="Novela Gráfica">Novela Gráfica</option>
-                <option value="Acción">Acción</option>
-                <option value="Ficción">Ficción</option>
-                <option value="Romántica">Romántica</option>
-                <option value="Historia">Historia</option>
-                <option value="Suspenso y terror">Suspenso y terror</option>
-                <option value="Policiaca">Policiaca</option>
-                <option value="Fantástica y ciencia ficción">Fantástica y ciencia ficción</option>
-                <option value="Juvenil">Juvenil</option>
-                <option value="Novela histórica">Novela histórica</option>
+              <select name="category" class="input-filter">
+                <% for (let i=0; i < categorias.length; i++) {%>
+                  <option value="<%= categorias[i].idCategory%>" <%=categorias[i].idCategory==product.idCategory
+                    ? ' selected' : '' ; %> >
+                    <%= categorias[i].nameCategory%>
+                  </option>
+                  <% } %>
               </select>
             </div>
             <div>
@@ -61,14 +62,14 @@
             <div>
               <label for="language" class="label-filter">Idioma</label>
               <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro"
-                value="<%= product.language %>">
+                value="<%= product.languageBook %>">
             </div>
           </div>
           <div>
             <div>
               <label for="edition" class="label-filter">Edición</label>
               <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro"
-                value="<%= product.edition %>">
+                value="<%= product.editionBook %>">
             </div>
             <div>
               <label for="pages" class="label-filter">Número de Páginas</label>
@@ -81,15 +82,15 @@
                 value="<%= product.chapters %>">
             </div>
             <div>
-              <input type="hidden" name="image" value="<%= product.image%>" />
+              <input type="hidden" name="image" value="<%= product.imageProduct%>" />
               <label for="imageBook" class="label-filter">Imagen</label>
-              <img id="imageEdit" src=<%="/images/books/" +product.image %> alt="<%= product.image %>" title="<%=
-                  product.image %>"><input type="file" name="imageBook" class="input-filter">
+              <img id="imageEdit" src=<%="/images/books/" +product.imageProduct %> alt="<%= product.imageProduct %>"
+                title="<%= product.imageProduct %>"><input type="file" name="imageBook" class="input-filter">
             </div>
             <div>
               <label for="description" class="label-filter">Descripción</label>
               <textarea name="description" cols="30" rows="8" class="input-filter"
-                placeholder="Descripción del libro"><%= product.description %></textarea>
+                placeholder="Descripción del libro"><%= product.descriptionBook %></textarea>
             </div>
           </div>
         </section>
