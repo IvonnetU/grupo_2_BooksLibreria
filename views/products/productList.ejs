@@ -47,9 +47,10 @@
         <section class="section-article-products">
           <% dataBooks.forEach(book=>{%>
             <article class="article-product-list">
-              <img src="../../images/books/<%= book.image %>" alt="<%= book.name %>" title="<%= book.name %>">
+              <img src="../../images/books/<%= book.imageProduct %>" alt="<%= book.nameBook %>"
+                title="<%= book.nameBook %>">
               <h5>
-                <%= book.name %>
+                <%= book.nameBook %>
               </h5>
               <p>
                 $<%= book.price %>
@@ -58,7 +59,7 @@
                 <a href="/products/cart" class="btn_circle">
                   <i class="fas fa-shopping-cart"></i>
                 </a>
-                <a href="/products/<%= book.id %>" class="btn_circle">
+                <a href="/products/<%= book.sku %>" class="btn_circle">
                   <i class="fas fa-eye"></i>
                 </a>
               </div>

@@ -12,19 +12,27 @@ app.use(express.static(publicPath));
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+// base de datos 
+const db = require("../database/models");
+
 let productController = {  
   // Root - Show all products
   list: (req, res) => {
-    res.render('./products/productList',{ dataBooks: products });
+    db.Productos.findAll().then((products) => {
+      res.render('./products/productList',{ dataBooks: products });
+    })
   },
 
   // Detail - Detail from one product
   detail: (req, res) => {
     let idProduct = req.params.id;
-    product = products.find(function(item){
-      return item.id === idProduct;
-    });
-    res.render('./products/productDetail',{product});
+
+    db.Productos.findByPk(idProduct,{
+      include: [{association:"autores"},{association:"formatos"},{association:"categorias"}]
+    }).then((product) => {
+      res.render('./products/productDetail',{product});
+    })
+    
   },
   // Car - show buy
   car: (req, res) => {

@@ -91,7 +91,7 @@ module.exports = function(sequelize, dataTypes){
       }
     },
     descriptionBook:{
-      type: dataTypes.STRING(100),
+      type: dataTypes.STRING(900),
       allowNull: false,
       validate:{
         notNull: true,
@@ -107,7 +107,7 @@ module.exports = function(sequelize, dataTypes){
 
   let Producto = sequelize.define(alias,cols, config);
 
-  // Relaciones de la tabla Prodcutos N:1
+  // Relaciones de la tabla Productos N:1
   Producto.associate = function(models){
 
     Producto.hasMany(models.Autores,{

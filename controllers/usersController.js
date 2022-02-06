@@ -13,6 +13,9 @@ app.use(express.static(publicPath));
 // const usersFilePath = path.join(__dirname, '../data/users.json');
 // const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+// base de datos 
+const db = require("../database/models");
+
 //Requerir modelo de usuarios
 const User = require('../models/User');
 const bcryptjs = require('bcryptjs');

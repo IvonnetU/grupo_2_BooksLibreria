@@ -75,7 +75,7 @@ let adminController = {
     let autores = await db.Autores.findAll();
     res.render('./admin/manageProducts',{
       dataBooks: productsUpdate,
-      catgorias,
+      categorias,
       autores,
       user: req.session.userLogged
     });

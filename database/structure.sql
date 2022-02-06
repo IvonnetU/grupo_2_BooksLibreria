@@ -1,16 +1,13 @@
 -- Crear base de datos
 CREATE DATABASE books_libreria;
-
 -- Usar la base de datos creada
 USE books_libreria;
-
 -- Crear tabla roles
 CREATE TABLE roles(
     idRole INT NOT NULL AUTO_INCREMENT,
     nameRole VARCHAR(20) NOT NULL,
     PRIMARY KEY(idRole)
 );
-
 -- Crear tabla usuarios
 CREATE TABLE users(
     email VARCHAR(50) NOT NULL,
@@ -26,7 +23,6 @@ CREATE TABLE users(
     PRIMARY KEY(email),
     FOREIGN KEY (idRole) REFERENCES roles(idRole)
 );
-
 -- Crear tabla autores
 CREATE TABLE authors(
     idAuthor INT NOT NULL AUTO_INCREMENT,
@@ -34,21 +30,18 @@ CREATE TABLE authors(
     surnameAuthor VARCHAR(30) NOT NULL,
     PRIMARY KEY(idAuthor)
 );
-
 -- Crear tabla formato de los libros
 CREATE TABLE formats(
     idFormat INT NOT NULL AUTO_INCREMENT,
     nameFormat VARCHAR(30) NOT NULL,
     PRIMARY KEY(idFormat)
 );
-
 -- Crear tabla categorias de los libros
 CREATE TABLE categorys(
     idCategory INT NOT NULL AUTO_INCREMENT,
     nameCategory VARCHAR(30) NOT NULL,
     PRIMARY KEY(idCategory)
 );
-
 -- Crear tabla productos
 CREATE TABLE products(
     sku VARCHAR(30) NOT NULL,
@@ -63,13 +56,12 @@ CREATE TABLE products(
     pages VARCHAR(30) NOT NULL,
     chapters VARCHAR(30) NOT NULL,
     imageProduct VARCHAR(50) NOT NULL,
-    descriptionBook VARCHAR(100) NOT NULL,
+    descriptionBook VARCHAR(900) NOT NULL,
     PRIMARY KEY(sku),
     FOREIGN KEY (idAuthor) REFERENCES authors(idAuthor),
     FOREIGN KEY (idFormat) REFERENCES formats(idFormat),
     FOREIGN KEY (idCategory) REFERENCES categorys(idCategory)
 );
-
 -- Crear tabla Detalles de la orden
 CREATE TABLE orders(
     idOrder INT NOT NULL AUTO_INCREMENT,
@@ -78,7 +70,6 @@ CREATE TABLE orders(
     PRIMARY KEY(idOrder),
     FOREIGN KEY (idUser) REFERENCES users(email)
 );
-
 -- Crear tabla Detalles de la orden
 CREATE TABLE details_order(
     idDetails INT NOT NULL AUTO_INCREMENT,

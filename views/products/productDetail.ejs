@@ -8,10 +8,12 @@
           <li>/</li>
           <li>Tienda</li>
           <li>/</li>
-          <li>Literatura universal</li>
+          <li>
+            <%= product.idCategory %>
+          </li>
           <li>/</li>
           <li class="active_product">
-            <%= product.name %>
+            <%= product.nameBook %>
           </li>
         </ul>
       </section>
@@ -19,19 +21,24 @@
       <section class="section-product">
         <div class="gallery">
           <div class="image_min">
-            <img src="../images/books/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
-            <img src="../images/books/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
-            <img src="../images/books/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
-            <img src="../images/books/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
-            <img src="../images/books/<%= product.image %>" alt="<%= product.name %>" title="<%= product.name %>">
+            <img src="../images/books/<%= product.imageProduct %>" alt="<%= product.nameBook %>"
+              title="<%= product.nameBook %>">
+            <img src="../images/books/<%= product.imageProduct %>" alt="<%= product.nameBook %>"
+              title="<%= product.nameBook %>">
+            <img src="../images/books/<%= product.imageProduct %>" alt="<%= product.nameBook %>"
+              title="<%= product.nameBook %>">
+            <img src="../images/books/<%= product.imageProduct %>" alt="<%= product.nameBook %>"
+              title="<%= product.nameBook %>">
+            <img src="../images/books/<%= product.imageProduct %>" alt="<%= product.nameBook %>"
+              title="<%= product.nameBook %>">
           </div>
           <div class="image_max">
-            <img src="../images/books/<%= product.image %>" alt="el_principito" title="el_principito">
+            <img src="../images/books/<%= product.imageProduct %>" alt="el_principito" title="el_principito">
           </div>
         </div>
         <div class="info-product">
           <h1>
-            <%= product.name %>
+            <%= product.nameBook %>
           </h1>
           <div class="content-raiting content-review">
             <div>
@@ -63,7 +70,7 @@
               <a href="#">Politícas de envío</a>
             </div>
             <p>
-              <%= product.description %>
+              <%= product.descriptionBook %>
             </p>
           </div>
           <div class="quantity">
