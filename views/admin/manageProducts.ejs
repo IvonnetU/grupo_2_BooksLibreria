@@ -23,20 +23,24 @@
           </div>
           <div>
             <label for="author" class="label-filter">Autor</label>
-            <select name="author" id="author-book" class="input-filter">
-              <option value="0">Selecciona el autor</option>
-              <option value="autor1">Autor 1</option>
-              <option value="autor2">Autor 2</option>
+            <select name="author" class="input-filter">
+              <% for (let i=0; i < autores.length; i++) {%>
+                <option value="<%= autores[i].idAuthor%>">
+                  <%= autores[i].nameAuthor+' '+autores[i].surnameAuthor%>
+                </option>
+              <% } %>
             </select>
           </div>
         </div>
         <div class="row-filter">
           <div>
             <label for="category" class="label-filter">Categoria</label>
-            <select name="category" id="category-book" class="input-filter">
-              <option value="0">Selecciona la Categoria</option>
-              <option value="categoria1">Categoria 1</option>
-              <option value="categoria2">Categoria 2</option>
+            <select name="category" class="input-filter">
+              <% for (let i=0; i < categorias.length; i++) {%>
+                <option value="<%= categorias[i].idCategory%>">
+                  <%= categorias[i].nameCategory%>
+                </option>
+                <% } %>
             </select>
           </div>
           <div>
@@ -60,21 +64,22 @@
           <% dataBooks.forEach(book=>{%>
             <tr class="article-product-admin">
               <td class="disabledPc">
-                <img src="../../images/books/<%= book.image %>" alt="<%= book.name %>" title="<%= book.name %>">
+                <img src="../../images/books/<%= book.imageProduct %>" alt="<%= book.nameBook %>"
+                  title="<%= book.nameBook %>">
               </td>
               <td>
                 <%= book.sku %>
               </td>
               <td class="disabled">
-                <%= book.name %>
+                <%= book.nameBook %>
               </td>
               <td class="td-actions">
                 <div class="content-actions flexV">
-                  <a href="/admin/edit/<%= book.id %>" class="btn-edit ani">
+                  <a href="/admin/edit/<%= book.sku %>" class="btn-edit ani">
                     <i class="fas fa-edit"></i>
                     <span>Editar</span>
                   </a>
-                  <a href="/admin/delete/<%= book.id %>" class="btn-delete ani">
+                  <a href="/admin/delete/<%= book.sku %>" class="btn-delete ani">
                     <i class="fas fa-trash-alt"></i>
                     <span>Eliminar</span>
                   </a>

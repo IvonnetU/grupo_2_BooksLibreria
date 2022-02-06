@@ -308,7 +308,7 @@ ol {
     grid-template-columns: 1fr 2fr;
   }
   .header-admin {
-    height: 100vh;
+    min-height: 100vh;
   }
   .button-exit a i,
   .button-add a i {

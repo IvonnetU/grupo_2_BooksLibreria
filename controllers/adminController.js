@@ -23,9 +23,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 let adminController = {
   //Index - Mostrar el administrador de productos
-  index: function(req,res){
-    res.render('./admin/manageProducts',{ 
-      dataBooks: products,
+  
+  index: async (req,res) => {
+    let productsDB = await db.Productos.findAll();
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
+
+    res.render('./admin/manageProducts',{
+      dataBooks: productsDB,
+      categorias,
+      autores,
       user: req.session.userLogged
     });
   },
@@ -42,29 +49,37 @@ let adminController = {
     });
   },
   // Crear -  Metodo de crear en la tienda
-  store:(req, res) => {
+  store: async (req, res) => {
     let resultValidation = validationResult(req);
     if(resultValidation.isEmpty()){
       const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
+
     db.Productos.create({
         sku,
-        name:nameBook, 
-        author,
+        nameBook, 
+        idAuthor:author,
         price,
         publisher,
-        format,
-        category,
-        language,
-        edition,
+        idFormat:format,
+        idCategory:category,
+        languageBook:language,
+        editionBook:edition,
         pages,
         chapters,
-        description,
-        image: req.file.filename
-    })      
-      res.render('./admin/manageProducts',{
-        dataBooks: products,
-        user: req.session.userLogged
-      });
+        descriptionBook:description,
+        imageProduct: req.file.filename
+    });  
+
+    let productsUpdate = await db.Productos.findAll();
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
+    res.render('./admin/manageProducts',{
+      dataBooks: productsUpdate,
+      catgorias,
+      autores,
+      user: req.session.userLogged
+    });
+
     }else{
       res.render('./admin/addProduct',{
         errors: resultValidation.mapped(),
