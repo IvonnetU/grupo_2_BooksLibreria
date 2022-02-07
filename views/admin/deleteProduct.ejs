@@ -5,11 +5,11 @@
       <h2>Eliminar producto</h2>
       <p>¿Esta seguro que deseas eliminar el producto?</p>
       <p class="name_delete">
-        <%= productDelete.name %>
+        <%= productDelete.nameBook %>
       </p>
       <section class="flexV containerBtn">
         <a href="/admin" class="btn-cancel ">Cancelar</a>
-        <form action="/admin/delete/<%= productDelete.id %>?_method=DELETE" method="POST">
+        <form action="/admin/delete/<%= productDelete.sku %>?_method=DELETE" method="POST">
           <button type="submit" class="btn-destroy">Eliminar</button>
         </form>
       </section>

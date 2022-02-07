@@ -156,22 +156,33 @@ let adminController = {
     }
   },
   // Eliminar - Formulario de confirmar eliminado
-  delete: (req, res) => {
+  delete: async (req, res) => {
     let idProduct = req.params.id;
-		productDelete = products.find(item => item.id == idProduct);
-    return res.render('./admin/deleteProduct',{productDelete});
+
+    let productDelete = await db.Productos.findByPk(idProduct);
+
+    res.render('./admin/deleteProduct',{productDelete});
   },
   // Borrar - Eliminar un producto de la BD
-  destroy: (req, res) => {
+  destroy: async (req, res) => {
     let idBook = req.params.id;
-		const booksNews = [];
-		products.map(item =>{
-			if(item.id != idBook){
-				booksNews.push(item);
-			}			
-		});		
-		fs.writeFileSync(productsFilePath,JSON.stringify(booksNews),'utf-8');
-		res.render('./admin/manageProducts',{dataBooks: booksNews});		
+		
+    db.Productos.destroy({
+      where: {
+        sku: idBook
+      }
+  })
+  let productsUpdate = await db.Productos.findAll();
+
+  let categorias = await db.Categorias.findAll();
+  let autores = await db.Autores.findAll();
+
+		res.render('./admin/manageProducts',{
+      dataBooks: productsUpdate,
+      categorias,
+      autores,
+      user: req.session.userLogged
+    });		
   },
   // Clientes - Mostrar todos los clientes
   customers: (req, res) => {    
