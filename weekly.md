@@ -1,4 +1,43 @@
 ================================================================================
+sprint# 7
+================================================================================
+# Weekly 1 febrero Grupo_2_BooksLibreria 🔎
+
+## ⌛ Qué hizo la semana pasada:
+
+###### Kate Castaño:
+
+- Entrega del Sprint # 6
+
+###### Ivonne Torres:
+
+- Entrega del Sprint # 6
+
+## 🛑 Impedimentos:
+
+###### Kate Castaño:
+
+- Dificultad para implementar agregar producto, salía error.Pero fue solucionado.
+
+###### Ivonne Torres:
+
+- Commit con merge. Pero fue solucionado.
+
+## ⏳ Que se hará esta semana:
+
+###### Kate Castaño:
+
+- Actualización y asignación de actividades en el tablero Trello para Sprint 7. 
+- Retro.md con las principales conclusiones de la retro del Sprint 6
+
+
+###### Ivonne Torres:
+
+- Actualización y asignación de actividades en el tablero Trello Sprint 7. 
+- Retro.md con las principales conclusiones de la retro del Sprint 6
+
+
+================================================================================
 sprint# 6
 ================================================================================
 # Weekly 12 Enero Grupo_2_BooksLibreria 🔎
