@@ -1,4 +1,28 @@
 ====================================================================
+# Retrospectiva 6 Grupo_2_BooksLibreria 🔎 Sprint# 7
+====================================================================
+## 🔵 Comenzar a hacer:
+
+1. Felicitarnos entre los miembros del equipo por los logros y avances alcanzados y evidenciados desde la retoalimentaion del Sprint # 1.
+
+## ⚪ Hacer más:
+
+1. Mantener actualizado el tablero de Trello, según la etapa en que cada uno se encuentre.
+
+## 🟢 Continuar haciendo:
+
+1. Tener en cuenta la retroalimentación según las opiniones del equipo después de las reuniones, teniendo presente trabajar de manera coordinada y orientada al objetivo común.
+2. Respetar el trabajo de los miembros del equipo, solucionar los errores que se presenten.
+3. Generar un ambiente colaborativo y de respeto.
+
+## 🟠 Hacer menos:
+
+1. Mantener dudas sin aclarar durante mucho tiempo.
+
+## 🔴 Dejar de hacer:
+
+1. Repasar los conceptos y clases necesarias para el desarrollo y entrega del sprint al limite de tiempo.
+====================================================================
 # Retrospectiva 5 Grupo_2_BooksLibreria 🔎 Sprint# 6
 ====================================================================
 ## 🔵 Comenzar a hacer:
@@ -48,7 +72,7 @@
 1. Finalización y entrega del sprint al limite de tiempo.
 
 ====================================================================
-# Retrospectiva 3 Grupo_2_BooksLibreria 🔎 Sprint#4
+# Retrospectiva 3 Grupo_2_BooksLibreria 🔎 Sprint# 4
 ====================================================================
 ## 🔵 Comenzar a hacer:
 
@@ -73,7 +97,7 @@
 1. Mover la fecha programada de las weekly, por cuestiones de tiempo.
 
 ====================================================================
-# Retrospectiva 2 Grupo_2_BooksLibreria 🔎
+# Retrospectiva 2 Grupo_2_BooksLibreria 🔎  Sprint# 3
 ====================================================================
 
 ## 🔵 Comenzar a hacer:
@@ -99,7 +123,7 @@
 1. Aplazar weeklys establecidas para la verificación de avances.
 
 ====================================================================
-# Retrospectiva 1 Grupo_2_BooksLibreria 🔎
+# Retrospectiva 1 Grupo_2_BooksLibreria 🔎  Sprint# 2
 ====================================================================
 ## 🔵 Comenzar a hacer:
 
