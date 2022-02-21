@@ -51,50 +51,58 @@ let adminController = {
   // Crear -  Metodo de crear en la tienda
   store: async (req, res) => {
     let resultValidation = validationResult(req);
-    if(resultValidation.isEmpty()){
-      const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
-
-    db.Productos.create({
-        sku,
-        nameBook, 
-        idAuthor:author,
-        price,
-        publisher,
-        idFormat:format,
-        idCategory:category,
-        languageBook:language,
-        editionBook:edition,
-        pages,
-        chapters,
-        descriptionBook:description,
-        imageProduct: req.file.filename
-    });  
-
-    let productsUpdate = await db.Productos.findAll();
-    let categorias = await db.Categorias.findAll();
-    let autores = await db.Autores.findAll();
-    res.render('./admin/manageProducts',{
-      dataBooks: productsUpdate,
-      categorias,
-      autores,
-      user: req.session.userLogged
-    });
-
-    }else{
-      res.render('./admin/addProduct',{
+    if(resultValidation.errors.length > 0){
+      let categorias = await db.Categorias.findAll();
+      let autores = await db.Autores.findAll();
+      let formatos = await db.Formatos.findAll();
+      res.render('./admin/addProduct',{        
+        categorias,
+        autores,
+        formatos,
         errors: resultValidation.mapped(),
         oldData: req.body,
         user: req.session.userLogged
       });
+
+    }else{
+      const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description} = req.body;
+
+      db.Productos.create({
+          sku,
+          nameBook, 
+          idAuthor:author,
+          price,
+          publisher,
+          idFormat:format,
+          idCategory:category,
+          languageBook:language,
+          editionBook:edition,
+          pages,
+          chapters,
+          descriptionBook:description,
+          imageProduct: req.file.filename
+      });  
+
+      let productsDB = await db.Productos.findAll();
+      let categorias = await db.Categorias.findAll();
+      let autores = await db.Autores.findAll();
+
+      res.render('./admin/manageProducts',{
+        dataBooks: productsDB,
+        categorias,
+        autores,
+        user: req.session.userLogged
+      });
+      
     }
     				
   },
 
   // Edit - formulario de editar
   edit: async (req, res) => {
-    let idProduct = req.params.id;
+    const idProduct = req.params.id;
 
-		let productEdit = await db.Productos.findByPk(idProduct);
+		const productEdit = await db.Productos.findByPk(idProduct);
 
     let categorias = await db.Categorias.findAll();
     let autores = await db.Autores.findAll();
@@ -104,52 +112,61 @@ let adminController = {
     product : productEdit, 
     categorias, 
     autores, 
-    formatos});
+    formatos
+  });
     	
   },
   // Actualizar - método de actualizar
   update: async (req, res) => {
     let resultValidation = validationResult(req);
+    const idProduct = req.params.id;
+    const productEdit = await db.Productos.findByPk(idProduct);
 
     if(resultValidation.isEmpty()){
       const {nameBook,author,price,publisher, format, category, sku, language,edition, pages,chapters,description,image} = req.body;
 
       const fileNameBook = (req.file) ? req.file.filename : image;
     
-    db.Productos.update({
-        sku,
-        nameBook, 
-        idAuthor:author,
-        price,
-        publisher,
-        idFormat:format,
-        idCategory:category,
-        languageBook:language,
-        editionBook:edition,
-        pages,
-        chapters,
-        descriptionBook:description,
-        imageProduct: fileNameBook
-    },{
-      where:{
-        sku: req.params.id
-      }
-    });  
+      db.Productos.update({
+          sku,
+          nameBook, 
+          idAuthor:author,
+          price,
+          publisher,
+          idFormat:format,
+          idCategory:category,
+          languageBook:language,
+          editionBook:edition,
+          pages,
+          chapters,
+          descriptionBook:description,
+          imageProduct: fileNameBook
+      },{
+        where:{
+          sku: req.params.id
+        }
+      });  
 
-    let productsUpdate = await db.Productos.findAll();
-    let categorias = await db.Categorias.findAll();
-    let autores = await db.Autores.findAll();
-    
-    res.render('./admin/manageProducts',{
-      dataBooks: productsUpdate,
-      categorias,
-      autores,
-      user: req.session.userLogged
-    });
+      let productsDB = await db.Productos.findAll();
+      let categorias = await db.Categorias.findAll();
+      let autores = await db.Autores.findAll();
+      
+      res.render('./admin/manageProducts',{
+        dataBooks: productsDB,
+        categorias,
+        autores,
+        user: req.session.userLogged
+      });
     }else{
-      res.render('./admin/editProduct',{
-        errors: resultValidation.mapped(),
+      let categorias = await db.Categorias.findAll();
+      let autores = await db.Autores.findAll();
+      let formatos = await db.Formatos.findAll();
+      res.render('./admin/editProduct',{     
+        categorias,
+        autores,
+        formatos,
         product : productEdit,
+        errors: resultValidation.mapped(),
         oldData: req.body,
         user: req.session.userLogged
       });
@@ -172,13 +189,12 @@ let adminController = {
         sku: idBook
       }
   })
-  let productsUpdate = await db.Productos.findAll();
-
-  let categorias = await db.Categorias.findAll();
-  let autores = await db.Autores.findAll();
+    let productsDB = await db.Productos.findAll();
+    let categorias = await db.Categorias.findAll();
+    let autores = await db.Autores.findAll();
 
 		res.render('./admin/manageProducts',{
-      dataBooks: productsUpdate,
+      dataBooks: productsDB,
       categorias,
       autores,
       user: req.session.userLogged

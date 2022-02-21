@@ -3,13 +3,22 @@
   <body class="body-add">
     <section class="container-formAdd boxShadow">
       <h2>Editar Producto</h2>
-      <form action="/admin/edit/<%= product.sku %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <div class="errorsJs">
+        <ul></ul>
+      </div>
+      <form action="/admin/edit/<%= product.sku %>?_method=PUT" method="POST" enctype="multipart/form-data"
+        id="formProduct">
         <section class="form-group">
           <div>
             <div>
               <label for="nameBook" class="label-filter">Nombre del libro</label>
-              <input type="text" name="nameBook" class="input-filter" placeholder="Ingresa nombre del libro"
-                value="<%= product.nameBook %>">
+              <input type="text" id="nameBook" name="nameBook" class="input-filter"
+                placeholder="Ingresa nombre del libro" value="<%= product.nameBook %>">
+              <% if(locals.errors && errors.nameBook){%>
+                <div class="alert-danger">
+                  <%= errors.nameBook.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="author" class="label-filter">Autor(a)</label>
@@ -21,16 +30,31 @@
                   </option>
                 <% } %>
               </select>
+              <% if(locals.errors && errors.author){%>
+                <div class="alert-danger">
+                  <%= errors.author.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="price" class="label-filter">Precio</label>
               <input type="text" name="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA"
                 value="<%= product.price %>">
+                <% if(locals.errors && errors.price){%>
+                  <div class="alert-danger">
+                    <%= errors.price.msg %>
+                  </div>
+                  <%} %>
             </div>
             <div>
               <label for="publisher" class="label-filter">Editorial</label>
-              <input type="text" name="publisher" class="input-filter" placeholder="Nombre de la editorial"
+              <input type="text" name="publisher" id="publisher" class="input-filter" placeholder="Nombre de la editorial"
                 value="<%= product.publisher %>">
+                <% if(locals.errors && errors.publisher){%>
+                  <div class="alert-danger">
+                    <%= errors.publisher.msg %>
+                  </div>
+                  <%} %>
             </div>
             <div>
               <label for="format" class="label-filter">Formato</label>
@@ -42,6 +66,11 @@
                   </option>
                   <% } %>
               </select>
+              <% if(locals.errors && errors.format){%>
+                <div class="alert-danger">
+                  <%= errors.format.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="category" class="label-filter">Categoria</label>
@@ -53,44 +82,84 @@
                   </option>
                   <% } %>
               </select>
+              <% if(locals.errors && errors.category){%>
+                <div class="alert-danger">
+                  <%= errors.category.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="sku" class="label-filter">SKU</label>
-              <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico"
+              <input type="text" name="sku" id="sku" class="input-filter" placeholder="Ingresa código unico"
                 value="<%= product.sku %>">
+              <% if(locals.errors && errors.sku){%>
+                <div class="alert-danger">
+                  <%= errors.sku.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="language" class="label-filter">Idioma</label>
-              <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro"
-                value="<%= product.languageBook %>">
+              <input type="text" name="language" id="language" class="input-filter"
+                placeholder="Ingresa idioma del libro" value="<%= product.languageBook %>">
+              <% if(locals.errors && errors.language){%>
+                <div class="alert-danger">
+                  <%= errors.language.msg %>
+                </div>
+                <%} %>
             </div>
           </div>
           <div>
             <div>
               <label for="edition" class="label-filter">Edición</label>
-              <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro"
-                value="<%= product.editionBook %>">
+              <input type="text" name="edition" id="edition" class="input-filter"
+                placeholder="Versión de la edición del libro" value="<%= product.editionBook %>">
+              <% if(locals.errors && errors.edition){%>
+                <div class="alert-danger">
+                  <%= errors.edition.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="pages" class="label-filter">Número de Páginas</label>
-              <input type="text" name="pages" class="input-filter" placeholder="Cantidad de páginas del libro"
-                value="<%= product.pages %>">
+              <input type="text" name="pages" id="pages" class="input-filter"
+                placeholder="Cantidad de páginas del libro" value="<%= product.pages %>">
+              <% if(locals.errors && errors.pages){%>
+                <div class="alert-danger">
+                  <%= errors.pages.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <label for="chapters" class="label-filter">Número de Capitulos</label>
-              <input type="text" name="chapters" class="input-filter" placeholder="Cantidad de capitulos del libro"
-                value="<%= product.chapters %>">
+              <input type="text" name="chapters" id="chapters" class="input-filter"
+                placeholder="Cantidad de capitulos del libro" value="<%= product.chapters %>">
+              <% if(locals.errors && errors.chapters){%>
+                <div class="alert-danger">
+                  <%= errors.chapters.msg %>
+                </div>
+                <%} %>
             </div>
             <div>
               <input type="hidden" name="image" value="<%= product.imageProduct%>" />
               <label for="imageBook" class="label-filter">Imagen</label>
               <img id="imageEdit" src=<%="/images/books/" +product.imageProduct %> alt="<%= product.imageProduct %>"
                 title="<%= product.imageProduct %>"><input type="file" name="imageBook" class="input-filter">
+                  <% if(locals.errors && errors.imagebook){%>
+                    <div class="alert-danger">
+                      <%= errors.imagebook.msg %>
+                    </div>
+                    <%} %>
             </div>
             <div>
               <label for="description" class="label-filter">Descripción</label>
-              <textarea name="description" cols="30" rows="8" class="input-filter"
+              <textarea name="description" id="description" cols="30" rows="8" class="input-filter"
                 placeholder="Descripción del libro"><%= product.descriptionBook %></textarea>
+              <% if(locals.errors && errors.description){%>
+                <div class="alert-danger">
+                  <%= errors.description.msg %>
+                </div>
+                <%} %>
             </div>
           </div>
         </section>

@@ -39,9 +39,18 @@ let multerDiskStorageCustomers = multer.diskStorage({
 
 let fileUploadCustomer = multer({ storage: multerDiskStorageCustomers });
 
-/************** Validación del formulario ****************/
+// ************ Validar Existencia del sku ************
+const db = require("../database/models");
+
+
+async function validateSku(skuRegistrado){  
+  const productsAll = await db.Productos.findAll();
+  return productsAll.includes(skuRegistrado);
+}
+
+/************** Validación del formulario creación de productos ****************/
 const validateFormCreate = [
-  body('nameBook').notEmpty().withMessage('Debes completar el campo de nombre'),
+  body('nameBook').notEmpty().withMessage('Debes completar el campo de nombre').isLength({ min: 5}).withMessage('Debes ingresar minimo 5 caracteres'),
   body('author').notEmpty().withMessage('Debes completar el campo de autor'),
   body('price').notEmpty().withMessage('Debes completar el campo de precio')
   .bail()
@@ -49,14 +58,14 @@ const validateFormCreate = [
   body('publisher').notEmpty().withMessage('Debes completar el campo de editorial'),
   body('format').notEmpty().withMessage('Debes completar el campo de formato del libro'),
   body('category').notEmpty().withMessage('Debes seleccionar una categoria del libro'),
-  body('sku').notEmpty().withMessage('Debes completar el campo de sku'),
+  body('sku').notEmpty().withMessage('Debes completar el campo de sku').custom((value, {req}) => (validateSku(req.body.sku))).withMessage('El SKU ya existe'),
   body('language').notEmpty().withMessage('Debes completar el campo de lenguaje'),
   body('edition').notEmpty().withMessage('Debes completar el campo de edición'),
   body('pages').notEmpty().withMessage('Debes completar el campo de páginas'),
   body('chapters').notEmpty().withMessage('Debes completar el campo de capítulos'),
   body('imagebook').custom((value, {req}) => {
     let file = req.file;
-    let acceptedExtensions = ['.jpg', '.png'];    
+    let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];    
     if(!file){
       throw new Error('Tienes que subir una imagen');
     }else{
@@ -67,10 +76,10 @@ const validateFormCreate = [
     }    
     return true;
   }),
-  body('description').notEmpty().withMessage('Debes completar el campo de descripción'),
+  body('description').notEmpty().withMessage('Debes completar el campo de descripción').isLength({ min: 20 ,max:900}).withMessage('Debes ingresar minimo 20 caracteres y máximo 900'),
 ];
 const validateFormEdit = [
-  body('nameBook').notEmpty().withMessage('Debes completar el campo de nombre'),
+  body('nameBook').notEmpty().withMessage('Debes completar el campo de nombre').isLength({ min: 5}).withMessage('Debes ingresar minimo 5 caracteres'),
   body('author').notEmpty().withMessage('Debes completar el campo de autor'),
   body('price').notEmpty().withMessage('Debes completar el campo de precio')
   .bail()
@@ -78,12 +87,12 @@ const validateFormEdit = [
   body('publisher').notEmpty().withMessage('Debes completar el campo de editorial'),
   body('format').notEmpty().withMessage('Debes completar el campo de formato del libro'),
   body('category').notEmpty().withMessage('Debes seleccionar una categoria del libro'),
-  body('sku').notEmpty().withMessage('Debes completar el campo de sku'),
+  body('sku').notEmpty().withMessage('Debes completar el campo de sku').custom((value, {req}) => (validateSku(req.body.sku))).withMessage('El SKU ya existe'),
   body('language').notEmpty().withMessage('Debes completar el campo de lenguaje'),
   body('edition').notEmpty().withMessage('Debes completar el campo de edición'),
   body('pages').notEmpty().withMessage('Debes completar el campo de páginas'),
   body('chapters').notEmpty().withMessage('Debes completar el campo de capítulos'),
-  body('description').notEmpty().withMessage('Debes completar el campo de descripción'),
+  body('description').notEmpty().withMessage('Debes completar el campo de descripción').isLength({ min: 20 ,max:900}).withMessage('Debes ingresar minimo 20 caracteres y máximo 900'),
 ];
 
 const validateFormEditCustomer = [
@@ -96,6 +105,7 @@ const validateFormEditCustomer = [
   body('confirmpass').notEmpty().withMessage('Debes completar el campo de confirmación de contraseña').isLength({ min: 6 }).withMessage('Debes generar una contraseña de al menos 6 caracteres').custom((value, {req}) => (value === req.body.pass)).withMessage('las contraseñas no coinciden'),
   body('role').notEmpty().withMessage('Rol no puede estar vacío')
 ];
+
 
 /************** Validación del formulario ****************/
 const authMiddleware = require('../middlewares/authMiddleware');

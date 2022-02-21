@@ -3,12 +3,16 @@
   <body class="body-add">
     <section class="container-formAdd boxShadow">
       <h2>Agregar Producto Nuevo</h2>
-      <form action="/admin/create" method="POST" enctype="multipart/form-data">
+      <div class="errorsJs">
+        <ul></ul>
+      </div>
+      <form action="/admin/create" method="POST" enctype="multipart/form-data" id="formProduct">
         <section class="form-group">
           <div>
             <div>
               <label for="nameBook" class="label-filter">Nombre del libro</label>
-              <input type="text" name="nameBook" class="input-filter" placeholder="Ingresa nombre del libro"
+              <input id="nameBook" type="text" name="nameBook" class="input-filter"
+                placeholder="Ingresa nombre del libro"
                 value="<%= locals.oldData && oldData.nameBook ? oldData.nameBook :''%>">
               <% if(locals.errors && errors.nameBook){%>
                 <div class="alert-danger">
@@ -34,7 +38,7 @@
             </div>
             <div>
               <label for="price" class="label-filter">Precio</label>
-              <input type="number" name="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA"
+              <input type="number" name="price" id="price" class="input-filter" placeholder="Ingresa precio del libro sin IVA"
                 value="<%= locals.oldData && oldData.price ? oldData.price :''%>">
               <% if(locals.errors && errors.price){%>
                 <div class="alert-danger">
@@ -86,7 +90,7 @@
             </div>
             <div>
               <label for="sku" class="label-filter">SKU</label>
-              <input type="text" name="sku" class="input-filter" placeholder="Ingresa código unico"
+              <input type="text" name="sku" id="sku" class="input-filter" placeholder="Ingresa código unico"
                 value="<%= locals.oldData && oldData.sku ? oldData.sku :''%>">
               <% if(locals.errors && errors.sku){%>
                 <div class="alert-danger">
@@ -98,7 +102,8 @@
           <div>
             <div>
               <label for="language" class="label-filter">Idioma</label>
-              <input type="text" name="language" class="input-filter" placeholder="Ingresa idioma del libro"
+              <input type="text" name="language" id="language" class="input-filter"
+                placeholder="Ingresa idioma del libro"
                 value="<%= locals.oldData && oldData.language ? oldData.language :''%>">
               <% if(locals.errors && errors.language){%>
                 <div class="alert-danger">
@@ -108,7 +113,8 @@
             </div>
             <div>
               <label for="edition" class="label-filter">Edición</label>
-              <input type="text" name="edition" class="input-filter" placeholder="Versión de la edición del libro"
+              <input type="text" name="edition" id="edition" class="input-filter"
+                placeholder="Versión de la edición del libro"
                 value="<%= locals.oldData && oldData.edition ? oldData.edition :''%>">
               <% if(locals.errors && errors.edition){%>
                 <div class="alert-danger">
@@ -118,7 +124,8 @@
             </div>
             <div>
               <label for="pages" class="label-filter">Número de Páginas</label>
-              <input type="text" name="pages" class="input-filter" placeholder="Cantidad de páginas del libro"
+              <input type="text" name="pages" id="pages" class="input-filter"
+                placeholder="Cantidad de páginas del libro"
                 value="<%= locals.oldData && oldData.pages ? oldData.pages :''%>">
               <% if(locals.errors && errors.pages){%>
                 <div class="alert-danger">
@@ -128,7 +135,8 @@
             </div>
             <div>
               <label for="chapters" class="label-filter">Número de Capitulos</label>
-              <input type="text" name="chapters" class="input-filter" placeholder="Cantidad de capitulos del libro"
+              <input type="text" name="chapters" id="chapters" class="input-filter"
+                placeholder="Cantidad de capitulos del libro"
                 value="<%= locals.oldData && oldData.chapters ? oldData.chapters :''%>">
               <% if(locals.errors && errors.chapters){%>
                 <div class="alert-danger">
@@ -147,7 +155,7 @@
             </div>
             <div>
               <label for="description" class="label-filter">Descripción</label>
-              <textarea name="description" id="" cols="30" rows="6" class="input-filter"
+              <textarea name="description" id="description" cols="30" rows="6" class="input-filter"
                 placeholder="Descripción del libro"><%= locals.oldData && oldData.description ? oldData.description : ''%></textarea>
               <% if(locals.errors && errors.description){%>
                 <div class="alert-danger">
