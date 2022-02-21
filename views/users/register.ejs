@@ -5,7 +5,10 @@
       <section class="section-left-register">
         <h1>Regístrate</h1>
         <h5>Registrate utilizando tus datos personales y correo electrónico</h5>
-        <form action="/users/register" method="POST">
+        <div class="errorsUser">
+          <ul></ul>
+        </div>
+        <form action="/users/register" method="POST" id="formUser">
           <div class="content-info-register">
             <input name="name" type="text" class="info" placeholder="Nombres"
               value="<%= locals.oldData && oldData.name ? oldData.name :''%>">

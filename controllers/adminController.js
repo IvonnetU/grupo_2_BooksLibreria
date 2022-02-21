@@ -251,7 +251,10 @@ let adminController = {
   deleteCustomer: (req, res) => {
     let idCustomer = req.params.id;
 		customerDelete = users.find(item => item.id == idCustomer);
-    return res.render('./admin/deleteCustomer',{customerDelete});
+    return res.render('./admin/deleteCustomer',{
+      customerDelete,
+      user: req.session.userLogged
+    });
   },
   // Borrar - Eliminar un cliente de la BD
   destroyCustomer: (req, res) => {
@@ -263,7 +266,10 @@ let adminController = {
 			}			
 		});		
 		fs.writeFileSync(usersFilePath,JSON.stringify(customersNews),'utf-8');
-		res.render('./admin/customers',{dataUsers: customersNews});		
+		res.render('./admin/customers',{
+      dataUsers: customersNews,
+      user: req.session.userLogged
+    });		
   },
 }
 
