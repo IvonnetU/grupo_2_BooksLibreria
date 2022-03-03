@@ -2,6 +2,8 @@
 const express = require('express');
 const router = express.Router();
 const { body } = require("express-validator");
+const path = require('path');
+const fs = require('fs');
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController.js');
@@ -9,9 +11,18 @@ const usersController = require('../controllers/usersController.js');
 // ************ Validar Existencia del Email ************
 const db = require("../database/models");
 
+//conectando json
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
+// async function validateEmail(emailRegistrando){  
+//   const usersAll = await db.Usuarios.findAll();
+//   return usersAll.includes(emailRegistrando);
+// }
 
 async function validateEmail(emailRegistrando){  
-  const usersAll = await db.Usuarios.findAll();
+  const usersAll = await users;
   return usersAll.includes(emailRegistrando);
 }
 

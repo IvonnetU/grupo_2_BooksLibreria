@@ -8,7 +8,7 @@
         <h2 class="title_one_line">NOVEDADES</h2>
         <div class="novedades">
           <% for(let i=0; i < 8; i++){%>
-            <a href="/products/<%= dataBooks[i].id %>">
+            <a href="/products/<%= dataBooks[i].sku %>">
               <img src="../../images/books/<%= dataBooks[i].image %>" alt="<%= dataBooks[i].name %>"
                 title="<%= dataBooks[i].name %>">
             </a>
@@ -79,7 +79,7 @@
             </div>
             <div class="button_white">
               <i class="fas fa-plus"></i>
-              <a href="#">
+              <a href="/products/9789585277304">
                 Ver más
               </a>
             </div>
@@ -103,7 +103,7 @@
             <% for(let i=0; i < 8; i++){%>
               <%#if(dataBooks[i].category=="Romántica" ){%>
                 <div class="items_home">
-                  <a href="/products/<%= dataBooks[i].id %>">
+                  <a href="/products/<%= dataBooks[i].sku %>">
                     <img src="../../images/books/<%= dataBooks[i].image %>" alt="<%= dataBooks[i].name %>"
                       title="<%= dataBooks[i].name %>">
                   </a>

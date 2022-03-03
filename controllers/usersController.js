@@ -85,9 +85,14 @@ let usersController = {
     }
 
     let userToCreate = {
-      ...req.body,
+      name:req.body.name,
+      lastname:req.body.lastname,
+      email:req.body.email,
+      city:req.body.city,
+      phone:req.body.phone,
       password: bcryptjs.hashSync(req.body.pass, 10),
       confirmpass: bcryptjs.hashSync(req.body.confirmpass, 10),
+      acceptCondition:'on',
       image: 'user-generic.png',
       role: 'user' 
     }
