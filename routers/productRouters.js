@@ -8,14 +8,11 @@ const productsController = require('../controllers/productController.js');
 /*** Listar todos los libros ***/
 router.get('/', productsController.list);
 
-
-/*** Consultar un libro***/ 
-router.get('/:id', productsController.detail); 
-
-
 /*** Ruta carrito***/ 
 router.get('/car', productsController.car);
 
+/*** Consultar un libro***/ 
+router.get('/:id', productsController.detail); 
 
 
 module.exports = router;

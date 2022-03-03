@@ -1616,6 +1616,7 @@ ol {
   .article_book_buy {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
   .delete_and_image {
     width: 38%;

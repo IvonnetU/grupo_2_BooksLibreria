@@ -49,6 +49,18 @@ ol {
   transition: all 400ms ease-out;
 }
 
+table.profile_table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table.profile_table,
+.profile_table th,
+.profile_table td {
+  border: 1px solid #183837;
+}
+
 /* Styles Administrator Menu */
 .header-admin {
   background-color: #183837;

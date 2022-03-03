@@ -6,6 +6,59 @@
         <%}else{%>
           <%- include('../partials/header-user')%>
             <%} %>
+              <h2 style="margin-left: 20px;">Perfil del usuario</h2>
+              <figure>
+                <img src=".././images/avatars/<%= user.image%>" alt="<%= user.name%>" title="<%= user.name%>"
+                  style="margin-left: 20px;">
+              </figure>
+              <table class="profile_table">
+                <tr>
+                  <th>
+                    Nombre del usuario
+                  </th>
+                  <th>
+                    Apellidos del usuario
+                  </th>
+                  <th>
+                    Email del usuario
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <%= user.name%>
+                  </td>
+                  <td>
+                    <%= user.lastname%>
+                  </td>
+                  <td>
+                    <%= user.email%>
+                  </td>
+                </tr>
+              </table>
+              <table class="profile_table">
+                <tr>
+                  <th>
+                    Ciudad del usuario
+                  </th>
+                  <th>
+                    Telefono del usuario
+                  </th>
+                  <th>
+                    Rol del usuario
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    <%= user.city%>
+                  </td>
+                  <td>
+                    <%= user.phone%>
+                  </td>
+                  <td>
+                    <%= user.role%>
+                  </td>
+                </tr>
+              </table>
   </body>
 
   </html>
