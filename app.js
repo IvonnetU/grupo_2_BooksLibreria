@@ -17,6 +17,11 @@ const routesProduct = require('./routers/productRouters.js');
 const routesUsers = require('./routers/usersRouters.js');
 const routesAdmin = require('./routers/adminRouters.js');
 
+/**********Rutas API*************/
+const apiProductsRouter = require('./routers/api/product.js');
+
+
+
 /*************Middlewares**************/
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
@@ -58,3 +63,6 @@ app.use('/users', routesUsers);
 
 // Declarando la ruta del archivo login
 app.use('/admin', routesAdmin);
+
+// API ROUTES
+app.use('/api/products', apiProductsRouter);
