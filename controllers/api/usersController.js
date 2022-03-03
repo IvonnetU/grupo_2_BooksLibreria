@@ -7,38 +7,38 @@ const fs = require('fs');
 // base de datos 
 const db = require("../../database/models");
 
-const productsController = {
-	// Listado de productos
+const usersController = {
+	// Listado de Usuarios
 	list: async (req, res) => {
-		db.Productos.findAll().then((products) => {
+		db.Usuarios.findAll().then((users) => {
       let respuesta = {
                 meta: {
                     status : 200,
-                    total: products.length,
-                    url: '/api/products'
+                    total: users.length,
+                    url: '/api/users'
                 },
-                data: products
+                data: users
             }
 			res.json(respuesta);
     })            
 	},
-	// Detalle de un producto
+	// Detalle de un usuario
 	detail: async (req, res) => {
     let id = req.params.id;
 
-    db.Productos.findByPk(id)
-    .then(products => {
+    db.Usuarios.findByPk(id)
+    .then(users => {
         let respuesta = {
             meta: {
                 status: 200,
-                total: products.length,
-                url: '/api/products/:id'
+                total: users.length,
+                url: '/api/users/:id'
             },
-            data: products
+            data: users
         }
         res.json(respuesta);
     });
 	}
 };
 
-module.exports = productsController;
+module.exports = usersController;
