@@ -20,7 +20,7 @@ const routesAdmin = require('./routers/adminRouters.js');
 /**********Rutas API*************/
 const apiProductsRouter = require('./routers/api/product.js');
 const apiUsersRouter = require('./routers/api/user.js');
-
+const apiCategoryRouter = require('./routers/api/category.js');
 
 /*************Middlewares**************/
 
@@ -67,3 +67,4 @@ app.use('/admin', routesAdmin);
 // API ROUTES
 app.use('/api/products', apiProductsRouter);
 app.use('/api/users', apiUsersRouter);
+app.use('/api/category', apiCategoryRouter);

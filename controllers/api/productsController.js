@@ -38,7 +38,7 @@ const productsController = {
         }
         res.json(respuesta);
     });
-	}
+	},
 };
 
 module.exports = productsController;
